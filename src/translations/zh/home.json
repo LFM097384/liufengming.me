@@ -1,36 +1,39 @@
 {
-  "hero": {
-    "title": "刘丰铭",
-    "subtitle": "哲学、政治与经济学学士",
-    "institution": "伦敦大学学院 | 政治学系",
-    "phd_notice": {
-      "title": "🎓 寻求博士/硕士研究机会",
-      "content": "我正在积极寻求社会科学各学科的全额资助博士或硕士职位。我的研究兴趣涵盖政治经济学、定量分析和人工智能的跨学科应用，特别欢迎重视方法论创新的商业和社会科学项目。",
-      "timing": "接受2026年秋季入学的职位"
+    "hero": {
+        "title": "刘丰铭",
+        "subtitle": "哲学、政治学与经济学学士",
+        "institution": "伦敦大学学院 | 政治学系",
+        "personal_intro": {
+            "title": "🎯 关于我",
+            "paragraph1": "我目前在伦敦大学学院攻读哲学、政治学与经济学学位，此前在北京师范大学附属中学学习政治哲学和经济学。我的研究兴趣集中在人工智能与社会科学方法论的交叉领域，特别关注新兴技术如何重塑社会科学的研究范式。",
+            "paragraph2": "我的学术背景跨越哲学和社会科学，使我独特地处于人文探究与技术创新的交汇点。我特别感兴趣的是在人工智能快速发展的时代探索\"是什么让我们成为人类\"这一根本问题，汲取西方哲学传统——从黑格尔再到马克思和精神分析传统——以及中国思想史的智慧。",
+            "paragraph3": "在方法论上，我的工作审视传统数据收集方法的局限性，包括资源密集型的访谈研究和不够灵活的定量调查，并研究人工智能辅助方法如何更有效地捕捉复杂的人类行为模式。我运用政治哲学的理论框架和实用的计算工具来弥合技术与社会科学理论之间的鸿沟。",
+            "paragraph4": "我目前的项目涉及开发Mimitalk (mimitalk.app)，这是一个创新的人工智能驱动的访谈平台，代表了我在人工智能增强的社会科学研究方法方面理论兴趣的实际应用。这个平台体现了我致力于将哲学探究转化为能够推进实证研究的具体技术解决方案的承诺。",
+            "paragraph5": "通过我的跨学科方法，我旨在为关于人工智能如何不仅仅是提高研究效率，而是从根本上改变社会科学探究的本体论和认识论基础的持续对话做出贡献。正如马克思在工业革命期间观察到的，当机器取代特定的人类功能时，我们剩余的能力揭示了人性更本质的方面——这一洞察在我们在学术界经历人工智能革命时仍然具有深刻的相关性。"
+        }
+    },
+    "sections": {
+        "education": "教育背景",
+        "experience": "研究经历",
+        "skills": "技能与专长",
+        "languages": "语言能力",
+        "programming": "编程技能",
+        "research_interests": "研究兴趣",
+        "quick_stats": "快速统计",
+        "recent_updates": "近期动态"
+    },
+    "stats": {
+        "total_publications": "总发表数",
+        "published_papers": "已发表论文",
+        "years_research": "研究年数",
+        "research_areas": "研究领域"
+    },
+    "updates": {
+        "new_publication": "计算经济学新发表",
+        "new_publication_desc": "2024年12月 - 《全球股票市场的风险传导机制》已发表",
+        "preprint": "SSRN预印本可用",
+        "preprint_desc": "2024年12月 - 人工智能驱动的访谈平台论文已提交审查",
+        "research_position": "研究助理职位",
+        "research_position_desc": "2024年 - 开始与挪威商学院的研究合作"
     }
-  },
-  "sections": {
-    "education": "教育背景",
-    "experience": "研究经历",
-    "skills": "技能专长",
-    "languages": "语言能力",
-    "programming": "编程技能",
-    "research_interests": "研究兴趣",
-    "quick_stats": "统计概览",
-    "recent_updates": "最新动态"
-  },
-  "stats": {
-    "total_publications": "论文总数",
-    "published_papers": "已发表论文",
-    "years_research": "研究年限",
-    "research_areas": "研究领域"
-  },
-  "updates": {
-    "new_publication": "计算经济学新论文发表",
-    "new_publication_desc": "2024年12月 - 全球股票市场风险传导机制论文已发表",
-    "preprint": "SSRN预印本可用",
-    "preprint_desc": "2024年12月 - AI驱动的访谈平台论文已提交审查",
-    "research_position": "研究助理职位",
-    "research_position_desc": "2024年 - 开始与挪威商学院的研究合作"
-  }
 }

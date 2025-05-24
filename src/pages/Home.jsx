@@ -133,23 +133,33 @@ const Home = () => {
           ORCID iD: <a href="https://orcid.org/0009-0009-3881-496X" target="_blank" rel="noopener noreferrer">
             orcid.org/0009-0009-3881-496X
           </a>
-        </Typography>
-          {/* PhD Opportunity Notice */}
+        </Typography>        {/* Personal Introduction */}
         <Box sx={{ 
           mt: 4, 
           p: 3, 
-          bgcolor: 'primary.light', 
+          bgcolor: 'background.paper', 
           borderRadius: 2,
-          color: 'white',
-          textAlign: 'center'
-        }}>          <Typography variant="h6" gutterBottom>
-            {t('hero.phd_notice.title')}
+          border: 1,
+          borderColor: 'divider',
+          textAlign: 'left'
+        }}>
+          <Typography variant="h6" gutterBottom color="primary" sx={{ fontWeight: 'bold' }}>
+            {t('hero.personal_intro.title')}
+          </Typography>
+          <Typography variant="body1" paragraph>
+            {t('hero.personal_intro.paragraph1')}
+          </Typography>
+          <Typography variant="body1" paragraph>
+            {t('hero.personal_intro.paragraph2')}
+          </Typography>
+          <Typography variant="body1" paragraph>
+            {t('hero.personal_intro.paragraph3')}
+          </Typography>
+          <Typography variant="body1" paragraph>
+            {t('hero.personal_intro.paragraph4')}
           </Typography>
           <Typography variant="body1">
-            {t('hero.phd_notice.content')}
-          </Typography>
-          <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-            {t('hero.phd_notice.timing')}
+            {t('hero.personal_intro.paragraph5')}
           </Typography>
         </Box>
       </Box>

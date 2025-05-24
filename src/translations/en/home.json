@@ -2,11 +2,13 @@
   "hero": {
     "title": "Fengming Liu",
     "subtitle": "BSc Philosophy, Politics and Economics",
-    "institution": "University College London | Department of Political Science",
-    "phd_notice": {
-      "title": "🎓 Seeking PhD/Master's Opportunities",
-      "content": "I am actively seeking fully-funded PhD or Master's positions across various disciplines in social sciences. My research interests span political economy, quantitative analysis, and interdisciplinary applications of AI, with particular openness to business and social science programs that value methodological innovation.",
-      "timing": "Open to positions starting Fall 2026"
+    "institution": "University College London | Department of Political Science",    "personal_intro": {
+      "title": "🎯 About Me",
+      "paragraph1": "I am currently pursuing my studies in Social Science Research Methods at University College London, following my foundational education in political philosophy and Chinese traditional thought at Beijing Normal University High School. My research interests center on the intersection of artificial intelligence and social science methodology, with particular focus on how emerging technologies are reshaping research paradigms in the social sciences.",
+     "paragraph2": "My academic background spans philosophy and social sciences, positioning me uniquely at the convergence of humanistic inquiry and technological innovation. I am particularly interested in exploring the fundamental question of \"what makes us human\" in an era of rapid AI advancement, drawing from both Western philosophical traditions—from Hegel to Marx and the psychoanalytic tradition—and Chinese intellectual history.",
+      "paragraph3": "Methodologically, my work examines the limitations of traditional data collection methods, including resource-intensive interview research and inflexible quantitative surveys, and investigates how AI-assisted approaches can capture complex human behavioral patterns more effectively. I employ both theoretical frameworks from political philosophy and practical computational tools to bridge the gap between technology and social science theory.",
+      "paragraph4": "My current project involves the development of Mimitalk (mimitalk.app), an innovative AI-powered interview platform that represents a practical application of my theoretical interests in AI-enhanced social science research methods. This platform exemplifies my commitment to translating philosophical inquiry into concrete technological solutions that can advance empirical research.",
+      "paragraph5": "Through my interdisciplinary approach, I aim to contribute to the ongoing dialogue about how artificial intelligence is not merely improving research efficiency, but fundamentally transforming the ontological and epistemological foundations of social science inquiry. As Marx observed during the Industrial Revolution, when machines replace specific human functions, our remaining capabilities reveal more essential aspects of human nature—a insight that remains profoundly relevant as we navigate the AI revolution in academia."
     }
   },
   "sections": {
