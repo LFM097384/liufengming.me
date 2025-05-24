@@ -30,8 +30,12 @@ import {
   Clear,
   Refresh
 } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 
-const Publications = () => {  const [searchQuery, setSearchQuery] = useState('')
+const Publications = () => {
+  const { t } = useTranslation()
+
+  const [searchQuery, setSearchQuery] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
 
   const resetFilters = () => {
@@ -174,12 +178,11 @@ const Publications = () => {  const [searchQuery, setSearchQuery] = useState('')
   )
 
   return (
-    <Container maxWidth="lg">      <Box sx={{ mb: 4 }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Publications
+    <Container maxWidth="lg">      <Box sx={{ mb: 4 }}>        <Typography variant="h3" component="h1" gutterBottom>
+          {t('publications.title')}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Academic publications, preprints, and working papers
+          {t('publications.subtitle')}
         </Typography>
       </Box>
 

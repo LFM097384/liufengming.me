@@ -13,12 +13,15 @@ import {
   MenuItem
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
+import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from './LanguageSwitcher'
 
 const Header = () => {
   const location = useLocation()
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   const [anchorEl, setAnchorEl] = useState(null)
+  const { t } = useTranslation()
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget)
@@ -26,14 +29,13 @@ const Header = () => {
   const handleMenuClose = () => {
     setAnchorEl(null)
   }
-  
-  const menuItems = [
-    { path: '/', label: 'Home' },
-    { path: '/publications', label: 'Publications' },
-    { path: '/research', label: 'Research' },
-    { path: '/blog', label: 'Blog' },
-    { path: '/cv', label: 'CV' },
-    { path: '/contact', label: 'Contact' }
+    const menuItems = [
+    { path: '/', label: t('navigation.home') },
+    { path: '/publications', label: t('navigation.publications') },
+    { path: '/research', label: t('navigation.research') },
+    { path: '/blog', label: t('navigation.blog') },
+    { path: '/cv', label: t('navigation.cv') },
+    { path: '/contact', label: t('navigation.contact') }
   ]
 
   return (
@@ -42,14 +44,15 @@ const Header = () => {
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Fengming Liu
         </Typography>
-        
-        {isMobile ? (
+          {isMobile ? (
           <>
+            <LanguageSwitcher variant="chip" />
             <IconButton
               edge="start"
               color="inherit"
               aria-label="menu"
               onClick={handleMenuOpen}
+              sx={{ ml: 1 }}
             >
               <MenuIcon />
             </IconButton>
@@ -72,7 +75,7 @@ const Header = () => {
             </Menu>
           </>
         ) : (
-          <Box sx={{ display: 'flex', gap: 2 }}>
+          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
             {menuItems.map((item) => (
               <Button
                 key={item.path}
@@ -86,6 +89,7 @@ const Header = () => {
                 {item.label}
               </Button>
             ))}
+            <LanguageSwitcher />
           </Box>
         )}
       </Toolbar>

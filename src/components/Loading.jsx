@@ -4,8 +4,11 @@ import {
   CircularProgress,
   Typography
 } from '@mui/material'
+import { useTranslation } from 'react-i18next'
 
-const Loading = ({ message = "Loading..." }) => {
+const Loading = ({ message }) => {
+  const { t } = useTranslation()
+  
   return (
     <Box
       sx={{
@@ -17,9 +20,8 @@ const Loading = ({ message = "Loading..." }) => {
         gap: 2
       }}
     >
-      <CircularProgress size={60} />
-      <Typography variant="h6" color="text.secondary">
-        {message}
+      <CircularProgress size={60} />      <Typography variant="h6" color="text.secondary">
+        {message || t('common.loading')}
       </Typography>
     </Box>
   )

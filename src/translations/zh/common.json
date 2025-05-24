@@ -1,0 +1,20 @@
+{
+  "navigation": {
+    "home": "主页",
+    "publications": "学术论文",
+    "research": "研究方向",
+    "blog": "博客",
+    "cv": "简历",
+    "contact": "联系方式"
+  },
+  "common": {
+    "loading": "加载中...",
+    "email": "邮箱",
+    "phone": "电话",
+    "address": "地址",
+    "institution": "机构",
+    "learn_more": "了解更多",
+    "view_all": "查看全部",
+    "back": "返回"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "navigation": {
+    "home": "Home",
+    "publications": "Publications",
+    "research": "Research",
+    "blog": "Blog",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "common": {
+    "loading": "Loading...",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "institution": "Institution",
+    "learn_more": "Learn More",
+    "view_all": "View All",
+    "back": "Back"
+  }
+}

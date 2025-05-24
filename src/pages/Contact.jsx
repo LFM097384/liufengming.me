@@ -23,8 +23,11 @@ import {
   Link as LinkIcon,
   Message
 } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 
 const Contact = () => {
+  const { t } = useTranslation()
+
   const contactInfo = {
     email: "leo.liu.23@ucl.ac.uk",
     phone: "+44 7436241983",
@@ -56,40 +59,32 @@ const Contact = () => {
     "Thursdays: 10:00 AM - 12:00 PM",
     "By appointment"
   ]
-
-  const researchCollaboration = [
-    "AI applications in social science research",
-    "Political economy and quantitative analysis",
-    "Academic inequality and accessibility studies",
-    "Quantitative history and data analysis"
-  ]
+  const researchCollaboration = t('contact.collaboration_areas', { returnObjects: true })
 
   return (
     <Container maxWidth="lg">
       <Box sx={{ mb: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Contact
+          {t('contact.title')}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Get in touch for research collaboration, academic inquiries, or general questions
+          {t('contact.subtitle')}
         </Typography>
       </Box>      <Grid container spacing={4}>
         {/* Primary Contact Information */}
         <Grid item xs={12} md={6}>
           <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <AccountCircle color="primary" />
-                Contact Information
+                {t('contact.info_title')}
               </Typography>
               
               <List>
                 <ListItem>
                   <ListItemIcon>
                     <Email color="primary" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="Email" 
+                  </ListItemIcon>                  <ListItemText 
+                    primary={t('common.email')} 
                     secondary={
                       <Link href={`mailto:${contactInfo.email}`} color="inherit">
                         {contactInfo.email}
@@ -101,9 +96,8 @@ const Contact = () => {
                 <ListItem>
                   <ListItemIcon>
                     <Phone color="primary" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="Phone" 
+                  </ListItemIcon>                  <ListItemText 
+                    primary={t('common.phone')} 
                     secondary={
                       <Link href={`tel:${contactInfo.phone}`} color="inherit">
                         {contactInfo.phone}
@@ -115,9 +109,8 @@ const Contact = () => {
                 <ListItem>
                   <ListItemIcon>
                     <School color="primary" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="Institution" 
+                  </ListItemIcon>                  <ListItemText 
+                    primary={t('common.institution')} 
                     secondary={contactInfo.address.institution} 
                   />
                 </ListItem>
@@ -125,9 +118,8 @@ const Contact = () => {
                 <ListItem>
                   <ListItemIcon>
                     <LocationOn color="primary" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="Address" 
+                  </ListItemIcon>                  <ListItemText 
+                    primary={t('common.address')} 
                     secondary={
                       <Box>
                         <Typography variant="body2">{contactInfo.address.department}</Typography>
@@ -147,7 +139,7 @@ const Contact = () => {
                   href={`mailto:${contactInfo.email}`}
                   size="large"
                 >
-                  Send Email
+                  {t('contact.send_email')}
                 </Button>
               </Box>
             </CardContent>
@@ -158,7 +150,7 @@ const Contact = () => {
             <CardContent sx={{ flexGrow: 1 }}>
               <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <LinkIcon color="primary" />
-                Academic Profiles
+                {t('contact.academicProfiles')}
               </Typography>
               
               <List>
@@ -205,11 +197,11 @@ const Contact = () => {
           <Card elevation={2}>
             <CardContent>
               <Typography variant="h5" gutterBottom>
-                Research Collaboration
+                {t('contact.researchCollaboration')}
               </Typography>
               
               <Typography variant="body2" color="text.secondary" paragraph>
-                I welcome collaboration opportunities in the following areas:
+                {t('contact.researchCollaborationDescription')}
               </Typography>
               
               <List>
@@ -225,9 +217,7 @@ const Contact = () => {
               
               <Box sx={{ mt: 2 }}>
                 <Typography variant="body2">
-                  Feel free to reach out if you have interesting research ideas, 
-                  data collaboration opportunities, or if you're interested in 
-                  jointly applying for research grants.
+                  {t('contact.researchCollaborationNote')}
                 </Typography>
               </Box>
             </CardContent>
@@ -239,44 +229,43 @@ const Contact = () => {
       <Card elevation={2} sx={{ mt: 4 }}>
         <CardContent>
           <Typography variant="h5" gutterBottom>
-            Quick Contact
+            {t('contact.quickContact')}
           </Typography>
           
           <Typography variant="body1" paragraph>
-            For the fastest response, please send me an email directly. Include the following 
-            information to help me respond more effectively:
+            {t('contact.quickContactDescription')}
           </Typography>
           
           <List>
             <ListItem>
               <ListItemText 
-                primary="Subject Line" 
-                secondary="Clear and specific subject (e.g., 'Research Collaboration Inquiry', 'Academic Question')" 
+                primary={t('contact.subjectLine')} 
+                secondary={t('contact.subjectLineDescription')} 
               />
             </ListItem>
             <ListItem>
               <ListItemText 
-                primary="Your Affiliation" 
-                secondary="Your institution, department, or organization" 
+                primary={t('contact.yourAffiliation')} 
+                secondary={t('contact.yourAffiliationDescription')} 
               />
             </ListItem>
             <ListItem>
               <ListItemText 
-                primary="Purpose" 
-                secondary="Brief description of your inquiry or collaboration interest" 
+                primary={t('contact.purpose')} 
+                secondary={t('contact.purposeDescription')} 
               />
             </ListItem>
             <ListItem>
               <ListItemText 
-                primary="Timeline" 
-                secondary="Any relevant deadlines or preferred response timeframe" 
+                primary={t('contact.timeline')} 
+                secondary={t('contact.timelineDescription')} 
               />
             </ListItem>
           </List>
           
           <Box sx={{ mt: 3, textAlign: 'center' }}>
             <Typography variant="body2" color="text.secondary">
-              I typically respond to emails within 2-3 business days.
+              {t('contact.responseTime')}
             </Typography>
           </Box>
         </CardContent>

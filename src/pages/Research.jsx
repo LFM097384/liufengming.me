@@ -24,8 +24,11 @@ import {
   BusinessCenter,
   School
 } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 
 const Research = () => {
+  const { t } = useTranslation()
+
   const currentProject = {
     title: "Impact of AI on Academic Inequality",
     institution: "BI Norwegian Business School",
@@ -87,20 +90,18 @@ const Research = () => {
 
   return (
     <Container maxWidth="lg">
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          Research
+      <Box sx={{ mb: 4 }}>        <Typography variant="h3" component="h1" gutterBottom>
+          {t('research.title')}
         </Typography>        <Typography variant="body1" color="text.secondary">
-          Focusing on AI applications in business and social science research
+          {t('research.subtitle')}
         </Typography>
       </Box>
 
       {/* Current Research Project */}
       <Card elevation={2} sx={{ mb: 4 }}>
-        <CardContent>
-          <Typography variant="h4" gutterBottom color="primary" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+        <CardContent>          <Typography variant="h4" gutterBottom color="primary" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <Psychology />
-            Current Research Project
+            {t('research.current_projects')}
           </Typography>
           
           <Typography variant="h5" gutterBottom>

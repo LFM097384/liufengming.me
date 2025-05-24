@@ -1,0 +1,36 @@
+{
+  "hero": {
+    "title": "Fengming Liu",
+    "subtitle": "BSc Philosophy, Politics and Economics",
+    "institution": "University College London | Department of Political Science",
+    "phd_notice": {
+      "title": "🎓 Seeking PhD/Master's Opportunities",
+      "content": "I am actively seeking fully-funded PhD or Master's positions across various disciplines in social sciences. My research interests span political economy, quantitative analysis, and interdisciplinary applications of AI, with particular openness to business and social science programs that value methodological innovation.",
+      "timing": "Open to positions starting Fall 2026"
+    }
+  },
+  "sections": {
+    "education": "Education",
+    "experience": "Research Experience",
+    "skills": "Skills & Expertise",
+    "languages": "Languages",
+    "programming": "Programming",
+    "research_interests": "Research Interests",
+    "quick_stats": "Quick Statistics",
+    "recent_updates": "Recent Updates"
+  },
+  "stats": {
+    "total_publications": "Total Publications",
+    "published_papers": "Published Papers",
+    "years_research": "Years Research",
+    "research_areas": "Research Areas"
+  },
+  "updates": {
+    "new_publication": "New Publication in Computational Economics",
+    "new_publication_desc": "December 2024 - The Risk Transmission Mechanism of Global Stock Markets published",
+    "preprint": "Preprint Available on SSRN",
+    "preprint_desc": "December 2024 - AI-Powered Interview Platform paper submitted for review",
+    "research_position": "Research Assistant Position",
+    "research_position_desc": "2024 - Started research collaboration with BI Norwegian Business School"
+  }
+}

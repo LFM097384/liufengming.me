@@ -18,9 +18,12 @@ import {
   Work,
   Article
 } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 import { getStaticPath } from '../utils/paths'
 
 const CV = () => {
+  const { t } = useTranslation()
+
   const handleDownload = () => {
     // Create a link to download the PDF
     const link = document.createElement('a')
@@ -40,10 +43,10 @@ const CV = () => {
     <Container maxWidth="lg">
       <Box sx={{ mb: 4 }}>
         <Typography variant="h3" component="h1" gutterBottom>
-          Curriculum Vitae
+          {t('cv.title')}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Academic CV and complete professional profile
+          {t('cv.subtitle')}
         </Typography>
       </Box>
 
@@ -62,15 +65,14 @@ const CV = () => {
                 publications, presentations, and skills.
               </Typography>
               
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
-                <Button
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>                <Button
                   variant="contained"
                   size="large"
                   startIcon={<Download />}
                   onClick={handleDownload}
                   fullWidth
                 >
-                  Download CV (PDF)
+                  {t('cv.download')}
                 </Button>
                 
                 <Button
@@ -80,7 +82,7 @@ const CV = () => {
                   onClick={handlePreview}
                   fullWidth
                 >
-                  Preview CV
+                  {t('cv.preview')}
                 </Button>
               </Box>
               

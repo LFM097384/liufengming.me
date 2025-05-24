@@ -25,10 +25,13 @@ import {
   Article,
   Assignment
 } from '@mui/icons-material'
+import { useTranslation } from 'react-i18next'
 import { getStaticPath } from '../utils/paths'
 import LazyImage from '../components/LazyImage'
 
 const Home = () => {
+  const { t } = useTranslation()
+  
   const education = [
     {
       period: "2023 – Present",
@@ -98,15 +101,16 @@ const Home = () => {
           }}
         >
           FL
-        </LazyImage>
-        <Typography variant="h2" component="h1" gutterBottom>
-          Fengming Liu
+        </LazyImage>        <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
+          {t('hero.title')}
         </Typography>
+        
         <Typography variant="h5" color="text.secondary" gutterBottom>
-          BSc Philosophy, Politics and Economics
+          {t('hero.subtitle')}
         </Typography>
-        <Typography variant="h6" color="text.secondary">
-          University College London | Department of Political Science
+        
+        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
+          {t('hero.institution')}
         </Typography>
         
         {/* Contact Info */}
@@ -138,17 +142,14 @@ const Home = () => {
           borderRadius: 2,
           color: 'white',
           textAlign: 'center'
-        }}>
-          <Typography variant="h6" gutterBottom>
-            🎓 Seeking PhD Opportunities
+        }}>          <Typography variant="h6" gutterBottom>
+            {t('hero.phd_notice.title')}
           </Typography>
           <Typography variant="body1">
-            I am actively seeking <strong>fully-funded PhD positions</strong> across various disciplines in social sciences. 
-            My research interests span political economy, quantitative analysis, and interdisciplinary applications of AI, 
-            with particular openness to business and social science programs that value methodological innovation.
+            {t('hero.phd_notice.content')}
           </Typography>
           <Typography variant="body2" sx={{ mt: 1, fontStyle: 'italic' }}>
-            Open to positions starting Fall 2025 or Spring 2026
+            {t('hero.phd_notice.timing')}
           </Typography>
         </Box>
       </Box>
@@ -157,10 +158,9 @@ const Home = () => {
         {/* Education */}
         <Grid item xs={12} md={6}>
           <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <School color="primary" />
-                Education
+                {t('section.education')}
               </Typography>
               {education.map((edu, index) => (
                 <Box key={index} sx={{ mb: 3 }}>
@@ -187,10 +187,9 @@ const Home = () => {
         {/* Research Experience */}
         <Grid item xs={12} md={6}>
           <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Work color="primary" />
-                Research Experience
+                {t('section.experience')}
               </Typography>
               {experience.map((exp, index) => (
                 <Box key={index} sx={{ mb: 3 }}>
@@ -228,17 +227,15 @@ const Home = () => {
         {/* Skills */}
         <Grid item xs={12}>
           <Card elevation={2}>
-            <CardContent>
-              <Typography variant="h5" gutterBottom>
-                Skills & Expertise
+            <CardContent>              <Typography variant="h5" gutterBottom>
+                {t('section.skills')}
               </Typography>
               
               <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
-                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>
-                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Language color="primary" />
-                      Languages
+                      {t('section.languages')}
                     </Typography>
                     {skills.languages.map((lang, index) => (
                       <Chip key={index} label={lang} sx={{ m: 0.5 }} />
@@ -247,10 +244,9 @@ const Home = () => {
                 </Grid>
                 
                 <Grid item xs={12} md={4}>
-                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>
-                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Code color="primary" />
-                      Programming
+                      {t('section.programming')}
                     </Typography>
                     {skills.programming.map((skill, index) => (
                       <Chip key={index} label={skill} sx={{ m: 0.5 }} color="primary" variant="outlined" />
@@ -259,9 +255,8 @@ const Home = () => {
                 </Grid>
                 
                 <Grid item xs={12} md={4}>
-                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>
-                    <Typography variant="h6" gutterBottom>
-                      Research Interests
+                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom>
+                      {t('section.research_interests')}
                     </Typography>
                     {skills.research.map((interest, index) => (
                       <Chip key={index} label={interest} sx={{ m: 0.5 }} color="secondary" variant="outlined" />
@@ -276,9 +271,8 @@ const Home = () => {
         {/* Quick Navigation */}
         <Grid item xs={12}>
           <Card elevation={2}>
-            <CardContent>
-              <Typography variant="h5" gutterBottom>
-                Quick Statistics
+            <CardContent>              <Typography variant="h5" gutterBottom>
+                {t('section.quick_stats')}
               </Typography>
               
               <Grid container spacing={2}>
@@ -286,9 +280,8 @@ const Home = () => {
                   <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
                     <Typography variant="h4" gutterBottom>
                       {publications.published.length + publications.preprint.length + publications.workingPapers.length}
-                    </Typography>
-                    <Typography variant="body1">
-                      Total Publications
+                    </Typography>                    <Typography variant="body1">
+                      {t('stats.total_publications')}
                     </Typography>
                   </Paper>
                 </Grid>
@@ -297,9 +290,8 @@ const Home = () => {
                   <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'success.main', color: 'white' }}>
                     <Typography variant="h4" gutterBottom>
                       {publications.published.length}
-                    </Typography>
-                    <Typography variant="body1">
-                      Published Papers
+                    </Typography>                    <Typography variant="body1">
+                      {t('stats.published_papers')}
                     </Typography>
                   </Paper>
                 </Grid>
@@ -308,9 +300,8 @@ const Home = () => {
                   <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'warning.main', color: 'white' }}>
                     <Typography variant="h4" gutterBottom>
                       1+
-                    </Typography>
-                    <Typography variant="body1">
-                      Years Research
+                    </Typography>                    <Typography variant="body1">
+                      {t('stats.years_research')}
                     </Typography>
                   </Paper>
                 </Grid>
@@ -319,9 +310,8 @@ const Home = () => {
                   <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'info.main', color: 'white' }}>
                     <Typography variant="h4" gutterBottom>
                       {skills.research.length}
-                    </Typography>
-                    <Typography variant="body1">
-                      Research Areas
+                    </Typography>                    <Typography variant="body1">
+                      {t('stats.research_areas')}
                     </Typography>
                   </Paper>
                 </Grid>
@@ -333,31 +323,30 @@ const Home = () => {
 
       {/* Recent Updates */}
       <Card elevation={2} sx={{ mt: 4 }}>
-        <CardContent>
-          <Typography variant="h5" gutterBottom>
-            Recent Updates
+        <CardContent>          <Typography variant="h5" gutterBottom>
+            {t('section.recent_updates')}
           </Typography>
           
           <List>
             <ListItem>
               <ListItemIcon><Article color="primary" /></ListItemIcon>
               <ListItemText 
-                primary="New Publication in Computational Economics"
-                secondary="December 2024 - The Risk Transmission Mechanism of Global Stock Markets published"
+                primary={t('update.new_publication')}
+                secondary={t('update.new_publication_desc')}
               />
             </ListItem>
             <ListItem>
               <ListItemIcon><Assignment color="primary" /></ListItemIcon>
               <ListItemText 
-                primary="Preprint Available on SSRN"
-                secondary="December 2024 - AI-Powered Interview Platform paper submitted for review"
+                primary={t('update.preprint')}
+                secondary={t('update.preprint_desc')}
               />
             </ListItem>
             <ListItem>
               <ListItemIcon><Work color="primary" /></ListItemIcon>
               <ListItemText 
-                primary="Research Assistant Position"
-                secondary="2024 - Started research collaboration with BI Norwegian Business School"
+                primary={t('update.research_position')}
+                secondary={t('update.research_position_desc')}
               />
             </ListItem>
           </List>
