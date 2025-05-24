@@ -160,7 +160,7 @@ const Home = () => {
           <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <School color="primary" />
-                {t('section.education')}
+                {t('sections.education')}
               </Typography>
               {education.map((edu, index) => (
                 <Box key={index} sx={{ mb: 3 }}>
@@ -189,7 +189,7 @@ const Home = () => {
           <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Work color="primary" />
-                {t('section.experience')}
+                {t('sections.experience')}
               </Typography>
               {experience.map((exp, index) => (
                 <Box key={index} sx={{ mb: 3 }}>
@@ -228,14 +228,14 @@ const Home = () => {
         <Grid item xs={12}>
           <Card elevation={2}>
             <CardContent>              <Typography variant="h5" gutterBottom>
-                {t('section.skills')}
+                {t('sections.skills')}
               </Typography>
               
               <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
                   <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Language color="primary" />
-                      {t('section.languages')}
+                      {t('sections.languages')}
                     </Typography>
                     {skills.languages.map((lang, index) => (
                       <Chip key={index} label={lang} sx={{ m: 0.5 }} />
@@ -246,7 +246,7 @@ const Home = () => {
                 <Grid item xs={12} md={4}>
                   <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                       <Code color="primary" />
-                      {t('section.programming')}
+                      {t('sections.programming')}
                     </Typography>
                     {skills.programming.map((skill, index) => (
                       <Chip key={index} label={skill} sx={{ m: 0.5 }} color="primary" variant="outlined" />
@@ -256,7 +256,7 @@ const Home = () => {
                 
                 <Grid item xs={12} md={4}>
                   <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom>
-                      {t('section.research_interests')}
+                      {t('sections.research_interests')}
                     </Typography>
                     {skills.research.map((interest, index) => (
                       <Chip key={index} label={interest} sx={{ m: 0.5 }} color="secondary" variant="outlined" />
@@ -272,7 +272,7 @@ const Home = () => {
         <Grid item xs={12}>
           <Card elevation={2}>
             <CardContent>              <Typography variant="h5" gutterBottom>
-                {t('section.quick_stats')}
+                {t('sections.quick_stats')}
               </Typography>
               
               <Grid container spacing={2}>
@@ -324,29 +324,26 @@ const Home = () => {
       {/* Recent Updates */}
       <Card elevation={2} sx={{ mt: 4 }}>
         <CardContent>          <Typography variant="h5" gutterBottom>
-            {t('section.recent_updates')}
+            {t('sections.recent_updates')}
           </Typography>
           
           <List>
             <ListItem>
-              <ListItemIcon><Article color="primary" /></ListItemIcon>
-              <ListItemText 
-                primary={t('update.new_publication')}
-                secondary={t('update.new_publication_desc')}
+              <ListItemIcon><Article color="primary" /></ListItemIcon>              <ListItemText 
+                primary={t('updates.new_publication')}
+                secondary={t('updates.new_publication_desc')}
               />
             </ListItem>
             <ListItem>
-              <ListItemIcon><Assignment color="primary" /></ListItemIcon>
-              <ListItemText 
-                primary={t('update.preprint')}
-                secondary={t('update.preprint_desc')}
+              <ListItemIcon><Assignment color="primary" /></ListItemIcon>              <ListItemText 
+                primary={t('updates.preprint')}
+                secondary={t('updates.preprint_desc')}
               />
             </ListItem>
             <ListItem>
-              <ListItemIcon><Work color="primary" /></ListItemIcon>
-              <ListItemText 
-                primary={t('update.research_position')}
-                secondary={t('update.research_position_desc')}
+              <ListItemIcon><Work color="primary" /></ListItemIcon>              <ListItemText 
+                primary={t('updates.research_position')}
+                secondary={t('updates.research_position_desc')}
               />
             </ListItem>
           </List>

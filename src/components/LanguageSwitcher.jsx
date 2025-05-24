@@ -35,33 +35,36 @@ const LanguageSwitcher = ({ variant = 'select' }) => {
     en: 'English',
     zh: '中文'
   }
-  
-  if (variant === 'chip') {
+    if (variant === 'chip') {
     return (
       <Chip
         icon={<LanguageIcon />}
         label={languages[currentLang] || 'English'}
         onClick={toggleLanguage}
         variant="outlined"
-        color="primary"
         sx={{ 
           cursor: 'pointer',
           fontFamily: theme.typography.fontFamily,
+          color: 'inherit',
+          borderColor: 'currentColor',
           '& .MuiChip-label': {
-            fontFamily: theme.typography.fontFamily
+            fontFamily: theme.typography.fontFamily,
+            color: 'inherit'
+          },
+          '& .MuiChip-icon': {
+            color: 'inherit'
           },
           '&:hover': {
-            backgroundColor: 'primary.light',
-            color: 'white'
+            backgroundColor: 'rgba(255,255,255,0.1)',
+            borderColor: 'currentColor'
           }
         }}
       />
     )
   }
-
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-      <LanguageIcon color="primary" />
+      <LanguageIcon sx={{ color: 'inherit' }} />
       <FormControl size="small" variant="outlined">
         <Select
           value={i18n.language}
@@ -69,12 +72,17 @@ const LanguageSwitcher = ({ variant = 'select' }) => {
           sx={{ 
             minWidth: 100,
             fontFamily: theme.typography.fontFamily,
+            color: 'inherit',
             '& .MuiOutlinedInput-notchedOutline': {
               border: 'none'
             },
             '& .MuiSelect-select': {
               padding: '8px 12px',
-              fontFamily: theme.typography.fontFamily
+              fontFamily: theme.typography.fontFamily,
+              color: 'inherit'
+            },
+            '& .MuiSelect-icon': {
+              color: 'inherit'
             },
             '& .MuiMenuItem-root': {
               fontFamily: theme.typography.fontFamily
