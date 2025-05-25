@@ -17,22 +17,12 @@
     "skills": "Skills & Expertise",
     "languages": "Languages",
     "programming": "Programming",
-    "research_interests": "Research Interests",
-    "quick_stats": "Quick Statistics",
-    "recent_updates": "Recent Updates"
+    "research_interests": "Research Interests",    "quick_stats": "Quick Statistics"
   },
   "stats": {
     "total_publications": "Total Publications",
     "published_papers": "Published Papers",
     "years_research": "Years Research",
     "research_areas": "Research Areas"
-  },
-  "updates": {
-    "new_publication": "New Publication in Computational Economics",
-    "new_publication_desc": "December 2024 - The Risk Transmission Mechanism of Global Stock Markets published",
-    "preprint": "Preprint Available on SSRN",
-    "preprint_desc": "December 2024 - AI-Powered Interview Platform paper submitted for review",
-    "research_position": "Research Assistant Position",
-    "research_position_desc": "2024 - Started research collaboration with BI Norwegian Business School"
   }
 }

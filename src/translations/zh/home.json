@@ -18,22 +18,12 @@
         "skills": "技能与专长",
         "languages": "语言能力",
         "programming": "编程技能",
-        "research_interests": "研究兴趣",
-        "quick_stats": "快速统计",
-        "recent_updates": "近期动态"
+        "research_interests": "研究兴趣",        "quick_stats": "快速统计"
     },
     "stats": {
         "total_publications": "总发表数",
         "published_papers": "已发表论文",
         "years_research": "研究年数",
         "research_areas": "研究领域"
-    },
-    "updates": {
-        "new_publication": "计算经济学新发表",
-        "new_publication_desc": "2024年12月 - 《全球股票市场的风险传导机制》已发表",
-        "preprint": "SSRN预印本可用",
-        "preprint_desc": "2024年12月 - 人工智能驱动的访谈平台论文已提交审查",
-        "research_position": "研究助理职位",
-        "research_position_desc": "2024年 - 开始与挪威商学院的研究合作"
     }
 }

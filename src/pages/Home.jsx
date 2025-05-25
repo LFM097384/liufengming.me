@@ -22,8 +22,8 @@ import {
   Email,
   Phone,
   LocationOn,
-  Article,
-  Assignment
+  Launch,
+  Star
 } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
 import { getStaticPath } from '../utils/paths'
@@ -64,7 +64,7 @@ const Home = () => {
 
   const skills = {
     languages: ["Mandarin (Native)", "English (Fluent)", "French (Basic)"],
-    programming: ["C", "Javascript", "Python", "R", "LaTeX"],
+    programming: ["C", "Javascript", "Python", "R", "LaTeX","SQL"],
     research: ["AI Application", "Political Economy", "Social Science", "Quantitative History"]
   }
   // Publications data for statistics
@@ -127,13 +127,44 @@ const Home = () => {
             <LocationOn color="primary" />
             <Typography variant="body2">London, WC1E 6BT</Typography>
           </Box>
-        </Box>
-        
-        <Typography variant="body2" sx={{ mt: 2 }}>
+        </Box>        <Typography variant="body2" sx={{ mt: 2 }}>
           ORCID iD: <a href="https://orcid.org/0009-0009-3881-496X" target="_blank" rel="noopener noreferrer">
             orcid.org/0009-0009-3881-496X
           </a>
-        </Typography>        {/* Personal Introduction */}
+        </Typography>
+
+        {/* Mimitalk Project Highlight */}
+        <Box 
+          component="a"
+          href="https://mimitalk.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          sx={{ 
+            mt: 3, 
+            p: 2, 
+            bgcolor: 'primary.main', 
+            color: 'white',
+            borderRadius: 2,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: 1,
+            cursor: 'pointer',
+            transition: 'all 0.3s ease',
+            textDecoration: 'none',
+            '&:hover': {
+              bgcolor: 'primary.dark',
+              transform: 'translateY(-2px)',
+              boxShadow: 3
+            }
+          }}
+        >
+          <Star />
+          <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'inherit' }}>
+            🎯 Mimitalk - AI-Powered Interview Platform
+          </Typography>
+          <Launch />
+        </Box>{/* Personal Introduction */}
         <Box sx={{ 
           mt: 4, 
           p: 3, 
@@ -327,38 +358,8 @@ const Home = () => {
                 </Grid>
               </Grid>
             </CardContent>
-          </Card>
-        </Grid>
+          </Card>        </Grid>
       </Grid>
-
-      {/* Recent Updates */}
-      <Card elevation={2} sx={{ mt: 4 }}>
-        <CardContent>          <Typography variant="h5" gutterBottom>
-            {t('sections.recent_updates')}
-          </Typography>
-          
-          <List>
-            <ListItem>
-              <ListItemIcon><Article color="primary" /></ListItemIcon>              <ListItemText 
-                primary={t('updates.new_publication')}
-                secondary={t('updates.new_publication_desc')}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon><Assignment color="primary" /></ListItemIcon>              <ListItemText 
-                primary={t('updates.preprint')}
-                secondary={t('updates.preprint_desc')}
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon><Work color="primary" /></ListItemIcon>              <ListItemText 
-                primary={t('updates.research_position')}
-                secondary={t('updates.research_position_desc')}
-              />
-            </ListItem>
-          </List>
-        </CardContent>
-      </Card>
     </Container>
   )
 }

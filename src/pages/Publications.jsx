@@ -69,7 +69,7 @@ const Publications = () => {
       {
         authors: "Yu, S., Shu, M., Liu, F., Hu, J & Joerling, M",
         title: "Consumer Research in the Age of Generative AI: Comparing AI and Human Interview Performance",
-        targetJournal: "Targeting at JCR-indexed journals",
+        targetJournal: "Targeting at Journal of Consumer Research",
         correspondingAuthor: "Shubin Yu",
         status: "Working Paper"
       }

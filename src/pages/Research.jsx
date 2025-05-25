@@ -145,12 +145,11 @@ const Research = () => {
           <Science />
           Research Interests
         </Typography>
-        
-        <Grid container spacing={3}>
+          <Grid container spacing={3}>
           {researchInterests.map((interest, index) => (
-            <Grid item xs={12} md={6} key={index}>
-              <Card elevation={1} sx={{ height: '100%' }}>
-                <CardContent>
+            <Grid item xs={12} md={6} lg={4} key={index}>
+              <Card elevation={1} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+                <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     {interest.icon}
                     {interest.area}
@@ -171,12 +170,10 @@ const Research = () => {
             </Grid>
           ))}
         </Grid>
-      </Box>
-
-      <Grid container spacing={4}>
+      </Box>      <Grid container spacing={4}>
         {/* Research Methodologies */}
         <Grid item xs={12} md={6}>
-          <Card elevation={2}>
+          <Card elevation={2} sx={{ height: '100%' }}>
             <CardContent>
               <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Computer color="primary" />
@@ -194,7 +191,7 @@ const Research = () => {
 
         {/* Collaborations */}
         <Grid item xs={12} md={6}>
-          <Card elevation={2}>
+          <Card elevation={2} sx={{ height: '100%' }}>
             <CardContent>
               <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                 <Public color="primary" />
@@ -217,7 +214,7 @@ const Research = () => {
             </CardContent>
           </Card>
         </Grid>
-      </Grid>      {/* Research Impact */}
+      </Grid>{/* Research Impact */}
       <Card elevation={2} sx={{ mt: 4 }}>
         <CardContent>
           <Typography variant="h5" gutterBottom>
