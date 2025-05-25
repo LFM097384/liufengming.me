@@ -2,6 +2,29 @@
   "title": "Curriculum Vitae",
   "subtitle": "Download or preview my academic CV",
   "download": "Download CV",
-  "preview": "Preview CV",
-  "preview_note": "If the preview doesn't load properly, please use the download or preview buttons above."
+  "preview_button": "Preview CV",
+  "preview_note": "If the preview doesn't load properly, please use the download or preview buttons above.",
+  "document": {
+    "title": "CV Document",
+    "description": "Download or preview my complete academic CV including education, research experience, publications, presentations, and skills.",
+    "last_updated": "Last updated: March 2024"
+  },
+  "highlights": {
+    "title": "CV Highlights",
+    "education": {
+      "title": "Education",
+      "content": "• BSc Philosophy, Politics and Economics (UCL)\n• Experimental High School (Beijing Normal University)"
+    },
+    "experience": {
+      "title": "Experience", 
+      "content": "• Research Assistant at BI Norwegian Business School\n• AI and Academic Inequality Research"
+    },
+    "publications": {
+      "title": "Publications & Research",
+      "content": "• 1 Published paper in risk transmission mechanisms\n• 1 Preprint on AI-powered interview platforms\n• 1 Working paper covering AI and consumer research\n• Research focus: AI applications, political economy, quantitative history"
+    }
+  },
+  "preview": {
+    "title": "CV Preview"
+  }
 }

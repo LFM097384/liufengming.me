@@ -2,6 +2,29 @@
   "title": "个人简历",
   "subtitle": "下载或预览我的学术简历",
   "download": "下载简历",
-  "preview": "预览简历",
-  "preview_note": "如果预览加载不正常，请使用上方的下载或预览按钮。"
+  "preview_button": "预览简历",
+  "preview_note": "如果预览加载不正常，请使用上方的下载或预览按钮。",
+  "document": {
+    "title": "简历文档",
+    "description": "下载或预览我的完整学术简历，包括教育背景、研究经历、发表论文、学术报告和技能专长。",
+    "last_updated": "最后更新：2024年3月"
+  },
+  "highlights": {
+    "title": "简历要点",
+    "education": {
+      "title": "教育背景",
+      "content": "• 哲学、政治学与经济学学士学位（伦敦大学学院）\n• 高中毕业（北京师范大学附属实验中学）"
+    },
+    "experience": {
+      "title": "研究经历", 
+      "content": "• BI挪威商学院研究助理\n• AI与学术不平等研究"
+    },
+    "publications": {
+      "title": "发表论文与研究",
+      "content": "• 1篇已发表论文（风险传导机制）\n• 1篇预印本论文（AI驱动访谈平台）\n• 1篇工作论文（AI与消费者研究）\n• 研究重点：AI应用、政治经济学、定量历史学"
+    }
+  },
+  "preview": {
+    "title": "简历预览"
+  }
 }
