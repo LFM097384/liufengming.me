@@ -87,7 +87,7 @@ const Publications = () => {
         authors: "Shu, M., Liu, F., & Wang, S.",
         title: "Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification",
         targetJournal: "R&R at Cliometrica. Accepted by The Eleventh Annual Symposium on Quantitative History.",
-        correspondingAuthor: "Mingyu Shu",
+        correspondingAuthor: "Fengming Liu",
         status: "Working Paper"
       },
       {
