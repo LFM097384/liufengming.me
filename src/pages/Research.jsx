@@ -13,11 +13,11 @@ import {
   Chip,
   Paper
 } from '@mui/material'
+import SEO from '../components/SEO'
 import {
   Psychology,
   Computer,
   Group,
-  Assignment,
   TrendingUp,
   Science,
   Public,
@@ -29,20 +29,7 @@ import { useTranslation } from 'react-i18next'
 const Research = () => {
   const { t } = useTranslation()
 
-  const currentProject = {
-    title: "Impact of AI on Academic Inequality",
-    institution: "BI Norwegian Business School",
-    supervisor: "Dr. Shubin Yu",
-    period: "2024 – Present",
-    description: "Investigating how artificial intelligence technologies affect academic inequality across different institutions and demographics, with a focus on applications in business and social science education.",
-    activities: [
-      "Conducted structured interviews with academic professionals",
-      "Designed comprehensive questionnaires for data collection",
-      "Built an online interview platform for remote data gathering",
-      "Drafted academic papers for publication",
-      "Analyzed data using quantitative and qualitative methods"
-    ]
-  }
+
 
   const researchInterests = [
     {
@@ -56,6 +43,12 @@ const Research = () => {
       icon: <School />,
       description: "Developing AI applications to enhance social science research methodologies and data analysis capabilities.",
       projects: ["AI-Powered Interview Platform", "Automated Social Science Research", "Consumer Research with AI"]
+    },
+    {
+      area: "Consumer Decision-Making and AI Transparency",
+      icon: <Psychology />,
+      description: "Investigating the paradoxical effects of AI identity disclosure on consumer trust across different decision contexts.",
+      projects: ["AI Identity Disclosure Studies", "Consumer Trust Research", "Transparency Theory in AI"]
     },
     {
       area: "Digital Transformation in Academia",
@@ -89,55 +82,41 @@ const Research = () => {
   ]
 
   return (
-    <Container maxWidth="lg">
-      <Box sx={{ mb: 4 }}>        <Typography variant="h3" component="h1" gutterBottom>
-          {t('research.title')}
-        </Typography>        <Typography variant="body1" color="text.secondary">
-          {t('research.subtitle')}
-        </Typography>
-      </Box>
+    <>
+      <SEO 
+        title="Research"
+        description="Research interests and methodologies of Fengming Liu including AI applications in business education, social science research, consumer decision-making, and AI transparency studies."
+        keywords="Fengming Liu research, AI applications, business education, social science research, consumer decision-making, AI transparency, quantitative analysis, machine learning"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ResearchOrganization",
+          "name": "Fengming Liu Research",
+          "description": "Research in AI applications and social science",
+          "member": {
+            "@type": "Person",
+            "name": "Fengming Liu",
+            "jobTitle": "Research Assistant"
+          },
+          "areaServed": [
+            "AI Research",
+            "Business Education",
+            "Social Science Research",
+            "Consumer Decision-Making",
+            "AI Transparency"
+          ]
+        }}
+      />
+      <Container maxWidth="lg">
+        <Box sx={{ mb: 4 }}>
+          <Typography variant="h3" component="h1" gutterBottom>
+            {t('research.title')}
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            {t('research.subtitle')}
+          </Typography>
+        </Box>
 
-      {/* Current Research Project */}
-      <Card elevation={2} sx={{ mb: 4 }}>
-        <CardContent>          <Typography variant="h4" gutterBottom color="primary" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Psychology />
-            {t('research.current_projects')}
-          </Typography>
-          
-          <Typography variant="h5" gutterBottom>
-            {currentProject.title}
-          </Typography>
-          
-          <Box sx={{ mb: 2 }}>
-            <Typography variant="body2" color="text.secondary">
-              <strong>Institution:</strong> {currentProject.institution}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              <strong>Supervisor:</strong> {currentProject.supervisor}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              <strong>Period:</strong> {currentProject.period}
-            </Typography>
-          </Box>
-            <Typography variant="body1" paragraph>
-            {currentProject.description}
-          </Typography>
-          
-          <Typography variant="h6" gutterBottom>
-            Research Activities:
-          </Typography>
-          <List>
-            {currentProject.activities.map((activity, index) => (
-              <ListItem key={index}>
-                <ListItemIcon>
-                  <Assignment color="primary" />
-                </ListItemIcon>
-                <ListItemText primary={activity} />
-              </ListItem>
-            ))}
-          </List>
-        </CardContent>
-      </Card>
+
 
       {/* Research Interests */}
       <Box sx={{ mb: 4 }}>
@@ -259,6 +238,7 @@ const Research = () => {
         </CardContent>
       </Card>
     </Container>
+    </>
   )
 }
 

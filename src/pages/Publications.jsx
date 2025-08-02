@@ -21,6 +21,7 @@ import {
   InputAdornment,
   Button
 } from '@mui/material'
+import SEO from '../components/SEO'
 import {
   Article,
   Visibility,
@@ -45,6 +46,15 @@ const Publications = () => {
   const publications = {
     published: [
       {
+        authors: "Huang, Y., Shu, M., Liu, F., Liu, B., Huang, C., & Wang, S.",
+        title: "Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets: A Global Perspective Analysis",
+        journal: "Energy",
+        year: "2025",
+        doi: "10.1016/j.energy.2025.137475",
+        correspondingAuthor: "Baoliu Liu",
+        status: "Published"
+      },
+      {
         authors: "Shu, M., Wang, C., Liu, F. et al.",
         title: "The Risk Transmission Mechanism of Global Stock Markets from the Perspective of Entropy-Riemann Geometry: Theoretical Construction and Empirical Analysis",
         journal: "Computational Economics",
@@ -56,16 +66,30 @@ const Publications = () => {
     ],
     preprint: [
       {
-        authors: "Liu, F. and Yu, S.",
+        authors: "Liu, F., & Yu, S.",
         title: "Step Further Towards Automated Social Science: An AI-Powered Interview Platform",
         date: "December 01, 2024",
         ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5120349",
-        underReview: "Computers in Human Behavior",
+        underReview: "Targeting at CHI 2026. Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025. Presented at: AMA Summer Academic Conference 2025 (Poster), Biz AI Conference: AI Applications in Business Research (Poster), Wharton's \"Business and Gen AI\" Conference (Oral Presentation), HumanTech Summit 2025 Conference (Accepted). *Presented by corresponding author.",
         correspondingAuthor: "Shubin Yu",
         status: "Under Review"
       }
     ],
     workingPapers: [
+      {
+        authors: "Liu, F.",
+        title: "The Poison in the Cup: Disclosure of Identity as an AI as a Double-Edged Sword in Consumer Decision-Making",
+        targetJournal: "Working Paper",
+        correspondingAuthor: "Fengming Liu",
+        status: "Working Paper"
+      },
+      {
+        authors: "Shu, M., Liu, F., & Wang, S.",
+        title: "Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification",
+        targetJournal: "R&R at Cliometrica. Accepted by The Eleventh Annual Symposium on Quantitative History.",
+        correspondingAuthor: "Mingyu Shu",
+        status: "Working Paper"
+      },
       {
         authors: "Yu, S., Shu, M., Liu, F., Hu, J & Joerling, M",
         title: "Consumer Research in the Age of Generative AI: Comparing AI and Human Interview Performance",
@@ -178,13 +202,48 @@ const Publications = () => {
   )
 
   return (
-    <Container maxWidth="lg">      <Box sx={{ mb: 4 }}>        <Typography variant="h3" component="h1" gutterBottom>
+    <>
+      <SEO 
+        title="Publications"
+        description="Academic publications by Fengming Liu including research on AI transparency, consumer decision-making, energy markets, and automated social science research."
+        keywords="Fengming Liu publications, AI research papers, consumer decision-making research, energy markets analysis, automated social science, academic papers"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "Academic Publications",
+          "description": "Research publications by Fengming Liu",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": publications.published.map((pub, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "ScholarlyArticle",
+                "name": pub.title,
+                "author": {
+                  "@type": "Person",
+                  "name": "Fengming Liu"
+                },
+                "publisher": {
+                  "@type": "Organization",
+                  "name": pub.journal
+                },
+                "datePublished": pub.year,
+                "url": pub.doi
+              }
+            }))
+          }
+        }}
+      />
+      <Container maxWidth="lg">
+        <Box sx={{ mb: 4 }}>
+                  <Typography variant="h3" component="h1" gutterBottom role="heading" aria-level="1">
           {t('publications.title')}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
-          {t('publications.subtitle')}
-        </Typography>
-      </Box>
+          <Typography variant="body1" color="text.secondary">
+            {t('publications.subtitle')}
+          </Typography>
+        </Box>
 
       {/* Search and Filter Controls */}
       <Card elevation={1} sx={{ mb: 4 }}>
@@ -366,6 +425,7 @@ const Publications = () => {
         </CardContent>
       </Card>
     </Container>
+    </>
   )
 }
 

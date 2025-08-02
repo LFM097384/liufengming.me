@@ -14,6 +14,7 @@ import {
   ListItemIcon,
   Paper
 } from '@mui/material'
+import SEO from '../components/SEO'
 import {
   School,
   Work,
@@ -87,7 +88,34 @@ const Home = () => {
   }
 
   return (
-    <Container maxWidth="lg">      {/* Hero Section */}
+    <>
+      <SEO 
+        title="Home"
+        description="Fengming Liu - Academic researcher specializing in AI applications in business and social science. BSc Philosophy, Politics and Economics student at University College London."
+        keywords="Fengming Liu, AI Research, Consumer Decision-Making, AI Transparency, Social Science Research, Philosophy Politics Economics, PPE, UCL, Academic Research"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Fengming Liu",
+          "jobTitle": "Research Assistant",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "BI Norwegian Business School"
+          },
+          "alumniOf": {
+            "@type": "Organization", 
+            "name": "University College London"
+          },
+          "knowsAbout": [
+            "AI Research",
+            "Consumer Decision-Making", 
+            "AI Transparency",
+            "Social Science Research"
+          ]
+        }}
+      />
+      <Container maxWidth="lg">
+        {/* Hero Section */}
       <Box sx={{ textAlign: 'center', mb: 6, py: 4 }}>        <LazyImage
           src={getStaticPath("Images/b71f54d23e1517e62a9235a7760e265.jpg")}
           alt="Fengming Liu"
@@ -101,7 +129,7 @@ const Home = () => {
           }}
         >
           FL
-        </LazyImage>        <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
+        </LazyImage>        <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 'bold' }} role="heading" aria-level="1">
           {t('hero.title')}
         </Typography>
         
@@ -118,6 +146,10 @@ const Home = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <Email color="primary" />
             <Typography variant="body2">leo.liu.23@ucl.ac.uk</Typography>
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Email color="primary" />
+            <Typography variant="body2">liu_fengming@outlook.com</Typography>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <Phone color="primary" />
@@ -308,59 +340,9 @@ const Home = () => {
             </CardContent>
           </Card>
         </Grid>
-
-        {/* Quick Navigation */}
-        <Grid item xs={12}>
-          <Card elevation={2}>
-            <CardContent>              <Typography variant="h5" gutterBottom>
-                {t('sections.quick_stats')}
-              </Typography>
-              
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={3}>
-                  <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
-                    <Typography variant="h4" gutterBottom>
-                      {publications.published.length + publications.preprint.length + publications.workingPapers.length}
-                    </Typography>                    <Typography variant="body1">
-                      {t('stats.total_publications')}
-                    </Typography>
-                  </Paper>
-                </Grid>
-                
-                <Grid item xs={12} sm={6} md={3}>
-                  <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'success.main', color: 'white' }}>
-                    <Typography variant="h4" gutterBottom>
-                      {publications.published.length}
-                    </Typography>                    <Typography variant="body1">
-                      {t('stats.published_papers')}
-                    </Typography>
-                  </Paper>
-                </Grid>
-                
-                <Grid item xs={12} sm={6} md={3}>
-                  <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'warning.main', color: 'white' }}>
-                    <Typography variant="h4" gutterBottom>
-                      1+
-                    </Typography>                    <Typography variant="body1">
-                      {t('stats.years_research')}
-                    </Typography>
-                  </Paper>
-                </Grid>
-                
-                <Grid item xs={12} sm={6} md={3}>
-                  <Paper sx={{ p: 3, textAlign: 'center', bgcolor: 'info.main', color: 'white' }}>
-                    <Typography variant="h4" gutterBottom>
-                      {skills.research.length}
-                    </Typography>                    <Typography variant="body1">
-                      {t('stats.research_areas')}
-                    </Typography>
-                  </Paper>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>        </Grid>
       </Grid>
     </Container>
+    </>
   )
 }
 

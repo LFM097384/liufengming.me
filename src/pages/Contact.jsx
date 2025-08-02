@@ -14,6 +14,7 @@ import {
   Link,
   Paper
 } from '@mui/material'
+import SEO from '../components/SEO'
 import {
   Email,
   Phone,
@@ -29,7 +30,7 @@ const Contact = () => {
   const { t } = useTranslation()
 
   const contactInfo = {
-    email: "leo.liu.23@ucl.ac.uk",
+    emails: ["leo.liu.23@ucl.ac.uk", "liu_fengming@outlook.com"],
     phone: "+44 7436241983",
     address: {
       institution: "University College London",
@@ -62,15 +63,40 @@ const Contact = () => {
   const researchCollaboration = t('contact.collaboration_areas', { returnObjects: true })
 
   return (
-    <Container maxWidth="lg">
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h3" component="h1" gutterBottom>
-          {t('contact.title')}
-        </Typography>
-        <Typography variant="body1" color="text.secondary">
-          {t('contact.subtitle')}
-        </Typography>
-      </Box>      <Grid container spacing={4}>
+    <>
+      <SEO 
+        title="Contact"
+        description="Contact information for Fengming Liu - Academic researcher at University College London. Get in touch for research collaborations and academic inquiries."
+        keywords="Fengming Liu contact, academic contact, research collaboration, UCL contact, AI research contact"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Fengming Liu",
+          "description": "Contact information for academic researcher Fengming Liu",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Fengming Liu",
+            "email": "leo.liu.23@ucl.ac.uk",
+            "telephone": "+44 7436241983",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "London",
+              "addressCountry": "GB",
+              "postalCode": "WC1E 6BT"
+            }
+          }
+        }}
+      />
+      <Container maxWidth="lg">
+        <Box sx={{ mb: 4 }}>
+          <Typography variant="h3" component="h1" gutterBottom>
+            {t('contact.title')}
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            {t('contact.subtitle')}
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
         {/* Primary Contact Information */}
         <Grid item xs={12} md={6}>
           <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
@@ -80,18 +106,20 @@ const Contact = () => {
               </Typography>
               
               <List>
-                <ListItem>
-                  <ListItemIcon>
-                    <Email color="primary" />
-                  </ListItemIcon>                  <ListItemText 
-                    primary={t('common.email')} 
-                    secondary={
-                      <Link href={`mailto:${contactInfo.email}`} color="inherit">
-                        {contactInfo.email}
-                      </Link>
-                    } 
-                  />
-                </ListItem>
+                {contactInfo.emails.map((email, index) => (
+                  <ListItem key={index}>
+                    <ListItemIcon>
+                      <Email color="primary" />
+                    </ListItemIcon>                  <ListItemText 
+                      primary={t('common.email')} 
+                      secondary={
+                        <Link href={`mailto:${email}`} color="inherit">
+                          {email}
+                        </Link>
+                      } 
+                    />
+                  </ListItem>
+                ))}
                 
                 <ListItem>
                   <ListItemIcon>
@@ -136,7 +164,7 @@ const Contact = () => {
                 <Button 
                   variant="contained" 
                   startIcon={<Email />}
-                  href={`mailto:${contactInfo.email}`}
+                  href={`mailto:${contactInfo.emails[0]}`}
                   size="large"
                 >
                   {t('contact.send_email')}
@@ -154,20 +182,6 @@ const Contact = () => {
               </Typography>
               
               <List>
-                <ListItem>
-                  <ListItemIcon>
-                    <AccountCircle color="primary" />
-                  </ListItemIcon>
-                  <ListItemText 
-                    primary="ORCID iD" 
-                    secondary={
-                      <Link href={`https://${contactInfo.orcid}`} target="_blank" rel="noopener noreferrer">
-                        {contactInfo.orcid}
-                      </Link>
-                    } 
-                  />
-                </ListItem>
-                
                 {socialLinks.map((link, index) => (
                   <ListItem key={index}>
                     <ListItemIcon>
@@ -271,6 +285,7 @@ const Contact = () => {
         </CardContent>
       </Card>
     </Container>
+    </>
   )
 }
 

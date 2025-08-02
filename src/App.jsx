@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Container } from '@mui/material'
+import { HelmetProvider } from 'react-helmet-async'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -16,7 +17,7 @@ const Contact = React.lazy(() => import('./pages/Contact'))
 
 function App() {
   return (
-    <>
+    <HelmetProvider>
       <Header />      <Container maxWidth="lg" sx={{ mt: 4, mb: 4, minHeight: 'calc(100vh - 200px)' }}>
         <Suspense fallback={<Loading message="Loading page..." />}>
           <Routes>
@@ -31,7 +32,7 @@ function App() {
       </Container>
       <Footer />
       <ScrollToTop />
-    </>
+    </HelmetProvider>
   )
 }
 
