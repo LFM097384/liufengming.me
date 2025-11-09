@@ -24,6 +24,12 @@
         "total_publications": "总发表数",
         "published_papers": "已发表论文",
         "years_research": "研究年数",
-        "research_areas": "研究领域"
+        "research_areas": "研究领域",
+        "values": {
+            "total": "4",
+            "published": "2",
+            "years": "2",
+            "areas": "6"
+        }
     }
 }

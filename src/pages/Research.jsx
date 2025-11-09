@@ -33,28 +33,40 @@ const Research = () => {
 
   const researchInterests = [
     {
-      area: "AI in Business Education",
+      area: "Marketing & Consumer Research",
       icon: <BusinessCenter />,
-      description: "Exploring how artificial intelligence can transform business education methodologies and improve learning outcomes in commercial disciplines.",
-      projects: ["AI-Powered Business Case Analysis", "Automated Financial Research Tools"]
+      description: "Exploring how consumers make decisions and how businesses can better understand and serve their customers through innovative research methodologies.",
+      projects: ["MimiTalk AI Interview Platform", "Consumer Behavior Analysis"]
     },
     {
-      area: "AI in Social Science Research",
-      icon: <School />,
-      description: "Developing AI applications to enhance social science research methodologies and data analysis capabilities.",
-      projects: ["AI-Powered Interview Platform", "Automated Social Science Research", "Consumer Research with AI"]
-    },
-    {
-      area: "Consumer Decision-Making and AI Transparency",
+      area: "Human-centered AI",
       icon: <Psychology />,
-      description: "Investigating the paradoxical effects of AI identity disclosure on consumer trust across different decision contexts.",
-      projects: ["AI Identity Disclosure Studies", "Consumer Trust Research", "Transparency Theory in AI"]
+      description: "Developing AI applications that enhance human capabilities and understanding, with focus on qualitative research methodologies.",
+      projects: ["Dual-Agent AI Systems", "AI-Powered Interview Platform", "Human-AI Interaction"]
     },
     {
-      area: "Digital Transformation in Academia",
-      icon: <Computer />,
-      description: "Studying the impact of digital technologies on academic institutions and research practices.",
-      projects: ["Academic Inequality Studies", "Technology Adoption in Universities"]
+      area: "Political Economy",
+      icon: <Public />,
+      description: "Studying the intersection of political systems and economic phenomena, including historical analysis of institutional development.",
+      projects: ["Historical Economic Development", "Institutional Analysis"]
+    },
+    {
+      area: "Quantitative History",
+      icon: <TrendingUp />,
+      description: "Applying quantitative methods to historical research, particularly in understanding long-term economic and social transformations.",
+      projects: ["China's Electrification History", "Long-term Development Studies"]
+    },
+    {
+      area: "Social Science Methodology",
+      icon: <School />,
+      description: "Advancing social science research methods through integration of computational tools and traditional approaches.",
+      projects: ["Qualitative Research Innovation", "Mixed Methods Development"]
+    },
+    {
+      area: "Economics & Financial Markets",
+      icon: <Science />,
+      description: "Analyzing economic systems and financial market dynamics using advanced mathematical and statistical frameworks.",
+      projects: ["Market Risk Analysis", "Energy Market Studies", "Entropy-Riemann Geometry Applications"]
     }
   ]
   const methodologies = [
@@ -62,22 +74,24 @@ const Research = () => {
     "Quantitative Analysis",
     "Qualitative Research", 
     "Mixed Methods",
-    "Data Mining",
-    "Statistical Modeling",
+    "Econometric Modeling",
+    "Statistical Analysis",
+    "Historical Data Analysis",
+    "Computational Methods",
     "Interview Platform Development",
-    "Business Research Methods"
+    "Natural Language Processing"
   ]
 
   const collaborations = [
     {
       institution: "BI Norwegian Business School",
       collaborators: ["Dr. Shubin Yu"],
-      projects: ["AI Impact on Academic Inequality"]
+      projects: ["Generative AI for Research Initiative", "MimiTalk Development"]
     },
     {
       institution: "Various International Institutions",
-      collaborators: ["Dr. Baoliu Liu", "M. Shu", "C. Wang", "S. Wang"],
-      projects: ["Economic & Financial Market Analysis", "Historical Studies"]
+      collaborators: ["Dr. Baoliu Liu", "Mingyu Shu", "Chengyu Wang", "Shoujun Wang", "Yixin Huang", "Chuang Huang"],
+      projects: ["Energy Market Analysis", "Risk Transmission Mechanisms", "China's Economic History", "Financial Market Studies"]
     }
   ]
 

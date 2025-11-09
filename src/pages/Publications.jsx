@@ -67,34 +67,21 @@ const Publications = () => {
     preprint: [
       {
         authors: "Liu, F., & Yu, S.",
-        title: "Step Further Towards Automated Social Science: An AI-Powered Interview Platform",
-        date: "December 01, 2024",
-        ssrn: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5120349",
-        underReview: "Targeting at CHI 2026. Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025. Presented at: AMA Summer Academic Conference 2025 (Poster), Biz AI Conference: AI Applications in Business Research (Poster), Wharton's \"Business and Gen AI\" Conference (Oral Presentation), HumanTech Summit 2025 Conference (Accepted). *Presented by corresponding author.",
+        title: "MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI",
+        date: "November 2025",
+        doi: "10.48550/arXiv.2511.03731",
+        ssrn: "https://dx.doi.org/10.2139/ssrn.5120349",
+        underReview: "Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025. Presented at: AMA Summer Academic Conference 2025 (Poster), Biz AI Conference: AI Applications in Business Research (Poster), Wharton's \"Business and Gen AI\" Conference (Oral Presentation), HumanTech Summit 2025 Conference (Accepted). *Presented by corresponding author.",
         correspondingAuthor: "Shubin Yu",
-        status: "Under Review"
+        status: "Preprint"
       }
     ],
     workingPapers: [
       {
-        authors: "Liu, F.",
-        title: "The Poison in the Cup: Disclosure of Identity as an AI as a Double-Edged Sword in Consumer Decision-Making",
-        targetJournal: "Working Paper",
-        correspondingAuthor: "Fengming Liu",
-        status: "Working Paper"
-      },
-      {
         authors: "Shu, M., Liu, F., & Wang, S.",
         title: "Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification",
         targetJournal: "R&R at Cliometrica. Accepted by The Eleventh Annual Symposium on Quantitative History.",
-        correspondingAuthor: "Fengming Liu",
-        status: "Working Paper"
-      },
-      {
-        authors: "Yu, S., Shu, M., Liu, F., Hu, J & Joerling, M",
-        title: "Consumer Research in the Age of Generative AI: Comparing AI and Human Interview Performance",
-        targetJournal: "Targeting at Journal of Consumer Research",
-        correspondingAuthor: "Shubin Yu",
+        correspondingAuthor: "Mingyu Shu",
         status: "Working Paper"
       }
     ]
@@ -129,6 +116,7 @@ const Publications = () => {
   const getStatusColor = (status) => {
     switch (status) {
       case 'Published': return 'success'
+      case 'Preprint': return 'secondary'
       case 'Under Review': return 'warning'
       case 'Working Paper': return 'info'
       default: return 'default'
@@ -143,6 +131,7 @@ const Publications = () => {
             label={publication.status} 
             color={getStatusColor(publication.status)}
             icon={publication.status === 'Published' ? <Article /> : 
+                  publication.status === 'Preprint' ? <Article /> :
                   publication.status === 'Under Review' ? <Visibility /> : <Edit />}
           />
           {publication.year && (
@@ -165,7 +154,7 @@ const Publications = () => {
         )}
           {publication.underReview && (
           <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-            Under review at <em>{publication.underReview}</em>
+            <em>{publication.underReview}</em>
           </Typography>
         )}
         

@@ -53,11 +53,11 @@ const Home = () => {
       position: "Research Assistant",
       institution: "BI Norwegian Business School",
       supervisor: "Dr. Shubin Yu",
-      project: "Impact of AI on Academic Inequality",
+      project: "Generative AI for Research Initiative",
       responsibilities: [
         "Conducted interviews",
         "Designed questionnaires",
-        "Built an online interview platform",
+        "Co-developed mimitalk.app (an AI-powered interview platform)",
         "Drafted papers"
       ]
     }
@@ -66,23 +66,26 @@ const Home = () => {
   const skills = {
     languages: ["Mandarin (Native)", "English (Fluent)", "French (Basic)"],
     programming: ["C", "Javascript", "Python", "R", "LaTeX","SQL"],
-    research: ["AI Application", "Political Economy", "Social Science", "Quantitative History"]
+    research: ["Marketing", "Social Science", "Political Economy", "Economics", "Quantitative History", "Human-centered AI"]
   }
   // Publications data for statistics
   const publications = {
     published: [
+      {
+        title: "Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets: A Global Perspective Analysis"
+      },
       {
         title: "The Risk Transmission Mechanism of Global Stock Markets from the Perspective of Entropy-Riemann Geometry: Theoretical Construction and Empirical Analysis"
       }
     ],
     preprint: [
       {
-        title: "Step Further Towards Automated Social Science: An AI-Powered Interview Platform"
+        title: "MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI"
       }
     ],
     workingPapers: [
       {
-        title: "Consumer Research in the Age of Generative AI: Comparing AI and Human Interview Performance"
+        title: "Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification"
       }
     ]
   }

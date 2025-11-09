@@ -7,7 +7,7 @@
   "document": {
     "title": "CV Document",
     "description": "Download or preview my complete academic CV including education, research experience, publications, presentations, and skills.",
-    "last_updated": "Last updated: March 2024"
+    "last_updated": "Last updated: November 2025"
   },
   "highlights": {
     "title": "CV Highlights",
@@ -17,11 +17,11 @@
     },
     "experience": {
       "title": "Experience", 
-      "content": "• Research Assistant at BI Norwegian Business School\n• AI and Academic Inequality Research"
+      "content": "• Research Assistant at BI Norwegian Business School\n• Generative AI for Research Initiative"
     },
     "publications": {
       "title": "Publications & Research",
-      "content": "• 1 Published paper in risk transmission mechanisms\n• 1 Preprint on AI-powered interview platforms\n• 1 Working paper covering AI and consumer research\n• Research focus: AI applications, political economy, quantitative history"
+      "content": "• 2 Published papers (Energy Markets, Risk Transmission Mechanisms)\n• 1 Preprint on MimiTalk: AI-powered interview platform\n• 1 Working paper on China's Electrification History\n• Research focus: Marketing, Social Science, Political Economy, Quantitative History, Human-centered AI"
     }
   },
   "preview": {
