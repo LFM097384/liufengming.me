@@ -1,0 +1,156 @@
+\documentclass[12pt,]{scrartcl}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath}
+}{}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}
+\usepackage[margin=1 in]{geometry}  % 将边距从1in改为0.8in
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+\usepackage{multirow}
+\usepackage{xcolor}
+\definecolor{cvlinkcolor}{RGB}{6,125,233}
+\definecolor{greytext}{gray}{0.5}  % 添加这行，定义灰色
+\hypersetup{colorlinks,linkcolor=cvlinkcolor,citecolor=cvlinkcolor,urlcolor=cvlinkcolor}
+\usepackage[english]{babel}  % 添加这行用于日期格式化
+\usepackage{datetime2}       % 添加这行用于日期显示
+
+\date{}
+
+\begin{document}
+
+\begin{table}[h]
+{\def\arraystretch{1.2}\tabcolsep=0pt
+\begin{tabular}{p{0.5\linewidth}p{0.05\linewidth}p{0.4\linewidth}}  % 修改个人信息表格的列宽
+  \multirow{1}{*}{\LARGE \textbf{Fengming Liu}} &  &  \\
+  & & \\  Department of Political Science & \multicolumn{1}{r}{Phone:\;\;} & \multicolumn{1}{l}{$+$44 7436241983} \\
+  University College London &\multicolumn{1}{r}{Email:\;\;} & \multicolumn{1}{l}{\href{leo.liu.23@ucl.ac.uk}{leo.liu.23@ucl.ac.uk}} \\
+  Gower Street & \multicolumn{1}{r}{ORCID iD:\;\;} & \multicolumn{1}{l}{\href{https://orcid.org/0009-0009-3881-496X}{0009-0009-3881-496X}} \\
+  London, WC1E 6BT & \multicolumn{1}{r}{Website:\;\;} & \multicolumn{1}{l}{\href{https://lfm097384.github.io/liufengming.me/}{lfm097384.github.io/liufengming.me}} \\
+  & &  \\
+\end{tabular}%
+}
+\end{table}
+
+\subsection{Education}\label{education}
+
+\begin{table}[h]
+{\def\arraystretch{1.5}\tabcolsep=0pt
+\begin{tabular}{p{0.2\linewidth}p{0.75\linewidth}}
+  2020 -- 2023 & High School Diploma\\
+  & Experimental High School Attached to Beijing Normal University \\
+  2023 -- Present & BSc Philosophy, Politics and Economics \\
+  & University College London \\
+  & Department of Political Science\\
+\end{tabular}%
+}
+\end{table}
+
+
+
+\subsection{Research Experience}\label{research-experience}
+
+\begin{table}[h]
+{\def\arraystretch{1.5}\tabcolsep=0pt
+\begin{tabular}{p{0.2\linewidth}p{0.75\linewidth}}  % 修改研究经历表格的列宽  
+  2024 -- Present & Research Assistant \\
+  & BI Norwegian Business School \\
+  & Supervisor: Dr. Shubin Yu \\
+  & Project: Generative AI for Research Initiative (\href{https://www.gaiforresearch.com/about}{Project Website}) \\
+  & \parbox[t]{\linewidth}{Responsibilities: Conducted interviews, designed questionnaires, co-developed \href{https://mimitalk.app}{\emph{mimitalk.app}} (an AI-powered interview platform), drafted papers}
+\end{tabular}%
+}
+\end{table}
+
+
+\subsection{Publications}\label{publications}
+
+\subsubsection{Published}\label{published}
+
+\begin{enumerate}
+  \leftskip-0.1in
+  
+  \item Huang, Y., Shu, M., \textbf{Liu, F.}, Liu, B., Huang, C., \& Wang, S. Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets: A Global Perspective Analysis. Energy (2025): 137475.\\
+  \href{https://doi.org/10.1016/j.energy.2025.137475}{doi: 10.1016/j.energy.2025.137475}\\
+  \textit{Corresponding Author: Baoliu Liu}
+  
+  \item Shu, M., Wang, C., \textbf{Liu, F}. et al. The Risk Transmission Mechanism of Global Stock Markets from the Perspective of Entropy-Riemann Geometry: Theoretical Construction and Empirical Analysis. Comput Econ (2025).\\ 
+  \href{https://doi.org/10.1007/s10614-025-10913-4}{doi: 10.1007/s10614-025-10913-4} \\
+  \textit{Corresponding Author: Fengming Liu}
+  
+\end{enumerate}
+
+\subsubsection{Preprint}\label{preprint}
+
+\begin{enumerate}
+  \leftskip-0.1in
+    
+    \item \textbf{Liu, F.}, \& Yu, S. MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI. arXiv (2025). \href{https://doi.org/10.48550/arXiv.2511.03731}{doi: 10.48550/arXiv.2511.03731} (Earlier version available at SSRN: \href{https://dx.doi.org/10.2139/ssrn.5120349}{10.2139/ssrn.5120349})\\
+    Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research \& Applications eJournal), April 2025.\\
+    Presented at: AMA Summer Academic Conference 2025 (Poster), Biz AI Conference: AI Applications in Business Research (Poster), Wharton's "Business and Gen AI" Conference (Oral Presentation), HumanTech Summit 2025 Conference (Accepted). \textit{*Presented by corresponding author.}\\
+    \textit{Corresponding Author: Shubin Yu}
+  
+\end{enumerate}
+
+
+\subsubsection{Working Papers}\label{working papers}
+
+\begin{enumerate}
+    \leftskip-0.1in
+    \item Shu, M., \textbf{Liu, F.}, \& Wang, S. Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification. \\
+    R\&R at \emph{Cliometrica}. Accepted by \emph{The Eleventh Annual Symposium on Quantitative History}.\\
+    \textit{Corresponding Author: Mingyu Shu}
+\end{enumerate}
+
+\subsection{Language and Skills}
+Mandarin (Native), English (Fluent), French (Basic), C, Javascript, Python, R, SQL, \LaTeX
+
+\subsection{Research Interests}
+Marketing, Social Science, Political Economy, Economics, Quantitative History, Human-centered AI
+
+\vspace{1em}
+{\small\raggedleft\textcolor{greytext}{Last Updated: \today}\par}
+
+
+
+\end{document}
