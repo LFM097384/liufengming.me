@@ -3,15 +3,8 @@
     "title": "Fengming Liu",
     "subtitle": "BSc Philosophy, Politics and Economics",
     "institution": "University College London · Department of Political Science",
-    "research_summary": "My research focuses on AI-augmented qualitative research methods, computational text analysis, political economy of technology, and consumer behavior in digitally mediated markets.",
-    "mimitalk_desc": "An innovative dual-agent AI platform for conducting qualitative research interviews. Co-developed as part of the Generative AI for Research Initiative."
-  },
-  "sections": {
-    "education": "Education",
-    "experience": "Research Experience",
-    "skills": "Languages & Skills",
-    "languages": "Languages",
-    "programming": "Programming & Tools",
-    "research_interests": "Research Interests"
+    "bio": "I am a final-year PPE student at University College London. My research focuses on AI-augmented qualitative research methods, computational text analysis, political economy of technology, and consumer behavior in digitally mediated markets. I currently work as a research assistant at UCL, BI Norwegian Business School & HEC Paris, and Anhui University.",
+    "mimitalk_desc": "An innovative dual-agent AI platform for conducting qualitative research interviews. Co-developed as part of the Generative AI for Research Initiative.",
+    "selected_pubs": "Selected Publications"
   }
 }
