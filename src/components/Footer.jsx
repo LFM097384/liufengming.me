@@ -5,101 +5,64 @@ import {
   Typography,
   Link,
   Divider,
-  IconButton
 } from '@mui/material'
-import {
-  Email,
-  School,
-  Article
-} from '@mui/icons-material'
 
 const Footer = () => {
   return (
     <Box 
       component="footer" 
       sx={{ 
-        bgcolor: 'grey.100', 
         py: 4, 
-        mt: 8,
-        borderTop: 1,
-        borderColor: 'grey.300'
+        mt: 10,
+        borderTop: '2px solid #2c2c2c',
       }}
     >
-      <Container maxWidth="lg">
-        <Box sx={{ textAlign: 'center', mb: 3 }}>
-          <Typography variant="h6" gutterBottom>
-            Fengming Liu
-          </Typography>
-          <Typography variant="body2" color="text.secondary" gutterBottom>
-            BSc Philosophy, Politics and Economics | University College London
-          </Typography>
-          
-          <Box sx={{ my: 2 }}>
-            <IconButton 
-              color="primary" 
-              href="mailto:leo.liu.23@ucl.ac.uk"
-              aria-label="Email"
-            >
-              <Email />
-            </IconButton>
-            <IconButton 
-              color="primary" 
-              href="https://orcid.org/0009-0009-3881-496X"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="ORCID"
-            >
-              <School />
-            </IconButton>
-            <IconButton 
-              color="primary" 
-              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5120349"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="SSRN"
-            >
-              <Article />
-            </IconButton>
-          </Box>
-        </Box>
-        
-        <Divider sx={{ my: 2 }} />
-        
+      <Container maxWidth="md">
         <Box sx={{ 
           display: 'flex', 
           justifyContent: 'space-between', 
-          alignItems: 'center',
+          alignItems: 'flex-start',
           flexWrap: 'wrap',
-          gap: 2
+          gap: 3,
+          mb: 3 
         }}>
-          <Typography variant="body2" color="text.secondary">
-            © {new Date().getFullYear()} Fengming Liu. All rights reserved.
-          </Typography>
-          
-          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-            <Link 
-              href="https://orcid.org/0009-0009-3881-496X" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              variant="body2"
-              color="text.secondary"
+          <Box>
+            <Typography 
+              variant="h6" 
+              sx={{ fontFamily: '"EB Garamond", serif', fontWeight: 700, mb: 0.5 }}
             >
-              ORCID
-            </Link>
-            <Link 
-              href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5120349" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              variant="body2"
-              color="text.secondary"
-            >
-              SSRN
-            </Link>
-            <Typography variant="body2" color="text.secondary">
-              Last updated: {new Date().toLocaleDateString()}
+              Fengming Liu
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem' }}>
+              Department of Political Science
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem' }}>
+              University College London
+            </Typography>
+          </Box>
+          <Box sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
+            <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem' }}>
+              <Link href="mailto:liu_fengming@outlook.com" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+                liu_fengming@outlook.com
+              </Link>
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem', mt: 0.5 }}>
+              <Link href="https://orcid.org/0009-0009-3881-496X" target="_blank" rel="noopener noreferrer" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+                ORCID
+              </Link>
+              {' · '}
+              <Link href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6120349" target="_blank" rel="noopener noreferrer" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+                SSRN
+              </Link>
             </Typography>
           </Box>
         </Box>
+        
+        <Divider sx={{ borderColor: '#ddd', mb: 2 }} />
+        
+        <Typography variant="body2" sx={{ color: '#999', fontSize: '0.75rem', textAlign: 'center' }}>
+          © {new Date().getFullYear()} Fengming Liu. All rights reserved.
+        </Typography>
       </Container>
     </Box>
   )

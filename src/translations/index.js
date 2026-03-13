@@ -3,7 +3,6 @@ import commonEn from './en/common.json'
 import homeEn from './en/home.json'
 import contactEn from './en/contact.json'
 import researchEn from './en/research.json'
-import blogEn from './en/blog.json'
 import cvEn from './en/cv.json'
 import publicationsEn from './en/publications.json'
 
@@ -11,7 +10,6 @@ import commonZh from './zh/common.json'
 import homeZh from './zh/home.json'
 import contactZh from './zh/contact.json'
 import researchZh from './zh/research.json'
-import blogZh from './zh/blog.json'
 import cvZh from './zh/cv.json'
 import publicationsZh from './zh/publications.json'
 
@@ -24,7 +22,6 @@ export const resources = {
       hero: homeEn,
       contact: contactEn,
       research: researchEn,
-      blog: blogEn,
       cv: cvEn,
       publications: publicationsEn
     }
@@ -36,7 +33,6 @@ export const resources = {
       hero: homeZh,
       contact: contactZh,
       research: researchZh,
-      blog: blogZh,
       cv: cvZh,
       publications: publicationsZh
     }

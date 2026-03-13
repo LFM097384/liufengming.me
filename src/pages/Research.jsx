@@ -1,257 +1,239 @@
 import React from 'react'
 import {
-  Container,
   Typography,
   Box,
-  Card,
-  CardContent,
   Grid,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
   Chip,
-  Paper
+  Divider,
+  Link,
 } from '@mui/material'
 import SEO from '../components/SEO'
-import {
-  Psychology,
-  Computer,
-  Group,
-  TrendingUp,
-  Science,
-  Public,
-  BusinessCenter,
-  School
-} from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
+
+/* ── Section title ── */
+const SectionTitle = ({ number, title }) => (
+  <Typography
+    variant="h5"
+    sx={{
+      fontFamily: '"EB Garamond", serif',
+      fontWeight: 700,
+      fontSize: '1.15rem',
+      mb: 2.5,
+      pb: 1,
+      borderBottom: '1px solid #ddd',
+    }}
+  >
+    <Box
+      component="span"
+      sx={{
+        fontFamily: '"IBM Plex Sans", sans-serif',
+        fontSize: '0.78rem',
+        fontWeight: 600,
+        color: '#b0413e',
+        mr: 1.5,
+      }}
+    >
+      {number}
+    </Box>
+    {title}
+  </Typography>
+)
 
 const Research = () => {
   const { t } = useTranslation()
 
-
-
-  const researchInterests = [
+  const researchAreas = [
     {
-      area: "Marketing & Consumer Research",
-      icon: <BusinessCenter />,
-      description: "Exploring how consumers make decisions and how businesses can better understand and serve their customers through innovative research methodologies.",
-      projects: ["MimiTalk AI Interview Platform", "Consumer Behavior Analysis"]
+      area: 'AI-Augmented Qualitative Research',
+      description:
+        'Developing AI tools that enhance qualitative data collection and analysis, including dual-agent interview systems and automated coding frameworks.',
+      projects: ['MimiTalk Platform', 'Dual-Agent AI Systems'],
     },
     {
-      area: "Human-centered AI",
-      icon: <Psychology />,
-      description: "Developing AI applications that enhance human capabilities and understanding, with focus on qualitative research methodologies.",
-      projects: ["Dual-Agent AI Systems", "AI-Powered Interview Platform", "Human-AI Interaction"]
+      area: 'Computational Text Analysis',
+      description:
+        'Applying NLP and computational methods to analyze political discourse, media narratives, and large-scale text corpora in social science contexts.',
+      projects: ['Political Discourse on Social Media', 'Text Mining Methods'],
     },
     {
-      area: "Political Economy",
-      icon: <Public />,
-      description: "Studying the intersection of political systems and economic phenomena, including historical analysis of institutional development.",
-      projects: ["Historical Economic Development", "Institutional Analysis"]
+      area: 'Political Economy of Technology',
+      description:
+        'Examining how technological change shapes political institutions, economic structures, and power relations in contemporary societies.',
+      projects: ['Historical Economic Development', 'Institutional Analysis'],
     },
     {
-      area: "Quantitative History",
-      icon: <TrendingUp />,
-      description: "Applying quantitative methods to historical research, particularly in understanding long-term economic and social transformations.",
-      projects: ["China's Electrification History", "Long-term Development Studies"]
+      area: 'Consumer Behavior in Digital Markets',
+      description:
+        'Investigating how digital platforms and AI mediation influence consumer decision-making processes and market dynamics.',
+      projects: ['AI-Mediated Consumer Choice', 'Digital Market Dynamics'],
     },
     {
-      area: "Social Science Methodology",
-      icon: <School />,
-      description: "Advancing social science research methods through integration of computational tools and traditional approaches.",
-      projects: ["Qualitative Research Innovation", "Mixed Methods Development"]
+      area: 'Quantitative History',
+      description:
+        'Applying quantitative methods to historical research, particularly in understanding long-term economic and social transformations.',
+      projects: ["China's Electrification History", 'Long-term Development Studies'],
     },
     {
-      area: "Economics & Financial Markets",
-      icon: <Science />,
-      description: "Analyzing economic systems and financial market dynamics using advanced mathematical and statistical frameworks.",
-      projects: ["Market Risk Analysis", "Energy Market Studies", "Entropy-Riemann Geometry Applications"]
-    }
+      area: 'Financial Markets & Risk Analysis',
+      description:
+        'Analyzing economic systems and financial market dynamics using advanced mathematical and statistical frameworks.',
+      projects: ['Market Risk Transmission', 'Energy Market Studies'],
+    },
   ]
+
   const methodologies = [
-    "AI & Machine Learning",
-    "Quantitative Analysis",
-    "Qualitative Research", 
-    "Mixed Methods",
-    "Econometric Modeling",
-    "Statistical Analysis",
-    "Historical Data Analysis",
-    "Computational Methods",
-    "Interview Platform Development",
-    "Natural Language Processing"
+    'Natural Language Processing',
+    'Machine Learning',
+    'Quantitative Analysis',
+    'Qualitative Interviews',
+    'Mixed Methods',
+    'Econometric Modeling',
+    'Computational Text Analysis',
+    'Historical Data Analysis',
   ]
 
   const collaborations = [
     {
-      institution: "BI Norwegian Business School",
-      collaborators: ["Dr. Shubin Yu"],
-      projects: ["Generative AI for Research Initiative", "MimiTalk Development"]
+      institution: 'University College London',
+      person: 'Dr. Handi Li',
+      focus: 'Political Discourse Analysis',
     },
     {
-      institution: "Various International Institutions",
-      collaborators: ["Dr. Baoliu Liu", "Mingyu Shu", "Chengyu Wang", "Shoujun Wang", "Yixin Huang", "Chuang Huang"],
-      projects: ["Energy Market Analysis", "Risk Transmission Mechanisms", "China's Economic History", "Financial Market Studies"]
-    }
+      institution: 'BI Norwegian Business School & HEC Paris',
+      person: 'Dr. Shubin Yu',
+      focus: 'Generative AI for Research',
+    },
+    {
+      institution: 'Anhui University',
+      person: 'Dr. Shun Wang',
+      focus: 'Economic History & Data Analysis',
+    },
   ]
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Research"
-        description="Research interests and methodologies of Fengming Liu including AI applications in business education, social science research, consumer decision-making, and AI transparency studies."
-        keywords="Fengming Liu research, AI applications, business education, social science research, consumer decision-making, AI transparency, quantitative analysis, machine learning"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "ResearchOrganization",
-          "name": "Fengming Liu Research",
-          "description": "Research in AI applications and social science",
-          "member": {
-            "@type": "Person",
-            "name": "Fengming Liu",
-            "jobTitle": "Research Assistant"
-          },
-          "areaServed": [
-            "AI Research",
-            "Business Education",
-            "Social Science Research",
-            "Consumer Decision-Making",
-            "AI Transparency"
-          ]
-        }}
+        description="Research interests and methodologies of Fengming Liu including AI-augmented qualitative methods, computational text analysis, and political economy of technology."
+        keywords="Fengming Liu research, AI qualitative methods, computational text analysis, political economy, consumer behavior"
       />
-      <Container maxWidth="lg">
-        <Box sx={{ mb: 4 }}>
-          <Typography variant="h3" component="h1" gutterBottom>
-            {t('research.title')}
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            {t('research.subtitle')}
-          </Typography>
-        </Box>
 
-
-
-      {/* Research Interests */}
-      <Box sx={{ mb: 4 }}>
-        <Typography variant="h4" gutterBottom color="primary" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Science />
-          Research Interests
+      {/* Header */}
+      <Box sx={{ mb: 5 }}>
+        <Typography variant="h3" component="h1" sx={{ mb: 1 }}>
+          {t('research.title')}
         </Typography>
-          <Grid container spacing={3}>
-          {researchInterests.map((interest, index) => (
-            <Grid item xs={12} md={6} lg={4} key={index}>
-              <Card elevation={1} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    {interest.icon}
-                    {interest.area}
-                  </Typography>
-                  
-                  <Typography variant="body2" paragraph>
-                    {interest.description}
-                  </Typography>
-                  
-                  <Typography variant="subtitle2" gutterBottom>
-                    Related Projects:
-                  </Typography>
-                  {interest.projects.map((project, idx) => (
-                    <Chip key={idx} label={project} size="small" sx={{ m: 0.5 }} variant="outlined" />
+        <Typography variant="body1" sx={{ color: '#666' }}>
+          {t('research.subtitle')}
+        </Typography>
+      </Box>
+
+      {/* Research Overview */}
+      <Box
+        sx={{
+          mb: 6,
+          p: 3,
+          bgcolor: '#f0edea',
+          border: '1.5px solid #c4b8a8',
+          borderRadius: 1,
+        }}
+      >
+        <Typography
+          variant="h5"
+          sx={{
+            fontFamily: '"EB Garamond", serif',
+            color: '#b0413e',
+            mb: 1.5,
+            pb: 1,
+            borderBottom: '1px solid #c4b8a8',
+          }}
+        >
+          Research Focus
+        </Typography>
+        <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
+          My research centers on AI-augmented qualitative research methods, computational text
+          analysis, political economy of technology, and consumer behavior in digitally mediated
+          markets. Through interdisciplinary approaches that bridge computational tools and social
+          science theory, I aim to develop practical solutions that advance empirical research while
+          maintaining methodological rigor.
+        </Typography>
+      </Box>
+
+      {/* Research Areas */}
+      <Box sx={{ mb: 6 }}>
+        <SectionTitle number="01" title={t('research.research_interests')} />
+        <Grid container spacing={4}>
+          {researchAreas.map((area, i) => (
+            <Grid item xs={12} md={6} key={i}>
+              <Box sx={{ mb: 2 }}>
+                <Typography
+                  variant="subtitle1"
+                  sx={{
+                    fontFamily: '"EB Garamond", serif',
+                    fontWeight: 600,
+                    fontSize: '1.05rem',
+                    mb: 0.8,
+                  }}
+                >
+                  {area.area}
+                </Typography>
+                <Typography variant="body2" sx={{ color: '#3a3a3a', mb: 1, lineHeight: 1.6 }}>
+                  {area.description}
+                </Typography>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                  {area.projects.map((proj, j) => (
+                    <Chip
+                      key={j}
+                      label={proj}
+                      size="small"
+                      variant="outlined"
+                      sx={{ borderColor: '#c4b8a8', fontSize: '0.75rem', height: 24 }}
+                    />
                   ))}
-                </CardContent>
-              </Card>
+                </Box>
+              </Box>
             </Grid>
           ))}
         </Grid>
-      </Box>      <Grid container spacing={4}>
-        {/* Research Methodologies */}
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <Computer color="primary" />
-                Research Methodologies
-              </Typography>
-              
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                {methodologies.map((method, index) => (
-                  <Chip key={index} label={method} color="primary" variant="outlined" />
-                ))}
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>
+      </Box>
 
-        {/* Collaborations */}
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <Public color="primary" />
-                Research Collaborations
-              </Typography>
-              
-              {collaborations.map((collab, index) => (
-                <Paper key={index} sx={{ p: 2, mb: 2, bgcolor: 'background.default' }}>
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    {collab.institution}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Collaborators: {collab.collaborators.join(', ')}
-                  </Typography>
-                  <Typography variant="body2">
-                    Projects: {collab.projects.join(', ')}
-                  </Typography>
-                </Paper>
-              ))}
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>{/* Research Impact */}
-      <Card elevation={2} sx={{ mt: 4 }}>
-        <CardContent>
-          <Typography variant="h5" gutterBottom>
-            Research Focus & Future Directions
-          </Typography>
-          
-          <Typography variant="body1" paragraph>
-            My research centers on the transformative applications of artificial intelligence in business and social science contexts. 
-            I focus on developing AI-powered tools and methodologies that can enhance research capabilities, improve educational outcomes, 
-            and address inequality in academic access and opportunity.
-          </Typography>
-          
-          <Typography variant="body1" paragraph>
-            Through interdisciplinary approaches that bridge technology and social sciences, I aim to create practical solutions 
-            that benefit both academic institutions and the broader business community. My work emphasizes the ethical implementation 
-            of AI technologies in educational and research environments.
-          </Typography>
-          
-          <Box sx={{ mt: 3 }}>
-            <Typography variant="h6" gutterBottom>
-              Key Research Objectives:
+      {/* Methodologies */}
+      <Box sx={{ mb: 6 }}>
+        <SectionTitle number="02" title={t('research.methodologies')} />
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+          {methodologies.map((method, i) => (
+            <Chip
+              key={i}
+              label={method}
+              variant="outlined"
+              sx={{
+                borderColor: '#c4b8a8',
+                color: '#3a3a3a',
+                fontWeight: 500,
+                '&:hover': { borderColor: '#b0413e', color: '#b0413e' },
+              }}
+            />
+          ))}
+        </Box>
+      </Box>
+
+      {/* Collaborations */}
+      <Box sx={{ mb: 4 }}>
+        <SectionTitle number="03" title={t('research.collaborations')} />
+        {collaborations.map((collab, i) => (
+          <Box key={i} sx={{ mb: 2.5 }}>
+            <Typography
+              variant="subtitle1"
+              sx={{ fontFamily: '"EB Garamond", serif', fontWeight: 600, lineHeight: 1.3 }}
+            >
+              {collab.institution}
             </Typography>
-            <List>
-              <ListItem>
-                <ListItemIcon><BusinessCenter color="primary" /></ListItemIcon>
-                <ListItemText primary="Advance AI applications in business education and research" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon><School color="primary" /></ListItemIcon>
-                <ListItemText primary="Enhance social science research methodologies through technology" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon><Group color="primary" /></ListItemIcon>
-                <ListItemText primary="Promote academic equality and accessibility through digital innovation" />
-              </ListItem>
-              <ListItem>
-                <ListItemIcon><Computer color="primary" /></ListItemIcon>
-                <ListItemText primary="Develop ethical AI frameworks for academic applications" />
-              </ListItem>
-            </List>
+            <Typography variant="body2" sx={{ color: '#888' }}>
+              {collab.person} — {collab.focus}
+            </Typography>
           </Box>
-        </CardContent>
-      </Card>
-    </Container>
+        ))}
+      </Box>
     </>
   )
 }

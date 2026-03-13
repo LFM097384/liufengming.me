@@ -45,18 +45,18 @@ const LanguageSwitcher = ({ variant = 'select' }) => {
         sx={{ 
           cursor: 'pointer',
           fontFamily: theme.typography.fontFamily,
-          color: 'inherit',
-          borderColor: 'currentColor',
+          color: '#2c2c2c',
+          borderColor: '#c4b8a8',
           '& .MuiChip-label': {
             fontFamily: theme.typography.fontFamily,
-            color: 'inherit'
+            color: '#2c2c2c'
           },
           '& .MuiChip-icon': {
-            color: 'inherit'
+            color: '#888'
           },
           '&:hover': {
-            backgroundColor: 'rgba(255,255,255,0.1)',
-            borderColor: 'currentColor'
+            backgroundColor: 'rgba(176,65,62,0.06)',
+            borderColor: '#b0413e'
           }
         }}
       />
@@ -64,7 +64,7 @@ const LanguageSwitcher = ({ variant = 'select' }) => {
   }
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-      <LanguageIcon sx={{ color: 'inherit' }} />
+      <LanguageIcon sx={{ color: '#888' }} />
       <FormControl size="small" variant="outlined">
         <Select
           value={i18n.language}
@@ -72,17 +72,17 @@ const LanguageSwitcher = ({ variant = 'select' }) => {
           sx={{ 
             minWidth: 100,
             fontFamily: theme.typography.fontFamily,
-            color: 'inherit',
+            color: '#2c2c2c',
             '& .MuiOutlinedInput-notchedOutline': {
-              border: 'none'
+              borderColor: '#c4b8a8'
             },
             '& .MuiSelect-select': {
               padding: '8px 12px',
               fontFamily: theme.typography.fontFamily,
-              color: 'inherit'
+              color: '#2c2c2c'
             },
             '& .MuiSelect-icon': {
-              color: 'inherit'
+              color: '#888'
             },
             '& .MuiMenuItem-root': {
               fontFamily: theme.typography.fontFamily

@@ -1,0 +1,207 @@
+% Academic CV — Wilson Style
+% Fengming Liu
+\documentclass[11pt, a4paper]{article}
+
+% ─── Fonts & Encoding ────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{ebgaramond}
+\usepackage[scaled=0.85]{beramono}
+
+% ─── Layout ──────────────────────────────────────────────────────
+\usepackage[top=0.75in, bottom=0.75in, left=1in, right=1in]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% ─── Utilities ───────────────────────────────────────────────────
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xcolor}
+\usepackage{datetime2}
+
+% ─── Hyperlinks (with URL line breaking) ─────────────────────────
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[hidelinks]{hyperref}
+\definecolor{linkblue}{RGB}{0,51,153}
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue}
+\urlstyle{same}
+% Allow URLs to break at any character
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+% ─── Section formatting ─────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\raggedright}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{6pt}{2pt}
+
+% ─── Footer ──────────────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\textcolor{gray}{Fengming Liu — Curriculum Vitae}}
+\fancyfoot[R]{\footnotesize\textcolor{gray}{\thepage\ of \pageref{LastPage}}}
+
+% ─── Custom entry command ────────────────────────────────────────
+\newlength{\datelength}
+\setlength{\datelength}{2.4cm}
+\newlength{\contentlength}
+\setlength{\contentlength}{\dimexpr\textwidth-\datelength-0.4cm\relax}
+
+\newcommand{\cventry}[2]{%
+  \noindent
+  \begin{minipage}[t]{\datelength}
+    \raggedright #1
+  \end{minipage}%
+  \hspace{0.4cm}%
+  \begin{minipage}[t]{\contentlength}
+    \raggedright #2
+  \end{minipage}%
+  \par\vspace{6pt}%
+}
+
+% ══════════════════════════════════════════════════════════════════
+\begin{document}
+
+% ─── Header ──────────────────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Fengming Liu}\par\vspace{4pt}
+  Department of Political Science, University College London\\
+  Gower Street, London WC1E 6BT, United Kingdom\par\vspace{2pt}
+  \href{mailto:liu_fengming@outlook.com}{liu\_fengming@outlook.com}
+  \enspace$\cdot$\enspace +44\,7436\,241983
+  \enspace$\cdot$\enspace ORCID: \href{https://orcid.org/0009-0009-3881-496X}{0009-0009-3881-496X}\\
+  \href{https://lfm097384.github.io/liufengming.me/}{lfm097384.github.io/liufengming.me}
+\end{center}
+
+% ─── Research Interests ──────────────────────────────────────────
+\section{Research Interests}
+AI-augmented qualitative research methods, computational text analysis, political economy of technology, and consumer behavior in digitally mediated markets.
+
+% ─── Education ───────────────────────────────────────────────────
+\section{Education}
+
+\cventry{2023 -- 2026 (expected)}{%
+  \textbf{BSc Philosophy, Politics and Economics}\\
+  University College London, Department of Political Science}
+
+\cventry{2020 -- 2023}{%
+  \textbf{High School Diploma}\\
+  Experimental High School Attached to Beijing Normal University}
+
+% ─── Research Experience ─────────────────────────────────────────
+\section{Research Experience}
+
+\cventry{2025 -- Present}{%
+  \textbf{Research Assistant}, University College London\\
+  Supervisor: Dr.\ Handi Li\\
+  Project: Quantitative Analysis of Political Discourse on Social Media}
+
+\cventry{2024 -- Present}{%
+  \textbf{Research Assistant}, BI Norwegian Business School \& HEC Paris\\
+  Supervisor: Dr.\ Shubin Yu\\
+  Project: Generative AI for Research Initiative (\href{https://www.gaiforresearch.com/about}{Project Website})\\
+  Conducted interviews, designed questionnaires, co-developed \href{https://mimitalk.app}{\textit{mimitalk.app}} (an AI-powered interview platform), drafted papers.}
+
+\cventry{2024 -- 2026}{%
+  \textbf{Research Assistant}, Anhui University\\
+  Supervisor: Dr.\ Shun Wang\\
+  Data collection and processing, literature review and synthesis.}
+
+% ─── Publications ────────────────────────────────────────────────
+\section{Publications}
+
+\subsection{Published}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=6pt]
+
+  \item Huang, Y., Shu, M., \textbf{Liu, F.}, Liu, B., Huang, C., \& Wang, S.
+  ``Nonlinear Heterogeneity Impact of El Ni\~{n}o-Southern Oscillation on Energy
+  Markets: A Global Perspective Analysis.''
+  \textit{Energy} (2025): 137475.
+  \href{https://doi.org/10.1016/j.energy.2025.137475}{doi:10.1016/j.energy.2025.137475}.\\
+  \textit{Corresponding Author: Baoliu Liu.}
+
+  \item Shu, M., Wang, C., \textbf{Liu, F.} et al.
+  ``The Risk Transmission Mechanism of Global Stock Markets from the Perspective
+  of Entropy-Riemann Geometry: Theoretical Construction and Empirical Analysis.''
+  \textit{Computational Economics} (2025).
+  \href{https://doi.org/10.1007/s10614-025-10913-4}{doi:10.1007/s10614-025-10913-4}.\\
+  \textit{Corresponding Author: Fengming Liu.}
+
+\end{enumerate}
+
+\subsection{Preprint}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=6pt]
+
+  \item \textbf{Liu, F.}, \& Yu, S.
+  ``MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI.''
+  \textit{arXiv} (2025).
+  \href{https://doi.org/10.48550/arXiv.2511.03731}{doi:10.48550/arXiv.2511.03731}.
+  Earlier version available at SSRN:
+  \href{https://dx.doi.org/10.2139/ssrn.5120349}{10.2139/ssrn.5120349}.\\
+  Designated as a Recent Top Paper by SSRN
+  (Frontiers in Information Systems Research \& Applications eJournal),
+  April 2025.\\
+  \textit{Corresponding Author: Shubin Yu.}
+
+\end{enumerate}
+
+\subsection{Working Papers}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=6pt]
+
+  \item Shu, M., \textbf{Liu, F.}, \& Wang, S.
+  ``Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening
+  Movement on China's Electrification.''
+  R\&R at \textit{Cliometrica}.\\
+  \textit{Corresponding Author: Mingyu Shu.}
+
+\end{enumerate}
+
+% ─── Conference Presentations ───────────────────────────────────
+\section{Conference Presentations}
+
+\cventry{2026}{%
+  ``MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI.''\\
+  COMPTEXT 2026 --- The 8th International Interdisciplinary Conference on Computational Text Analysis. Oral presentation (accepted).}
+
+\cventry{2025}{%
+  ``MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI.''\\
+  HumanTech Summit 2025 Conference. Oral presentation (presented by F.\ Liu).}
+
+\cventry{2025}{%
+  ``MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI.''\\
+  Wharton ``Business and Gen AI'' Conference. Oral presentation (presented by S.\ Yu).}
+
+\cventry{2025}{%
+  ``MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI.''\\
+  Biz AI Conference: AI Applications in Business Research. Poster presentation.}
+
+\cventry{2025}{%
+  ``MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI.''\\
+  AMA Summer Academic Conference 2025. Poster presentation.}
+
+\cventry{2025}{%
+  ``Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification.''\\
+  The Eleventh Annual Symposium on Quantitative History. Oral presentation (presented by M.\ Shu).}
+
+% ─── Languages & Skills ──────────────────────────────────────────
+\section{Languages and Skills}
+
+\textbf{Languages:} Mandarin (Native), English (Fluent), French (Basic)\\
+\textbf{Programming:} C, Javascript, Python, SQL, \LaTeX, AI-assisted Development
+
+\vfill
+\begin{center}
+  \footnotesize\textcolor{gray}{Last updated: \today}
+\end{center}
+
+\end{document}

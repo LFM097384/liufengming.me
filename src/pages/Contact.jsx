@@ -1,290 +1,220 @@
 import React from 'react'
 import {
-  Container,
   Typography,
   Box,
-  Card,
-  CardContent,
   Grid,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Button,
   Link,
-  Paper
+  Button,
+  Divider,
 } from '@mui/material'
 import SEO from '../components/SEO'
-import {
-  Email,
-  Phone,
-  LocationOn,
-  School,
-  AccountCircle,
-  Link as LinkIcon,
-  Message
-} from '@mui/icons-material'
+import { Email } from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
+
+/* ── Section title ── */
+const SectionTitle = ({ number, title }) => (
+  <Typography
+    variant="h5"
+    sx={{
+      fontFamily: '"EB Garamond", serif',
+      fontWeight: 700,
+      fontSize: '1.15rem',
+      mb: 2,
+      pb: 1,
+      borderBottom: '1px solid #ddd',
+    }}
+  >
+    <Box
+      component="span"
+      sx={{
+        fontFamily: '"IBM Plex Sans", sans-serif',
+        fontSize: '0.78rem',
+        fontWeight: 600,
+        color: '#b0413e',
+        mr: 1.5,
+      }}
+    >
+      {number}
+    </Box>
+    {title}
+  </Typography>
+)
 
 const Contact = () => {
   const { t } = useTranslation()
 
-  const contactInfo = {
-    emails: ["leo.liu.23@ucl.ac.uk", "liu_fengming@outlook.com"],
-    phone: "+44 7436241983",
-    address: {
-      institution: "University College London",
-      department: "Department of Political Science",
-      street: "Gower Street",
-      city: "London, WC1E 6BT",
-      country: "United Kingdom"
-    },
-    orcid: "orcid.org/0009-0009-3881-496X"
-  }
-
-  const socialLinks = [
-    {
-      platform: "ORCID",
-      url: "https://orcid.org/0009-0009-3881-496X",
-      description: "Academic profile and publication list"
-    },
-    {
-      platform: "SSRN",
-      url: "https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6120349",
-      description: "Preprints and working papers"
-    }
-  ]
-
-  const officeHours = [
-    "Tuesdays: 2:00 PM - 4:00 PM",
-    "Thursdays: 10:00 AM - 12:00 PM",
-    "By appointment"
-  ]
-  const researchCollaboration = t('contact.collaboration_areas', { returnObjects: true })
-
   return (
     <>
-      <SEO 
+      <SEO
         title="Contact"
-        description="Contact information for Fengming Liu - Academic researcher at University College London. Get in touch for research collaborations and academic inquiries."
-        keywords="Fengming Liu contact, academic contact, research collaboration, UCL contact, AI research contact"
-        structuredData={{
-          "@context": "https://schema.org",
-          "@type": "ContactPage",
-          "name": "Contact Fengming Liu",
-          "description": "Contact information for academic researcher Fengming Liu",
-          "mainEntity": {
-            "@type": "Person",
-            "name": "Fengming Liu",
-            "email": "leo.liu.23@ucl.ac.uk",
-            "telephone": "+44 7436241983",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "London",
-              "addressCountry": "GB",
-              "postalCode": "WC1E 6BT"
-            }
-          }
-        }}
+        description="Contact information for Fengming Liu – researcher at University College London."
+        keywords="Fengming Liu contact, UCL, research collaboration"
       />
-      <Container maxWidth="lg">
-        <Box sx={{ mb: 4 }}>
-          <Typography variant="h3" component="h1" gutterBottom>
-            {t('contact.title')}
-          </Typography>
-          <Typography variant="body1" color="text.secondary">
-            {t('contact.subtitle')}
-          </Typography>
-        </Box>
-        <Grid container spacing={4}>
-        {/* Primary Contact Information */}
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <AccountCircle color="primary" />
-                {t('contact.info_title')}
-              </Typography>
-              
-              <List>
-                {contactInfo.emails.map((email, index) => (
-                  <ListItem key={index}>
-                    <ListItemIcon>
-                      <Email color="primary" />
-                    </ListItemIcon>                  <ListItemText 
-                      primary={t('common.email')} 
-                      secondary={
-                        <Link href={`mailto:${email}`} color="inherit">
-                          {email}
-                        </Link>
-                      } 
-                    />
-                  </ListItem>
-                ))}
-                
-                <ListItem>
-                  <ListItemIcon>
-                    <Phone color="primary" />
-                  </ListItemIcon>                  <ListItemText 
-                    primary={t('common.phone')} 
-                    secondary={
-                      <Link href={`tel:${contactInfo.phone}`} color="inherit">
-                        {contactInfo.phone}
-                      </Link>
-                    } 
-                  />
-                </ListItem>
-                
-                <ListItem>
-                  <ListItemIcon>
-                    <School color="primary" />
-                  </ListItemIcon>                  <ListItemText 
-                    primary={t('common.institution')} 
-                    secondary={contactInfo.address.institution} 
-                  />
-                </ListItem>
-                
-                <ListItem>
-                  <ListItemIcon>
-                    <LocationOn color="primary" />
-                  </ListItemIcon>                  <ListItemText 
-                    primary={t('common.address')} 
-                    secondary={
-                      <Box>
-                        <Typography variant="body2">{contactInfo.address.department}</Typography>
-                        <Typography variant="body2">{contactInfo.address.street}</Typography>
-                        <Typography variant="body2">{contactInfo.address.city}</Typography>
-                        <Typography variant="body2">{contactInfo.address.country}</Typography>
-                      </Box>
-                    } 
-                  />
-                </ListItem>
-              </List>
-              
-              <Box sx={{ mt: 3, textAlign: 'center' }}>
-                <Button 
-                  variant="contained" 
-                  startIcon={<Email />}
-                  href={`mailto:${contactInfo.emails[0]}`}
-                  size="large"
-                >
-                  {t('contact.send_email')}
-                </Button>
-              </Box>
-            </CardContent>
-          </Card>
-        </Grid>        {/* Academic Profiles */}
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>
-              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <LinkIcon color="primary" />
-                {t('contact.academicProfiles')}
-              </Typography>
-              
-              <List>
-                {socialLinks.map((link, index) => (
-                  <ListItem key={index}>
-                    <ListItemIcon>
-                      <LinkIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText 
-                      primary={link.platform}
-                      secondary={
-                        <Box>
-                          <Link href={link.url} target="_blank" rel="noopener noreferrer">
-                            {link.platform} Profile
-                          </Link>
-                          <Typography variant="caption" display="block" color="text.secondary">
-                            {link.description}
-                          </Typography>
-                        </Box>
-                      } 
-                    />
-                  </ListItem>
-                ))}
-              </List>
-            </CardContent>
-          </Card>        </Grid>
 
-        {/* Research Collaboration */}
-        <Grid item xs={12}>
-          <Card elevation={2}>
-            <CardContent>
-              <Typography variant="h5" gutterBottom>
-                {t('contact.researchCollaboration')}
-              </Typography>
-              
-              <Typography variant="body2" color="text.secondary" paragraph>
-                {t('contact.researchCollaborationDescription')}
-              </Typography>
-              
-              <List>
-                {researchCollaboration.map((area, index) => (
-                  <ListItem key={index}>
-                    <ListItemIcon>
-                      <School color="primary" />
-                    </ListItemIcon>
-                    <ListItemText primary={area} />
-                  </ListItem>
-                ))}
-              </List>
-              
-              <Box sx={{ mt: 2 }}>
-                <Typography variant="body2">
-                  {t('contact.researchCollaborationNote')}
-                </Typography>
-              </Box>
-            </CardContent>
-          </Card>
+      {/* Header */}
+      <Box sx={{ mb: 5 }}>
+        <Typography variant="h3" component="h1" sx={{ mb: 1 }}>
+          {t('contact.title')}
+        </Typography>
+        <Typography variant="body1" sx={{ color: '#666' }}>
+          {t('contact.subtitle')}
+        </Typography>
+      </Box>
+
+      <Grid container spacing={6} sx={{ mb: 6 }}>
+        {/* Contact Info */}
+        <Grid item xs={12} md={6}>
+          <SectionTitle number="01" title={t('contact.info_title')} />
+
+          <Box sx={{ mb: 2.5 }}>
+            <Typography variant="overline" sx={{ color: '#888', display: 'block', mb: 0.3 }}>
+              Email
+            </Typography>
+            <Link href="mailto:liu_fengming@outlook.com" sx={{ fontSize: '0.95rem' }}>
+              liu_fengming@outlook.com
+            </Link>
+          </Box>
+
+          <Box sx={{ mb: 2.5 }}>
+            <Typography variant="overline" sx={{ color: '#888', display: 'block', mb: 0.3 }}>
+              Phone
+            </Typography>
+            <Typography variant="body2">+44 7436 241983</Typography>
+          </Box>
+
+          <Box sx={{ mb: 2.5 }}>
+            <Typography variant="overline" sx={{ color: '#888', display: 'block', mb: 0.3 }}>
+              Address
+            </Typography>
+            <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
+              Department of Political Science
+              <br />
+              University College London
+              <br />
+              Gower Street, London WC1E 6BT
+              <br />
+              United Kingdom
+            </Typography>
+          </Box>
+
+          <Button
+            variant="contained"
+            startIcon={<Email />}
+            href="mailto:liu_fengming@outlook.com"
+            sx={{ mt: 1, px: 3 }}
+          >
+            {t('contact.send_email')}
+          </Button>
+        </Grid>
+
+        {/* Academic Profiles */}
+        <Grid item xs={12} md={6}>
+          <SectionTitle number="02" title={t('contact.academicProfiles')} />
+
+          <Box sx={{ mb: 2.5 }}>
+            <Typography
+              variant="subtitle1"
+              sx={{ fontFamily: '"EB Garamond", serif', fontWeight: 600 }}
+            >
+              ORCID
+            </Typography>
+            <Link
+              href="https://orcid.org/0009-0009-3881-496X"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ fontSize: '0.9rem' }}
+            >
+              orcid.org/0009-0009-3881-496X →
+            </Link>
+            <Typography variant="body2" sx={{ color: '#888', mt: 0.3 }}>
+              Academic profile and publication list
+            </Typography>
+          </Box>
+
+          <Box sx={{ mb: 2.5 }}>
+            <Typography
+              variant="subtitle1"
+              sx={{ fontFamily: '"EB Garamond", serif', fontWeight: 600 }}
+            >
+              SSRN
+            </Typography>
+            <Link
+              href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6120349"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ fontSize: '0.9rem' }}
+            >
+              SSRN Author Page →
+            </Link>
+            <Typography variant="body2" sx={{ color: '#888', mt: 0.3 }}>
+              Preprints and working papers
+            </Typography>
+          </Box>
+
+          <Box sx={{ mb: 2.5 }}>
+            <Typography
+              variant="subtitle1"
+              sx={{ fontFamily: '"EB Garamond", serif', fontWeight: 600 }}
+            >
+              MimiTalk
+            </Typography>
+            <Link
+              href="https://mimitalk.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ fontSize: '0.9rem' }}
+            >
+              mimitalk.app →
+            </Link>
+            <Typography variant="body2" sx={{ color: '#888', mt: 0.3 }}>
+              AI-powered interview platform
+            </Typography>
+          </Box>
         </Grid>
       </Grid>
 
-      {/* Quick Contact Form Alternative */}
-      <Card elevation={2} sx={{ mt: 4 }}>
-        <CardContent>
-          <Typography variant="h5" gutterBottom>
-            {t('contact.quickContact')}
-          </Typography>
-          
-          <Typography variant="body1" paragraph>
-            {t('contact.quickContactDescription')}
-          </Typography>
-          
-          <List>
-            <ListItem>
-              <ListItemText 
-                primary={t('contact.subjectLine')} 
-                secondary={t('contact.subjectLineDescription')} 
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText 
-                primary={t('contact.yourAffiliation')} 
-                secondary={t('contact.yourAffiliationDescription')} 
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText 
-                primary={t('contact.purpose')} 
-                secondary={t('contact.purposeDescription')} 
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemText 
-                primary={t('contact.timeline')} 
-                secondary={t('contact.timelineDescription')} 
-              />
-            </ListItem>
-          </List>
-          
-          <Box sx={{ mt: 3, textAlign: 'center' }}>
-            <Typography variant="body2" color="text.secondary">
-              {t('contact.responseTime')}
-            </Typography>
-          </Box>
-        </CardContent>
-      </Card>
-    </Container>
+      <Divider sx={{ mb: 5 }} />
+
+      {/* Research Collaboration */}
+      <Box sx={{ mb: 6 }}>
+        <SectionTitle number="03" title={t('contact.researchCollaboration')} />
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          {t('contact.researchCollaborationDescription')}
+        </Typography>
+        <Box component="ul" sx={{ pl: 2.5, mb: 2 }}>
+          {[
+            'AI-augmented qualitative research methods',
+            'Computational text analysis for social science',
+            'Political economy and quantitative analysis',
+            'Consumer behavior in digital markets',
+          ].map((area, i) => (
+            <Box component="li" key={i} sx={{ mb: 0.8 }}>
+              <Typography variant="body2" sx={{ lineHeight: 1.6 }}>
+                {area}
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+        <Typography variant="body2" sx={{ color: '#888' }}>
+          {t('contact.researchCollaborationNote')}
+        </Typography>
+      </Box>
+
+      {/* Response time */}
+      <Box
+        sx={{
+          p: 2.5,
+          bgcolor: '#f0edea',
+          border: '1.5px solid #c4b8a8',
+          borderRadius: 1,
+          textAlign: 'center',
+          mb: 4,
+        }}
+      >
+        <Typography variant="body2" sx={{ color: '#666' }}>
+          {t('contact.responseTime')}
+        </Typography>
+      </Box>
     </>
   )
 }

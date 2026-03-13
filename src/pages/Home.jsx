@@ -1,350 +1,376 @@
 import React from 'react'
 import {
-  Container,
   Typography,
   Box,
   Grid,
-  Card,
-  CardContent,
   Chip,
-  Avatar,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemIcon,
-  Paper
+  Link,
+  Divider,
 } from '@mui/material'
 import SEO from '../components/SEO'
-import {
-  School,
-  Work,
-  Language,
-  Code,
-  Email,
-  Phone,
-  LocationOn,
-  Launch,
-  Star
-} from '@mui/icons-material'
 import { useTranslation } from 'react-i18next'
 import { getStaticPath } from '../utils/paths'
 import LazyImage from '../components/LazyImage'
 
+/* ─── Reusable section title matching poster aesthetic ─── */
+const SectionTitle = ({ number, title }) => (
+  <Typography
+    variant="h5"
+    sx={{
+      fontFamily: '"EB Garamond", serif',
+      fontWeight: 700,
+      fontSize: '1.15rem',
+      mb: 2,
+      pb: 1,
+      borderBottom: '1px solid #ddd',
+    }}
+  >
+    <Box
+      component="span"
+      sx={{
+        fontFamily: '"IBM Plex Sans", sans-serif',
+        fontSize: '0.78rem',
+        fontWeight: 600,
+        color: '#b0413e',
+        mr: 1.5,
+      }}
+    >
+      {number}
+    </Box>
+    {title}
+  </Typography>
+)
+
 const Home = () => {
   const { t } = useTranslation()
-  
+
+  const researchInterests = [
+    'AI-Augmented Qualitative Methods',
+    'Computational Text Analysis',
+    'Political Economy of Technology',
+    'Consumer Behavior in Digital Markets',
+  ]
+
   const education = [
     {
-      period: "2023 – Present",
-      degree: "BSc Philosophy, Politics and Economics",
-      institution: "University College London",
-      department: "Department of Political Science"
+      period: '2023 – 2026 (expected)',
+      degree: 'BSc Philosophy, Politics and Economics',
+      institution: 'University College London',
+      department: 'Department of Political Science',
     },
     {
-      period: "2020 – 2023",
-      degree: "High School Diploma",
-      institution: "Experimental High School Attached to Beijing Normal University"
-    }
+      period: '2020 – 2023',
+      degree: 'High School Diploma',
+      institution: 'Experimental High School Attached to Beijing Normal University',
+    },
   ]
 
   const experience = [
     {
-      period: "2024 – Present",
-      position: "Research Assistant",
-      institution: "BI Norwegian Business School",
-      supervisor: "Dr. Shubin Yu",
-      project: "Generative AI for Research Initiative",
-      responsibilities: [
-        "Conducted interviews",
-        "Designed questionnaires",
-        "Co-developed mimitalk.app (an AI-powered interview platform)",
-        "Drafted papers"
-      ]
-    }
+      period: '2025 – Present',
+      position: 'Research Assistant',
+      institution: 'University College London',
+      supervisor: 'Dr. Handi Li',
+      project: 'Quantitative Analysis of Political Discourse on Social Media',
+    },
+    {
+      period: '2024 – Present',
+      position: 'Research Assistant',
+      institution: 'BI Norwegian Business School & HEC Paris',
+      supervisor: 'Dr. Shubin Yu',
+      project: 'Generative AI for Research Initiative',
+      link: 'https://www.gaiforresearch.com/about',
+      details:
+        'Conducted interviews, designed questionnaires, co-developed mimitalk.app, drafted papers.',
+    },
+    {
+      period: '2024 – 2026',
+      position: 'Research Assistant',
+      institution: 'Anhui University',
+      supervisor: 'Dr. Shun Wang',
+      project: 'Data collection and processing, literature review and synthesis.',
+    },
   ]
 
   const skills = {
-    languages: ["Mandarin (Native)", "English (Fluent)", "French (Basic)"],
-    programming: ["C", "Javascript", "Python", "R", "LaTeX","SQL"],
-    research: ["Marketing", "Social Science", "Political Economy", "Economics", "Quantitative History", "Human-centered AI"]
-  }
-  // Publications data for statistics
-  const publications = {
-    published: [
-      {
-        title: "Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets: A Global Perspective Analysis"
-      },
-      {
-        title: "The Risk Transmission Mechanism of Global Stock Markets from the Perspective of Entropy-Riemann Geometry: Theoretical Construction and Empirical Analysis"
-      }
-    ],
-    preprint: [
-      {
-        title: "MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI"
-      }
-    ],
-    workingPapers: [
-      {
-        title: "Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification"
-      }
-    ]
+    languages: ['Mandarin (Native)', 'English (Fluent)', 'French (Basic)'],
+    programming: ['C', 'Javascript', 'Python', 'SQL', 'LaTeX', 'AI-assisted Development'],
   }
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Home"
-        description="Fengming Liu - Academic researcher specializing in AI applications in business and social science. BSc Philosophy, Politics and Economics student at University College London."
-        keywords="Fengming Liu, AI Research, Consumer Decision-Making, AI Transparency, Social Science Research, Philosophy Politics Economics, PPE, UCL, Academic Research"
+        description="Fengming Liu – Academic researcher specializing in AI-augmented qualitative research, computational text analysis, and political economy of technology. BSc PPE at University College London."
+        keywords="Fengming Liu, AI Research, Computational Text Analysis, Political Economy, Social Science, PPE, UCL"
         structuredData={{
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Fengming Liu",
-          "jobTitle": "Research Assistant",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "BI Norwegian Business School"
-          },
-          "alumniOf": {
-            "@type": "Organization", 
-            "name": "University College London"
-          },
-          "knowsAbout": [
-            "AI Research",
-            "Consumer Decision-Making", 
-            "AI Transparency",
-            "Social Science Research"
-          ]
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Fengming Liu',
+          jobTitle: 'Research Assistant',
+          worksFor: [
+            { '@type': 'Organization', name: 'University College London' },
+            { '@type': 'Organization', name: 'BI Norwegian Business School' },
+          ],
+          alumniOf: { '@type': 'Organization', name: 'University College London' },
         }}
       />
-      <Container maxWidth="lg">
-        {/* Hero Section */}
-      <Box sx={{ textAlign: 'center', mb: 6, py: 4 }}>        <LazyImage
-          src={getStaticPath("Images/b71f54d23e1517e62a9235a7760e265.jpg")}
-          alt="Fengming Liu"
-          sx={{
-            width: 150,
-            height: 150,
-            mx: 'auto',
-            mb: 3,
-            bgcolor: 'primary.main',
-            fontSize: '3rem'
-          }}
-        >
-          FL
-        </LazyImage>        <Typography variant="h3" component="h1" gutterBottom sx={{ fontWeight: 'bold' }} role="heading" aria-level="1">
-          {t('hero.title')}
-        </Typography>
-        
-        <Typography variant="h5" color="text.secondary" gutterBottom>
-          {t('hero.subtitle')}
-        </Typography>
-        
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          {t('hero.institution')}
-        </Typography>
-        
-        {/* Contact Info */}
-        <Box sx={{ mt: 3, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 2 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Email color="primary" />
-            <Typography variant="body2">leo.liu.23@ucl.ac.uk</Typography>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Email color="primary" />
-            <Typography variant="body2">liu_fengming@outlook.com</Typography>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Phone color="primary" />
-            <Typography variant="body2">+44 7436241983</Typography>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <LocationOn color="primary" />
-            <Typography variant="body2">London, WC1E 6BT</Typography>
-          </Box>
-        </Box>        <Typography variant="body2" sx={{ mt: 2 }}>
-          ORCID iD: <a href="https://orcid.org/0009-0009-3881-496X" target="_blank" rel="noopener noreferrer">
-            orcid.org/0009-0009-3881-496X
-          </a>
-        </Typography>
 
-        {/* Mimitalk Project Highlight */}
-        <Box 
-          component="a"
-          href="https://mimitalk.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          sx={{ 
-            mt: 3, 
-            p: 2, 
-            bgcolor: 'primary.main', 
-            color: 'white',
-            borderRadius: 2,
+      {/* ── HERO ── */}
+      <Box sx={{ mb: 8 }}>
+        <Box
+          sx={{
             display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: 1,
-            cursor: 'pointer',
-            transition: 'all 0.3s ease',
-            textDecoration: 'none',
-            '&:hover': {
-              bgcolor: 'primary.dark',
-              transform: 'translateY(-2px)',
-              boxShadow: 3
-            }
+            gap: { xs: 3, md: 5 },
+            alignItems: { xs: 'center', md: 'flex-end' },
+            flexDirection: { xs: 'column', md: 'row' },
+            mb: 4,
           }}
         >
-          <Star />
-          <Typography variant="h6" sx={{ fontWeight: 'bold', color: 'inherit' }}>
-            🎯 Mimitalk - AI-Powered Interview Platform
-          </Typography>
-          <Launch />
-        </Box>{/* Personal Introduction */}
-        <Box sx={{ 
-          mt: 4, 
-          p: 3, 
-          bgcolor: 'background.paper', 
-          borderRadius: 2,
-          border: 1,
-          borderColor: 'divider',
-          textAlign: 'left'
-        }}>
-          <Typography variant="h6" gutterBottom color="primary" sx={{ fontWeight: 'bold' }}>
-            {t('hero.personal_intro.title')}
-          </Typography>
-          <Typography variant="body1" paragraph>
-            {t('hero.personal_intro.paragraph1')}
-          </Typography>
-          <Typography variant="body1" paragraph>
-            {t('hero.personal_intro.paragraph2')}
-          </Typography>
-          <Typography variant="body1" paragraph>
-            {t('hero.personal_intro.paragraph3')}
-          </Typography>
-          <Typography variant="body1" paragraph>
-            {t('hero.personal_intro.paragraph4')}
-          </Typography>
-          <Typography variant="body1">
-            {t('hero.personal_intro.paragraph5')}
-          </Typography>
+          <LazyImage
+            src={getStaticPath('Images/b71f54d23e1517e62a9235a7760e265.jpg')}
+            alt="Fengming Liu"
+            sx={{
+              width: { xs: 120, md: 140 },
+              height: { xs: 120, md: 140 },
+              borderRadius: '50%',
+              border: '3px solid #e0dcd6',
+              flexShrink: 0,
+            }}
+          />
+          <Box sx={{ textAlign: { xs: 'center', md: 'left' } }}>
+            <Typography
+              variant="h2"
+              component="h1"
+              sx={{ fontSize: { xs: '2.2rem', md: '2.8rem' }, mb: 0.5 }}
+            >
+              {t('hero.title')}
+            </Typography>
+            <Typography
+              variant="h5"
+              sx={{
+                fontFamily: '"EB Garamond", serif',
+                fontWeight: 400,
+                fontStyle: 'italic',
+                color: '#666',
+                mb: 1,
+              }}
+            >
+              {t('hero.subtitle')}
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#888' }}>
+              {t('hero.institution')}
+            </Typography>
+
+            {/* Contact row */}
+            <Box
+              sx={{
+                mt: 1.5,
+                display: 'flex',
+                gap: 2,
+                flexWrap: 'wrap',
+                justifyContent: { xs: 'center', md: 'flex-start' },
+              }}
+            >
+              <Link
+                href="mailto:liu_fengming@outlook.com"
+                sx={{ fontSize: '0.85rem', color: '#888', '&:hover': { color: '#b0413e' } }}
+              >
+                liu_fengming@outlook.com
+              </Link>
+              <Typography variant="body2" sx={{ color: '#ccc' }}>
+                ·
+              </Typography>
+              <Link
+                href="https://orcid.org/0009-0009-3881-496X"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ fontSize: '0.85rem', color: '#888', '&:hover': { color: '#b0413e' } }}
+              >
+                ORCID: 0009-0009-3881-496X
+              </Link>
+            </Box>
+          </Box>
+        </Box>
+
+        <Divider sx={{ borderColor: '#2c2c2c', borderWidth: 1.5 }} />
+      </Box>
+
+      {/* ── RESEARCH INTERESTS ── */}
+      <Box sx={{ mb: 6 }}>
+        <SectionTitle number="01" title={t('sections.research_interests')} />
+        <Typography variant="body1" sx={{ mb: 2 }}>
+          {t('hero.research_summary')}
+        </Typography>
+        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2 }}>
+          {researchInterests.map((interest, i) => (
+            <Chip
+              key={i}
+              label={interest}
+              variant="outlined"
+              sx={{
+                borderColor: '#c4b8a8',
+                color: '#3a3a3a',
+                fontWeight: 500,
+                '&:hover': { borderColor: '#b0413e', color: '#b0413e' },
+              }}
+            />
+          ))}
         </Box>
       </Box>
 
-      <Grid container spacing={4}>
-        {/* Education */}
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <School color="primary" />
-                {t('sections.education')}
+      {/* ── MIMITALK HIGHLIGHT ── */}
+      <Box
+        component="a"
+        href="https://mimitalk.app"
+        target="_blank"
+        rel="noopener noreferrer"
+        sx={{
+          display: 'block',
+          mb: 6,
+          p: 3,
+          bgcolor: '#f0edea',
+          border: '1.5px solid #c4b8a8',
+          borderRadius: 1,
+          textDecoration: 'none',
+          transition: 'all 0.2s ease',
+          '&:hover': { borderColor: '#b0413e', transform: 'translateY(-1px)' },
+        }}
+      >
+        <Typography variant="overline" sx={{ color: '#b0413e', mb: 0.5, display: 'block' }}>
+          FEATURED PROJECT
+        </Typography>
+        <Typography
+          variant="h5"
+          sx={{ fontFamily: '"EB Garamond", serif', color: '#1a1a1a', mb: 1 }}
+        >
+          MimiTalk — AI-Powered Interview Platform
+        </Typography>
+        <Typography variant="body2" sx={{ color: '#666' }}>
+          {t('hero.mimitalk_desc')}
+        </Typography>
+      </Box>
+
+      {/* ── EDUCATION & EXPERIENCE ── */}
+      <Grid container spacing={6} sx={{ mb: 6 }}>
+        <Grid item xs={12} md={5}>
+          <SectionTitle number="02" title={t('sections.education')} />
+          {education.map((edu, i) => (
+            <Box key={i} sx={{ mb: 3 }}>
+              <Typography
+                variant="body2"
+                sx={{ color: '#b0413e', fontWeight: 600, fontSize: '0.8rem', mb: 0.3 }}
+              >
+                {edu.period}
               </Typography>
-              {education.map((edu, index) => (
-                <Box key={index} sx={{ mb: 3 }}>
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    {edu.degree}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {edu.institution}
-                  </Typography>
-                  {edu.department && (
-                    <Typography variant="body2" color="text.secondary">
-                      {edu.department}
-                    </Typography>
-                  )}
-                  <Typography variant="body2" color="primary">
-                    {edu.period}
-                  </Typography>
-                </Box>
-              ))}
-            </CardContent>
-          </Card>
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  fontFamily: '"EB Garamond", serif',
+                  fontWeight: 600,
+                  lineHeight: 1.3,
+                }}
+              >
+                {edu.degree}
+              </Typography>
+              <Typography variant="body2" sx={{ color: '#888' }}>
+                {edu.institution}
+              </Typography>
+              {edu.department && (
+                <Typography variant="body2" sx={{ color: '#888' }}>
+                  {edu.department}
+                </Typography>
+              )}
+            </Box>
+          ))}
         </Grid>
 
-        {/* Research Experience */}
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-            <CardContent sx={{ flexGrow: 1 }}>              <Typography variant="h5" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <Work color="primary" />
-                {t('sections.experience')}
+        <Grid item xs={12} md={7}>
+          <SectionTitle number="03" title={t('sections.experience')} />
+          {experience.map((exp, i) => (
+            <Box key={i} sx={{ mb: 3 }}>
+              <Typography
+                variant="body2"
+                sx={{ color: '#b0413e', fontWeight: 600, fontSize: '0.8rem', mb: 0.3 }}
+              >
+                {exp.period}
               </Typography>
-              {experience.map((exp, index) => (
-                <Box key={index} sx={{ mb: 3 }}>
-                  <Typography variant="subtitle1" fontWeight="bold">
-                    {exp.position}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {exp.institution}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Supervisor: {exp.supervisor}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Project: {exp.project}
-                  </Typography>
-                  <Typography variant="body2" color="primary" sx={{ mb: 1 }}>
-                    {exp.period}
-                  </Typography>
-                  <Typography variant="body2" fontWeight="bold">
-                    Responsibilities:
-                  </Typography>
-                  <List dense>
-                    {exp.responsibilities.map((resp, idx) => (
-                      <ListItem key={idx} sx={{ py: 0 }}>
-                        <ListItemText primary={`• ${resp}`} />
-                      </ListItem>
-                    ))}
-                  </List>
-                </Box>
-              ))}
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Skills */}
-        <Grid item xs={12}>
-          <Card elevation={2}>
-            <CardContent>              <Typography variant="h5" gutterBottom>
-                {t('sections.skills')}
+              <Typography
+                variant="subtitle1"
+                sx={{
+                  fontFamily: '"EB Garamond", serif',
+                  fontWeight: 600,
+                  lineHeight: 1.3,
+                }}
+              >
+                {exp.position}, {exp.institution}
               </Typography>
-              
-              <Grid container spacing={3}>
-                <Grid item xs={12} md={4}>
-                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <Language color="primary" />
-                      {t('sections.languages')}
-                    </Typography>
-                    {skills.languages.map((lang, index) => (
-                      <Chip key={index} label={lang} sx={{ m: 0.5 }} />
-                    ))}
-                  </Paper>
-                </Grid>
-                
-                <Grid item xs={12} md={4}>
-                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      <Code color="primary" />
-                      {t('sections.programming')}
-                    </Typography>
-                    {skills.programming.map((skill, index) => (
-                      <Chip key={index} label={skill} sx={{ m: 0.5 }} color="primary" variant="outlined" />
-                    ))}
-                  </Paper>
-                </Grid>
-                
-                <Grid item xs={12} md={4}>
-                  <Paper sx={{ p: 2, bgcolor: 'background.default' }}>                    <Typography variant="h6" gutterBottom>
-                      {t('sections.research_interests')}
-                    </Typography>
-                    {skills.research.map((interest, index) => (
-                      <Chip key={index} label={interest} sx={{ m: 0.5 }} color="secondary" variant="outlined" />
-                    ))}
-                  </Paper>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
+              <Typography variant="body2" sx={{ color: '#888' }}>
+                Supervisor: {exp.supervisor}
+              </Typography>
+              <Typography variant="body2" sx={{ color: '#3a3a3a', mt: 0.5 }}>
+                {exp.project}
+              </Typography>
+              {exp.details && (
+                <Typography
+                  variant="body2"
+                  sx={{ color: '#666', fontStyle: 'italic', mt: 0.3 }}
+                >
+                  {exp.details}
+                </Typography>
+              )}
+              {exp.link && (
+                <Link
+                  href={exp.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ fontSize: '0.82rem' }}
+                >
+                  Project Website →
+                </Link>
+              )}
+            </Box>
+          ))}
         </Grid>
       </Grid>
-    </Container>
+
+      {/* ── SKILLS ── */}
+      <Box sx={{ mb: 4 }}>
+        <SectionTitle number="04" title={t('sections.skills')} />
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="overline" sx={{ color: '#888', mb: 1, display: 'block' }}>
+              {t('sections.languages')}
+            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+              {skills.languages.map((lang, i) => (
+                <Chip
+                  key={i}
+                  label={lang}
+                  size="small"
+                  sx={{ bgcolor: '#f0edea', border: 'none' }}
+                />
+              ))}
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography variant="overline" sx={{ color: '#888', mb: 1, display: 'block' }}>
+              {t('sections.programming')}
+            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+              {skills.programming.map((skill, i) => (
+                <Chip
+                  key={i}
+                  label={skill}
+                  size="small"
+                  variant="outlined"
+                  sx={{ borderColor: '#c4b8a8' }}
+                />
+              ))}
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
     </>
   )
 }

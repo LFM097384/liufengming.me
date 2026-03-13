@@ -7,7 +7,6 @@ import enCommon from './translations/en/common.json'
 import enHome from './translations/en/home.json'
 import enContact from './translations/en/contact.json'
 import enResearch from './translations/en/research.json'
-import enBlog from './translations/en/blog.json'
 import enCV from './translations/en/cv.json'
 import enPublications from './translations/en/publications.json'
 
@@ -15,7 +14,6 @@ import zhCommon from './translations/zh/common.json'
 import zhHome from './translations/zh/home.json'
 import zhContact from './translations/zh/contact.json'
 import zhResearch from './translations/zh/research.json'
-import zhBlog from './translations/zh/blog.json'
 import zhCV from './translations/zh/cv.json'
 import zhPublications from './translations/zh/publications.json'
 
@@ -27,7 +25,6 @@ const resources = {
       ...enHome,
       contact: enContact,
       research: enResearch,
-      blog: enBlog,
       cv: enCV,
       publications: enPublications
     }
@@ -39,7 +36,6 @@ const resources = {
       ...zhHome,
       contact: zhContact,
       research: zhResearch,
-      blog: zhBlog,
       cv: zhCV,
       publications: zhPublications
     }

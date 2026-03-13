@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ideology of Value-Neutrality</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        @page { size: A3 landscape; margin: 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            width: 420mm;
+            height: 297mm;
+            background: #faf8f5;
+            color: #2c2c2c;
+            overflow: hidden;
+        }
+
+        .poster {
+            width: 100%; height: 100%;
+            padding: 12mm 16mm 8mm;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 8mm;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            grid-column: 1 / -1;
+            border-bottom: 3px solid #2c2c2c;
+            padding-bottom: 5mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-left h1 {
+            font-family: 'EB Garamond', serif;
+            font-size: 32pt;
+            font-weight: 700;
+            line-height: 1.05;
+            color: #1a1a1a;
+        }
+
+        .header-left h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 15pt;
+            font-weight: 400;
+            font-style: italic;
+            color: #666;
+            margin-top: 1.5mm;
+        }
+
+        .header-right {
+            text-align: right;
+            font-size: 9pt;
+            line-height: 1.5;
+            color: #888;
+        }
+        .header-right strong {
+            color: #2c2c2c;
+            font-size: 9.5pt;
+        }
+
+        /* ── COLUMNS ── */
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 6mm;
+        }
+
+        /* ── SECTION ── */
+        .section {
+            position: relative;
+        }
+
+        .section h3 {
+            font-family: 'EB Garamond', serif;
+            font-size: 13.5pt;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 2.5mm;
+            padding-bottom: 1.5mm;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section h3 .sn {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 8.5pt;
+            font-weight: 600;
+            color: #b0413e;
+            margin-right: 2mm;
+        }
+
+        .section p, .section li {
+            font-size: 9.5pt;
+            line-height: 1.6;
+            color: #3a3a3a;
+        }
+
+        .section ul {
+            padding-left: 5mm;
+            margin-top: 2mm;
+        }
+        .section li {
+            margin-bottom: 2mm;
+        }
+
+        .section strong { color: #1a1a1a; }
+        .mt { margin-top: 2mm; }
+
+        /* ── EMPHASIS ── */
+        .em-r {
+            color: #b0413e;
+            font-weight: 600;
+        }
+
+        /* ── QUOTE ── */
+        .bq {
+            border-left: 2.5px solid #b0413e;
+            padding: 2.5mm 0 2.5mm 4mm;
+            margin: 2.5mm 0;
+            font-style: italic;
+            font-size: 9pt;
+            line-height: 1.5;
+            color: #555;
+        }
+        .bq .attr {
+            display: block;
+            text-align: right;
+            font-size: 7.5pt;
+            font-style: normal;
+            color: #999;
+            margin-top: 1.5mm;
+        }
+
+        /* ── THESIS BOX ── */
+        .thesis-box {
+            background: #f0edea;
+            border: 1.5px solid #c4b8a8;
+            border-radius: 4px;
+            padding: 6mm 7mm;
+        }
+        .thesis-box h3 {
+            color: #b0413e;
+            border-bottom: 1px solid #c4b8a8;
+        }
+
+        /* ── DIAGRAM ── */
+        .diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4mm;
+            padding: 3mm;
+            margin: 1mm 0;
+        }
+        .diagram .node {
+            font-size: 9pt;
+            font-weight: 500;
+            text-align: center;
+            padding: 3mm 4mm;
+            border: 1.5px solid #2c2c2c;
+            border-radius: 3px;
+            background: #fff;
+            flex: 1;
+            line-height: 1.4;
+        }
+        .diagram .node small {
+            display: block;
+            font-size: 7.5pt;
+            font-weight: 400;
+            color: #888;
+            font-style: italic;
+        }
+        .diagram .conn {
+            font-size: 11pt;
+            color: #b0413e;
+            flex-shrink: 0;
+        }
+
+        .diagram-note {
+            font-size: 8.5pt;
+            text-align: center;
+            color: #888;
+            font-style: italic;
+            margin-top: 1mm;
+        }
+
+        /* ── CONCLUSION ── */
+        .conclusion-box {
+            border-top: 2px solid #2c2c2c;
+            border-bottom: 2px solid #2c2c2c;
+            padding: 5mm 0;
+        }
+        .conclusion-box h3 {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .conclusion-box .final {
+            margin-top: 3.5mm;
+            font-family: 'EB Garamond', serif;
+            font-size: 12pt;
+            font-weight: 700;
+            text-align: center;
+            color: #1a1a1a;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 6.5pt;
+            color: #999;
+            border-top: 1px solid #ddd;
+            padding-top: 2mm;
+        }
+        .footer .refs {
+            line-height: 1.4;
+            max-width: 88%;
+        }
+        .footer em { font-style: italic; }
+    </style>
+</head>
+<body>
+<div class="poster">
+
+    <header class="header">
+        <div class="header-left">
+            <h1>The Ideology of Value-Neutrality</h1>
+            <h2>Why the Impossible Ideal Persists</h2>
+        </div>
+        <div class="header-right">
+            <strong>Student No. 23120745</strong><br>
+            POLS0033: Philosophy, Values,<br>
+            and the Social Sciences<br>
+            UCL &middot; 2025&ndash;26
+        </div>
+    </header>
+
+    <!-- COL 1 -->
+    <div class="col">
+
+        <div class="section">
+            <h3><span class="sn">01</span> The Question</h3>
+            <p>Douglas (2007) demonstrates that value-free science is <span class="em-r">impossible</span>. Scientists inevitably make value judgments when assessing evidence, because the consequences of accepting a false hypothesis differ from those of rejecting a true one.</p>
+            <p class="mt">But if value-neutrality is impossible, why does the ideal persist? The answer I propose is that the ideal is not merely unattainable. It is <span class="em-r">ideological</span>: it disguises a specific set of commitments &mdash; instrumental reason, quantifiability, formalization &mdash; as the absence of values altogether.</p>
+        </div>
+
+        <div class="section">
+            <h3><span class="sn">02</span> Douglas on Inductive Risk</h3>
+            <p>Douglas's key insight turns on <span class="em-r">inductive risk</span>. In deciding when evidence is sufficient, scientists must weigh the costs of different kinds of error &mdash; which is inescapably a value judgment.</p>
+            <div class="bq">
+                The consequences of accepting a false hypothesis or rejecting a true one vary depending on what is at stake, and this requires value judgments about which errors are more tolerable.
+                <span class="attr">&mdash; Douglas (2007)</span>
+            </div>
+            <p>This argument is necessary but not sufficient. Douglas shows that values <em>infiltrate</em> science. She does not ask what <span class="em-r">ideological function</span> is served by continuing to insist on value-neutrality despite its impossibility.</p>
+        </div>
+
+        <div class="section">
+            <h3><span class="sn">03</span> Nagel's Failed Defence</h3>
+            <p>Nagel (1961) attempts to rescue objectivity by distinguishing two types of value judgment:</p>
+            <ul>
+                <li><strong>Characterizing</strong> &mdash; selecting problems, defining concepts (unavoidable)</li>
+                <li><strong>Appraising</strong> &mdash; evaluating moral worth (supposedly excludable)</li>
+            </ul>
+            <p class="mt">This distinction <span class="em-r">cannot hold</span>. The concepts through which social science apprehends its objects already carry entire worldviews. "Rationality," "development," "efficiency" are not neutral descriptors. They encode specific conceptions of human flourishing and encode them as self-evident.</p>
+        </div>
+
+    </div>
+
+    <!-- COL 2 -->
+    <div class="col">
+
+        <div class="section thesis-box">
+            <h3><span class="sn">04</span> Core Thesis</h3>
+            <p>The claim to neutrality performs three linked <span class="em-r">ideological operations</span>:</p>
+            <ul>
+                <li class="mt"><strong>It disguises a perspective as no perspective.</strong> By presenting quantification and formal methodology as "objectivity," the value-free ideal positions instrumental reason as the only legitimate way of knowing &mdash; while concealing that this is itself a substantive commitment.</li>
+                <li class="mt"><strong>It marginalizes rival traditions.</strong> Hermeneutics, phenomenology, and critical theory are demoted to "soft" disciplines precisely because they refuse the pretence of neutrality. Their reflexivity is treated as a deficiency rather than as intellectual honesty.</li>
+                <li class="mt"><strong>It mirrors liberal neutrality.</strong> Liberalism claims neutrality among conceptions of the good while enforcing a particular procedural framework (Rawls, 1971). Value-free science performs the same move in the epistemic domain: it enforces a framework while denying it is one.</li>
+            </ul>
+        </div>
+
+        <div class="diagram">
+            <div class="node">Political Liberalism<small>"Neutral among values"</small></div>
+            <div class="conn">&harr;</div>
+            <div class="node">Value-Free Science<small>"Neutral among perspectives"</small></div>
+        </div>
+        <p class="diagram-note">Both conceal their own value-commitments by claiming to have none.</p>
+
+        <div class="section">
+            <h3><span class="sn">05</span> Genealogy: Instrumental Reason</h3>
+            <div class="bq">
+                Enlightenment, understood in the widest sense as the advance of thought, has always aimed at liberating human beings from fear and installing them as masters. Yet the wholly enlightened earth is radiant with triumphant calamity.
+                <span class="attr">&mdash; Adorno &amp; Horkheimer (1944)</span>
+            </div>
+            <p>Reason, developed to master nature, becomes a means of domination &mdash; including self-domination. The demand for "objectivity" is, at bottom, the demand that the knowing subject erase its own particularity.</p>
+            <p class="mt">Heidegger deepens this point. His concept of <strong>Gestell</strong> (enframing) describes how modern technology reveals all beings as <em>Bestand</em> &mdash; standing-reserve, resources awaiting deployment. Under the value-free ideal, science reveals <span class="em-r">truth itself</span> as standing-reserve: knowledge is whatever can be operationalized.</p>
+        </div>
+
+    </div>
+
+    <!-- COL 3 -->
+    <div class="col">
+
+        <div class="section">
+            <h3><span class="sn">06</span> Implications for Social Science</h3>
+            <p>When economics models human behaviour as utility-maximisation, it is not neutrally describing. It is <span class="em-r">constructing</span> the subject it claims to observe. <em>Homo economicus</em> is not discovered in nature; it is an artefact of the framework.</p>
+            <p class="mt">When political science treats "stability" as a dependent variable, it already endorses a conception of the political good &mdash; one that privileges order over justice, continuity over transformation.</p>
+            <p class="mt">The categories of social science are not neutral lenses through which we see the world. They are <span class="em-r">performative</span>. They shape what they claim only to measure.</p>
+        </div>
+
+        <div class="section">
+            <h3><span class="sn">07</span> The Alternative: Value-Transparency</h3>
+            <p>If value-neutrality is both impossible and ideological, what follows?</p>
+            <p class="mt"><strong>Not relativism.</strong> The conclusion is not that "all values are equal" or that "science is just politics." Giving up the pretence of neutrality does not mean giving up rigour.</p>
+            <p class="mt">The alternative is <span class="em-r">value-transparency</span>: making explicit the values embedded in research design, evidence evaluation, and theoretical framing. This strengthens science by exposing hidden assumptions to scrutiny (Anderson, 2004).</p>
+            <p class="mt">But we must go further than transparency as a method. Genuine reflexivity demands recognising that the demand for neutrality <em>is itself</em> a value &mdash; and perhaps the most effectively concealed one.</p>
+        </div>
+
+        <div class="section conclusion-box">
+            <h3>Conclusion</h3>
+            <p>The ideal of value-free science is not merely unattainable. It is a mechanism of <span class="em-r">ideological closure</span>. It disguises instrumental reason as the absence of value. It marginalises epistemic traditions that practice reflexivity. It forecloses critical reflection on science's own presuppositions.</p>
+            <div class="final">The task is not to achieve neutrality,<br>but to achieve reflexivity.</div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="refs">
+            Adorno, T. W. &amp; Horkheimer, M. (1944). <em>Dialectic of Enlightenment.</em> &ensp;|&ensp;
+            Anderson, E. (2004). Uses of value judgments in science. <em>Hypatia</em> 19, 1&ndash;24. &ensp;|&ensp;
+            Douglas, H. (2007). Rejecting the ideal of value-free science. In Kincaid et al. (eds.), <em>Value-Free Science?</em> &ensp;|&ensp;
+            Heidegger, M. (1954). Die Frage nach der Technik. &ensp;|&ensp;
+            Nagel, E. (1961). The value-orientated bias of social inquiry. &ensp;|&ensp;
+            Rawls, J. (1971). <em>A Theory of Justice.</em>
+        </div>
+        <div style="text-align:right;white-space:nowrap">POLS0033 &middot; UCL Political Science</div>
+    </footer>
+
+</div>
+</body>
+</html>

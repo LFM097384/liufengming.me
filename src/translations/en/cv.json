@@ -3,25 +3,25 @@
   "subtitle": "Download or preview my academic CV",
   "download": "Download CV",
   "preview_button": "Preview CV",
-  "preview_note": "If the preview doesn't load properly, please use the download or preview buttons above.",
+  "preview_note": "If the preview doesn't load, please use the download or preview buttons above.",
   "document": {
     "title": "CV Document",
-    "description": "Download or preview my complete academic CV including education, research experience, publications, presentations, and skills.",
-    "last_updated": "Last updated: November 2025"
+    "description": "Download or preview my complete academic CV.",
+    "last_updated": "Last updated: March 2026"
   },
   "highlights": {
     "title": "CV Highlights",
     "education": {
       "title": "Education",
-      "content": "• BSc Philosophy, Politics and Economics (UCL)\n• Experimental High School (Beijing Normal University)"
+      "content": "BSc Philosophy, Politics and Economics at UCL (2023–2026 expected)"
     },
     "experience": {
-      "title": "Experience", 
-      "content": "• Research Assistant at BI Norwegian Business School\n• Generative AI for Research Initiative"
+      "title": "Research Experience",
+      "content": "Research Assistant positions at UCL, BI Norwegian Business School & HEC Paris, and Anhui University"
     },
     "publications": {
       "title": "Publications & Research",
-      "content": "• 2 Published papers (Energy Markets, Risk Transmission Mechanisms)\n• 1 Preprint on MimiTalk: AI-powered interview platform\n• 1 Working paper on China's Electrification History\n• Research focus: Marketing, Social Science, Political Economy, Quantitative History, Human-centered AI"
+      "content": "2 published papers (Energy, Computational Economics), 1 preprint on MimiTalk (arXiv/SSRN), 1 working paper (R&R at Cliometrica). 6 conference presentations including COMPTEXT 2026, HumanTech Summit 2025, Wharton Business & Gen AI, AMA Summer Academic Conference."
     }
   },
   "preview": {

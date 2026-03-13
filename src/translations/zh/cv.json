@@ -6,22 +6,22 @@
   "preview_note": "如果预览加载不正常，请使用上方的下载或预览按钮。",
   "document": {
     "title": "简历文档",
-    "description": "下载或预览我的完整学术简历，包括教育背景、研究经历、发表论文、学术报告和技能专长。",
-    "last_updated": "最后更新：2025年11月"
+    "description": "下载或预览我的完整学术简历。",
+    "last_updated": "最后更新：2026年3月"
   },
   "highlights": {
     "title": "简历要点",
     "education": {
       "title": "教育背景",
-      "content": "• 哲学、政治学与经济学学士学位（伦敦大学学院）\n• 高中毕业（北京师范大学附属实验中学）"
+      "content": "伦敦大学学院 哲学、政治学与经济学学士（2023–2026，预期）"
     },
     "experience": {
-      "title": "研究经历", 
-      "content": "• BI挪威商学院研究助理\n• 生成式AI研究项目（Generative AI for Research Initiative）"
+      "title": "研究经历",
+      "content": "分别在伦敦大学学院、BI挪威商学院与HEC巴黎高等商学院、安徽大学担任研究助理"
     },
     "publications": {
-      "title": "发表论文与研究",
-      "content": "• 2篇已发表论文（能源市场、风险传导机制）\n• 1篇预印本论文（MimiTalk：AI驱动的访谈平台）\n• 1篇工作论文（洋务运动与中国电气化）\n• 研究重点：营销学、社会科学、政治经济学、定量历史学、以人为本的AI"
+      "title": "论文与研究",
+      "content": "2篇已发表论文（Energy、Computational Economics），1篇预印本MimiTalk（arXiv/SSRN），1篇工作论文（Cliometrica R&R）。6次学术会议报告，包括COMPTEXT 2026、HumanTech Summit 2025、Wharton商学院GenAI会议、AMA夏季学术会议。"
     }
   },
   "preview": {

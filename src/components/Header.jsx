@@ -9,10 +9,15 @@ import {
   useTheme,
   useMediaQuery,
   IconButton,
-  Menu,
-  MenuItem
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemText,
+  Divider
 } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
+import CloseIcon from '@mui/icons-material/Close'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -20,76 +25,149 @@ const Header = () => {
   const location = useLocation()
   const theme = useTheme()
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [drawerOpen, setDrawerOpen] = useState(false)
   const { t } = useTranslation()
 
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
-  const handleMenuClose = () => {
-    setAnchorEl(null)
-  }
-    const menuItems = [
+  const menuItems = [
     { path: '/', label: t('navigation.home') },
     { path: '/publications', label: t('navigation.publications') },
     { path: '/research', label: t('navigation.research') },
-    { path: '/blog', label: t('navigation.blog') },
     { path: '/cv', label: t('navigation.cv') },
     { path: '/contact', label: t('navigation.contact') }
   ]
 
   return (
-    <AppBar position="static" elevation={1}>
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Fengming Liu
-        </Typography>
-          {isMobile ? (
+    <AppBar position="sticky">
+      <Toolbar sx={{ 
+        maxWidth: 'lg', 
+        width: '100%', 
+        mx: 'auto',
+        px: { xs: 2, md: 3 },
+        py: 1.5,
+      }}>
+        <Box sx={{ flexGrow: 1 }}>
+          <Typography 
+            variant="h5" 
+            component={Link} 
+            to="/"
+            sx={{ 
+              fontFamily: '"EB Garamond", serif',
+              fontWeight: 700,
+              color: '#1a1a1a',
+              textDecoration: 'none',
+              letterSpacing: '-0.01em',
+              '&:hover': { color: '#b0413e', textDecoration: 'none' }
+            }}
+          >
+            Fengming Liu
+          </Typography>
+          <Typography 
+            variant="caption" 
+            sx={{ 
+              display: { xs: 'none', sm: 'block' },
+              color: '#888',
+              fontWeight: 400,
+              letterSpacing: '0.06em',
+              mt: -0.3,
+              fontSize: '0.72rem'
+            }}
+          >
+            UCL &middot; POLITICAL SCIENCE
+          </Typography>
+        </Box>
+
+        {isMobile ? (
           <>
             <LanguageSwitcher variant="chip" />
             <IconButton
-              edge="start"
+              edge="end"
               color="inherit"
               aria-label="menu"
-              onClick={handleMenuOpen}
+              onClick={() => setDrawerOpen(true)}
               sx={{ ml: 1 }}
             >
               <MenuIcon />
             </IconButton>
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleMenuClose}
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={() => setDrawerOpen(false)}
+              PaperProps={{
+                sx: {
+                  width: 260,
+                  bgcolor: '#faf8f5',
+                  pt: 2,
+                }
+              }}
             >
-              {menuItems.map((item) => (
-                <MenuItem
-                  key={item.path}
-                  component={Link}
-                  to={item.path}
-                  onClick={handleMenuClose}
-                  selected={location.pathname === item.path}
-                >
-                  {item.label}
-                </MenuItem>
-              ))}
-            </Menu>
+              <Box sx={{ display: 'flex', justifyContent: 'flex-end', px: 1 }}>
+                <IconButton onClick={() => setDrawerOpen(false)}>
+                  <CloseIcon />
+                </IconButton>
+              </Box>
+              <Divider sx={{ mb: 1 }} />
+              <List>
+                {menuItems.map((item) => (
+                  <ListItem key={item.path} disablePadding>
+                    <ListItemButton
+                      component={Link}
+                      to={item.path}
+                      onClick={() => setDrawerOpen(false)}
+                      selected={location.pathname === item.path}
+                      sx={{
+                        py: 1.5,
+                        px: 3,
+                        '&.Mui-selected': {
+                          bgcolor: 'transparent',
+                          borderLeft: '3px solid #b0413e',
+                          color: '#b0413e',
+                          fontWeight: 600,
+                        },
+                      }}
+                    >
+                      <ListItemText 
+                        primary={item.label} 
+                        primaryTypographyProps={{ 
+                          fontFamily: '"EB Garamond", serif',
+                          fontSize: '1.05rem',
+                          fontWeight: location.pathname === item.path ? 600 : 400
+                        }} 
+                      />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+            </Drawer>
           </>
         ) : (
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', gap: 0.5, alignItems: 'center' }}>
             {menuItems.map((item) => (
               <Button
                 key={item.path}
-                color="inherit"
                 component={Link}
                 to={item.path}
                 sx={{
-                  backgroundColor: location.pathname === item.path ? 'rgba(255,255,255,0.1)' : 'transparent'
+                  color: location.pathname === item.path ? '#b0413e' : '#2c2c2c',
+                  fontFamily: '"IBM Plex Sans", sans-serif',
+                  fontWeight: location.pathname === item.path ? 600 : 400,
+                  fontSize: '0.875rem',
+                  px: 1.8,
+                  py: 0.8,
+                  borderBottom: location.pathname === item.path ? '2px solid #b0413e' : '2px solid transparent',
+                  borderRadius: 0,
+                  transition: 'all 0.2s ease',
+                  '&:hover': {
+                    bgcolor: 'transparent',
+                    color: '#b0413e',
+                  },
                 }}
               >
                 {item.label}
               </Button>
             ))}
-            <LanguageSwitcher />
+            <Box sx={{ ml: 1 }}>
+              <LanguageSwitcher />
+            </Box>
           </Box>
         )}
       </Toolbar>
