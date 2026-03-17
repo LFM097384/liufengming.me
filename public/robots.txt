@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://liufengming.me/sitemap.xml
+Sitemap: https://lfm097384.github.io/liufengming.me/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
