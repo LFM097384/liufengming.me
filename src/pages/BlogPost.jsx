@@ -15,6 +15,7 @@ const BlogPost = () => {
   const [post, setPost] = useState(null)
   const [loading, setLoading] = useState(true)
   const [iframeHeight, setIframeHeight] = useState(600)
+  const [srcUrl, setSrcUrl] = useState('')
 
   useEffect(() => {
     fetch(getStaticPath('blog/posts.json'))
@@ -26,6 +27,24 @@ const BlogPost = () => {
       .catch(() => setPost(null))
       .finally(() => setLoading(false))
   }, [slug])
+
+  // Resolve file URL when post or language changes
+  useEffect(() => {
+    if (!post) return
+    const base = post.folder || post.slug
+    const primaryFile = isZh
+      ? (post.file_zh ? `${base}/${post.file_zh}` : `${base}/zh.html`)
+      : (post.file_en ? `${base}/${post.file_en}` : `${base}/en.html`)
+    const fallbackFile = isZh
+      ? (post.file_en ? `${base}/${post.file_en}` : `${base}/en.html`)
+      : (post.file_zh ? `${base}/${post.file_zh}` : `${base}/zh.html`)
+    const postUrl = getStaticPath(`blog/${primaryFile}`)
+    const fallbackUrl = getStaticPath(`blog/${fallbackFile}`)
+
+    fetch(postUrl, { method: 'HEAD' })
+      .then(res => setSrcUrl(res.ok ? postUrl : fallbackUrl))
+      .catch(() => setSrcUrl(fallbackUrl))
+  }, [post, isZh])
 
   // Auto-resize iframe to fit content
   useEffect(() => {
@@ -42,12 +61,10 @@ const BlogPost = () => {
     try {
       const iframe = iframeRef.current
       if (iframe && iframe.contentDocument) {
-        // Inject a small script to report height and handle resizes
         const doc = iframe.contentDocument
         const height = doc.documentElement.scrollHeight
         setIframeHeight(height + 32)
 
-        // Watch for size changes
         const observer = new ResizeObserver(() => {
           const h = doc.documentElement.scrollHeight
           setIframeHeight(h + 32)
@@ -74,28 +91,7 @@ const BlogPost = () => {
     )
   }
 
-  // Resolve file path: folder/file_xx if specified, otherwise slug/xx.html
-  const base = post.folder || post.slug
-  const primaryFile = isZh
-    ? (post.file_zh ? `${base}/${post.file_zh}` : `${base}/zh.html`)
-    : (post.file_en ? `${base}/${post.file_en}` : `${base}/en.html`)
-  const fallbackFile = isZh
-    ? (post.file_en ? `${base}/${post.file_en}` : `${base}/en.html`)
-    : (post.file_zh ? `${base}/${post.file_zh}` : `${base}/zh.html`)
-  const postUrl = getStaticPath(`blog/${primaryFile}`)
-  const fallbackUrl = getStaticPath(`blog/${fallbackFile}`)
   const title = isZh ? (post.title_zh || post.title) : post.title
-
-  const [srcUrl, setSrcUrl] = useState(postUrl)
-
-  // Check if preferred language file exists; if not, fall back
-  useEffect(() => {
-    fetch(postUrl, { method: 'HEAD' })
-      .then(res => {
-        setSrcUrl(res.ok ? postUrl : fallbackUrl)
-      })
-      .catch(() => setSrcUrl(fallbackUrl))
-  }, [postUrl, fallbackUrl])
 
   return (
     <>
