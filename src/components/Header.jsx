@@ -33,6 +33,7 @@ const Header = () => {
     { path: '/publications', label: t('navigation.publications') },
     { path: '/research', label: t('navigation.research') },
     { path: '/cv', label: t('navigation.cv') },
+    { path: '/blog', label: t('navigation.blog') },
     { path: '/contact', label: t('navigation.contact') }
   ]
 

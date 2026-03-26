@@ -111,12 +111,30 @@ const Home = () => {
               </Link>
               <Typography variant="body2" sx={{ color: '#ccc' }}>·</Typography>
               <Link
-                href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6120349"
+                href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7378335"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ fontSize: '0.85rem', color: '#888', '&:hover': { color: '#b0413e' } }}
               >
                 SSRN
+              </Link>
+              <Typography variant="body2" sx={{ color: '#ccc' }}>·</Typography>
+              <Link
+                href="https://www.linkedin.com/in/liufengming"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ fontSize: '0.85rem', color: '#888', '&:hover': { color: '#b0413e' } }}
+              >
+                LinkedIn
+              </Link>
+              <Typography variant="body2" sx={{ color: '#ccc' }}>·</Typography>
+              <Link
+                href="https://github.com/LFM097384"
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ fontSize: '0.85rem', color: '#888', '&:hover': { color: '#b0413e' } }}
+              >
+                GitHub
               </Link>
             </Box>
           </Box>

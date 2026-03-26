@@ -66,7 +66,9 @@ const Contact = () => {
 
           {[
             { name: 'ORCID', url: 'https://orcid.org/0009-0009-3881-496X', label: '0009-0009-3881-496X' },
-            { name: 'SSRN', url: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6120349', label: 'Author Page' },
+            { name: 'SSRN', url: 'https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7378335', label: 'Author Page' },
+            { name: 'LinkedIn', url: 'https://www.linkedin.com/in/liufengming', label: 'liufengming' },
+            { name: 'GitHub', url: 'https://github.com/LFM097384', label: 'LFM097384' },
             { name: 'MimiTalk', url: 'https://mimitalk.app', label: 'mimitalk.app' },
           ].map((p, i) => (
             <Box key={i} sx={{ mb: 2 }}>

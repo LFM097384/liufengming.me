@@ -51,8 +51,16 @@ const Footer = () => {
                 ORCID
               </Link>
               {' · '}
-              <Link href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=6120349" target="_blank" rel="noopener noreferrer" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+              <Link href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=7378335" target="_blank" rel="noopener noreferrer" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
                 SSRN
+              </Link>
+              {' · '}
+              <Link href="https://www.linkedin.com/in/liufengming" target="_blank" rel="noopener noreferrer" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+                LinkedIn
+              </Link>
+              {' · '}
+              <Link href="https://github.com/LFM097384" target="_blank" rel="noopener noreferrer" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+                GitHub
               </Link>
             </Typography>
           </Box>
