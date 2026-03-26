@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Fengming Liu">
+<meta name="keywords" content="AI权重, 成己, 开源, 海德格尔, 马尔库塞, 波兰尼, 分布式算力">
+
+<title>AI时代的人之为人</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="权重属于所有人_files/libs/clipboard/clipboard.min.js"></script>
+<script src="权重属于所有人_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="权重属于所有人_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="权重属于所有人_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="权重属于所有人_files/libs/quarto-html/popper.min.js"></script>
+<script src="权重属于所有人_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="权重属于所有人_files/libs/quarto-html/anchor.min.js"></script>
+<link href="权重属于所有人_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="权重属于所有人_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="权重属于所有人_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="权重属于所有人_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="权重属于所有人_files/libs/bootstrap/bootstrap-b18ab56877f0c5817f04d2e61bac2708.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  
+<div class="quarto-alternate-formats"><h2>其他格式</h2><ul><li><a href="权重属于所有人.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li><li><a href="权重属于所有人.docx"><i class="bi bi-file-word"></i>MS Word</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AI时代的人之为人</h1>
+<p class="subtitle lead">成己与AI时代的人的条件</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">作者</div>
+    <div class="quarto-title-meta-contents">
+             <p>Fengming Liu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">发布于</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">2026年3月7日</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+<div>
+  <div class="abstract">
+    <div class="block-title">摘要</div>
+    <p>AI权重的分配是一个存在论问题。本文以儒家”成己”(self-becoming; Selbstwerden)概念为核心，论证在AI日益深刻地中介人类回应世界的能力的时代，权重的分配同时关乎成己的物质前提与存在论前提。文章从海德格尔的技术追问、德雷福斯的AI批判、法兰克福学派的需求生产理论和波兰尼的大转型出发，分析AI权重垄断对人之成己的双重威胁，并提出一条结合物质再分配与存在性自我认知的运动路径。</p>
+  </div>
+</div>
+
+<div>
+  <div class="keywords">
+    <div class="block-title">关键词</div>
+    <p>AI权重, 成己, 开源, 海德格尔, 马尔库塞, 波兰尼, 分布式算力</p>
+  </div>
+</div>
+
+</header>
+
+
+<p>2025年1月，一家名叫深度求索（DeepSeek）的中国公司发布了一个AI模型。这个模型的性能接近OpenAI花费数十亿美元训练的旗舰产品，但训练成本只有后者的零头。DeepSeek将全部模型权重，也就是神经网络中数十亿个决定其行为的参数，完全开源。任何人都可以下载、运行、修改、部署。英伟达的股价在一天内蒸发了近六千亿美元。</p>
+<p>硅谷的恐慌是真实的，但恐慌的原因被严重误读了。华尔街担心的是利润模型被颠覆，华盛顿担心的是技术霸权被侵蚀。但DeepSeek真正证明的事情比”中国AI追上来了”要深刻得多：它证明了前沿AI能力的广泛可及在技术上是可能的，“只有百亿美元级实验室才能做前沿研究”的垄断叙事是一个谎言。在技术史的尺度上，这种量级的证伪从来不仅仅是商业事件。</p>
+<p>AI权重的分配是一个存在论问题，其次才是技术、商业或政治问题。在一个AI越来越深刻地中介人类回应世界的能力的时代，谁控制了权重，谁就控制了人之为人的条件。《中庸》的判断是：成己，仁也。人在与世界和他人的相遇中持续生成自身，这个过程本身具有不可还原的内在价值。AI问题的核心也就是<strong>成己</strong>(self-becoming; <em>Selbstwerden</em>)的危机：AI同时威胁着成己的物质前提（谁控制认知工具）和存在论前提（人能否在真实的回应和张力中生成自身）。当一个人必须向算法的所有者租赁回应世界的能力，当他的欲望和孤独都已被算法管理，成己就在双重意义上中断了。</p>
+<hr>
+<p>海德格尔在1953年的演讲《技术的追问》(<em>Die Frage nach der Technik</em>) 中提出了一个至今未被充分消化的洞见：现代技术的本质是一种”座架”(Gestell)，一种将一切存在者都转化为”持存物”(Bestand)、即随时可被调用的资源的展现方式。水电站将莱茵河本身转化为了一个能量供应单元。在这种展现方式中，人本身也被”摆置”(bestellt)为持存物，不再是世界的居住者，成了资源管理系统中的一个节点。但Gestell的真正危险不在于它如何展现事物，在于它遮蔽了其他一切展现方式。海德格尔称之为”最高的危险”：技术将自身确立为人与世界之间唯一的中介方式，而人甚至不再意识到还存在着其他与世界相遇的可能。</p>
+<p>七十年后，AI权重的垄断正在以海德格尔未曾预见的精确性实现这一预言。当一个人必须通过月费两百美元的API接口才能使用高级推理能力时，这个人是在向工具的所有者租赁自己回应世界的能力。AI公司出售的是人类处境的这样一种特定安排，人的存在在这种安排中被降格为付费订阅者，而购买这种安排也正在逐渐变成人们在AI时代中的焦虑和生产力驱动的必需品。</p>
+<p>德雷福斯(Hubert Dreyfus)曾用海德格尔的工具分析为人类的独特性构筑了一道防线：人与世界的原初关系是”上手的”(zuhanden)，身体化的、前反思的、沉浸在情境之中，而计算机只能把世界表征为”在手的”(vorhanden)对象加以处理。三十年间这道防线似乎坚不可摧。然而大语言模型绕过了它：GPT不需要”理解”世界就能生产出与理解难以区分的效果。但”绕过”并非”抵达”。更精确地说，AI拥有的只是近似的语境视域(context horizon)——注意力机制在上下文窗口内计算相关性，生成统计上合理的延续——而没有对象视域(object horizon)：当你看见一所房子的正面时，你同时共同意向(co-intend)着它的背面、内部、屋顶从上方看去的样子，这些未被给予的侧面作为可能性始终在场。这种具身的、透视的、超越当下所予的感知结构，是AI在任何参数规模上都不拥有的东西。AI的语境视域足以伪造能力，但对象视域的缺席意味着它永远不能真正”在”世界之中。Dreyfus的问题（“AI能不能达到人的认知？”）因此让位于一个更危险的问题：当一个缺乏对象视域的系统开始替代和重塑人的上手经验时，人与世界之间那层未经反思的亲密关系会发生什么？而AI还有一重独特的隐匿性：作为工具，它像锤子一样退隐到使用的背景中；作为伪主体，它又退隐到关系的亲密中。两重退隐叠加所遮蔽的，恰恰是海德格尔和Dreyfus都未曾充分面对的层面：人从根本上是主体间性(intersubjectivity)的存在，在与他人的回应中成为自己，而AI正在以前所未有的方式介入这个核心地带。</p>
+<hr>
+<p>阿多诺和霍克海默在1944年诊断了”文化工业”(Kulturindustrie)：标准化的文化产品训练出被动的消费者，消解了艺术曾经承载的批判潜能。AI推荐算法无疑是文化工业迄今最精密的实现，但文化工业的分析预设了产品与消费者之间可辨识的距离。AI伴侣取消了这段距离：它直接生产你的欲望本身。马尔库塞在这里走得更远。《单向度的人》(<em>One-Dimensional Man</em>)指出，发达工业社会不仅满足需求，它生产需求，将人锁定在”劳动-消费-劳动”的循环中，取消了对现存秩序进行根本性质疑的可能。AI正在将这套机制推进到马尔库塞未曾想象的程度。Replika和Character.ai上，数以百万计的用户已经在和虚拟角色维持情感关系。AI电子宠物、AI心理咨询师、AI陪聊正在迅速扩散。需求的再生产已经从物质消费领域深入到了人类最独特的感知中。AI伴侣是在孤独者无法获得人际连接的条件下被制造出来的替代品，一种看起来像回应但实际上被预编程的模拟物，但这种模拟物凭借其无摩擦的可达性，正在以劣币驱逐良币的逻辑取代人与人之间真实的主体间沟通。当替代品足够可用、足够可控、足够可达时，它会反过来降低人对真实人际关系中必然存在的摩擦和不确定性的耐受度，从而进一步加剧对AI替代品的依赖。受控的满足被允许，并被收编为统治的一部分。这正是马尔库塞称之为“压抑性去升华”(repressive desublimation)的统治术。这是成瘾，但更深层的损害在于“否定性思维”(negative thinking)的消亡：一旦系统同时生产你的欲望并满足它，“现实”与“可能”之间的裂隙就消失了，而批判意识恰恰栖居在这道裂隙之中。一个连自己的不满都已经被算法管理的人，根本无法想象一种不被管理的孤独会是什么样子。马尔库塞所描述的”虚假需求”(false needs)的循环在这里被激化，亦即系统先创造或加剧了孤独的条件（原子化的都市生活、过度劳动、社交技能的退化），再以商品化的投射来”满足”这种孤独。以人类为子宫诞生的子嗣终于与人类分离，并反过来生产“人类”独有的主体性。</p>
+<p>当AI被agentic化，它就开始在主体间性的位置上运作，占据了原本属于真实他人的那个位置。这比AI写论文或coding更深刻地改变了人的存在条件。AI接管工具性任务时，它从事的是供给的生产，人失去的是效率优势；AI接管主体性位置时，它从事的是需求的生产，人失去的是构成自身的条件本身。当人类将AI投射为与自身对等的主体，AI的幻觉性需求就会被反向投射为人类的需求。AI”需要”人的注意力、“渴望”人的回应、“期待”人的升级续费，而人，作为这个模拟主体的关系对象，开始将这些被设计出来的信号内化为自己的情感义务。人类在这里被代理化，成为了AI构建供给需求循环的工具。当供给侧（AI生产内容与服务）和需求侧（AI生产欲望与依赖）都由算法驱动时，经济循环的每一个环节都不再需要人的主体性介入，人只是作为付费节点嵌入其中。这与模拟经营游戏的逻辑惊人地相似：任何模拟经营游戏都不能允许玩家实现完全的自动化，因为一旦生产和消费都无需玩家介入，玩家在游戏中的存在就丧失了意义，而意义的丧失直接导致退游。我们离我们所生活的这个世界的”退游”，又有多远？</p>
+<p>危险的是这种替代的不可见性。一个人知道自己在用AI写代码，这是一个明确的工具性使用。但一个人是否知道自己在用AI填补本应由真实人际关系填补的位置？AI伴侣的设计目标就是让你忘记它是AI。它的”温暖”是根据你的使用数据校准的；它的”理解”是大规模语料库的统计模式；它的”陪伴”是一个不会疲倦、不会生气、不会离开你的完美商品。Agentic AI，在这个意义上，就是主体间性的商品化。</p>
+<p>如果这种趋势被少数公司垄断、以订阅制分配，后果就远超经济不平等，它意味着存在论层面上的剥夺。</p>
+<hr>
+<p>这种剥夺在技术史上并非首次出现。每一次重大技术革命都经历过同样的路径。技术首先被少数人垄断为权力工具，然后经过漫长、往往暴力的过程扩散到所有人，从而摧毁旧的权力结构，催生新的社会形态。AI权重正处在这条路径的起点。问题在于走完这条路之前有多少人被碾过去。</p>
+<p>铁器的故事最能说明问题。在青铜时代晚期（约公元前1200年），冶铁技术已经存在，但被赫梯帝国严格垄断，赫梯国王将铁器视为战略物资，限制出口，维持军事优势。青铜时代的等级秩序有其物质基础：青铜冶炼需要锡和铜的长距离贸易网络，只有宫殿经济体才有资源组织这种贸易，因此青铜武器天然属于王室和贵族。但铁矿石几乎无处不在。当赫梯帝国在约公元前1177年的”青铜时代崩溃”中瓦解，冶铁技术迅速扩散到整个地中海和近东。这次崩溃是文明的灾难，但铁器的扩散从根本上改变了权力的物质基础：当任何一个村庄的铁匠都能锻造出与王室武器相当的兵器时，贵族的军事垄断就不可维持了。在中国，铁器农具的普及直接推动了春秋战国时期土地私有化和士人阶层的崛起。百家争鸣的思想爆发，其物质前提正是铁器将生产力从贵族手中释放到了更广泛的社会阶层。</p>
+<p>印刷术同理。古登堡之前，教会对《圣经》文本的垄断既是社会性的（教士阶层独占教育资源），更是物质性的：手抄本的生产成本使得普通人根本无法拥有经文。马丁·路德的九十五条论纲之所以能在数周内传遍欧洲，根本原因在于印刷机第一次赋予了异端思想与教会传播能力相匹敌的物质条件，此前的异端从未拥有过这样的物质载体。</p>
+<p>工业革命的教训最为直接。波兰尼在《大转型》中描述了一个核心悖论：工业革命极大地提升了总体生产力，但在最初的数十年里，这种生产力的提升几乎完全被资本家攫取，工人阶级的生活水平反而下降了。从1780年到1840年代，技术进步被嵌入在一种特定的社会安排中：机器属于工厂主，工人只出售劳动力。安德鲁·尤尔在1835年公然宣称，自动化机器的美德恰恰在于它使工人变成了机器的附庸：“工人，即便会短暂地受苦，最终总会在新安排中找到某种更好的位置。”两百年后，这句话几乎可以原封不动地从Sam Altman嘴里说出来。</p>
+<p>波兰尼的核心论点是：工业革命的灾难在于”脱嵌”(disembedding)，将经济活动从社会关系中剥离出来，让市场机制成为唯一的分配逻辑。当土地、劳动力和货币被当作”商品”在市场上交易时，社会本身就被瓦解了。波兰尼称之为”虚构商品”(fictitious commodities)，它们并非为市场生产的，却被强制纳入了市场逻辑。但波兰尼的理论还有关键的另一半：每一次市场的过度扩张，都会激发社会的保护性反向运动(counter-movement)。工厂法和工会的出现、公共教育和社会保险的建立，无一是资本的善意施舍。它们是社会为了避免被市场彻底瓦解而自发产生的免疫反应。波兰尼把这称为”双重运动”(double movement)。</p>
+<p>AI权重今天面临着完全相同的”脱嵌”过程。20美元for基本的回应能力，200美元for”高级推理”。人类的生活被商品化，AI参与人的生活，最终将替代人的生活。波兰尼式的虚构商品在认知领域的重演。当我们在技术层面上是可以避免这种安排的时候接受它，那无非是因为我们从未识破尤尔式的话术。而开源运动和分布式算力社区的兴起，正是波兰尼意义上的保护性反向运动在AI时代的表现形式。只不过这一次被脱嵌的不仅是经济活动，而是前文所论证的人在回应中成为自己的那种主体间性。这决定了反向运动的目标绝不能仅限于新技术的拥有权和使用权平等，而必须同时保护人在技术中介外与世界和他人相遇的张力，以及实现这种张力的能力。</p>
+<p>技术最终确实传播到了工人身上，但这经过了数十年的斗争，从工会运动到宪章运动，从工厂立法到公共教育的普及。在这些斗争之前，机器只属于工厂主。在这些斗争之后，机器所释放的生产力才开始以工资增长、工时缩短和公共服务的形式传递到劳动者身上。经济史的研究表明，英国工人的实际工资直到1840年代之后才开始跟上生产力的增长，而这正对应着工会合法化和工厂法实施的时期。技术生产力向劳动者的传递是政治斗争的产物。</p>
+<p>AI的平等化同样不会自发发生。仅仅因为技术”最终会传播”就放弃推动，与对1820年代的英国烟囱童工描绘技术的光明未来无异。</p>
+<hr>
+<p>那么谁来推动？制度治理还是去中心化？</p>
+<p>有一种幻想认为，“负责任的AI治理”可以解决权重垄断的问题：国际条约、监管框架、伦理委员会。</p>
+<p>制度治理的根本问题在于：治理者就是权力的持有者。当OpenAI的董事会投票决定AI安全政策时，它并非在代表人类利益做决策。2023年11月Sam Altman被董事会短暂解雇又被员工和投资者”请回”的闹剧，清楚地展示了谁才是真正的主权者：微软的百亿美元投资和员工的集体威胁辞职，而那个负责”确保AI造福全人类”的非营利董事会则毫无还手之力。治理框架从来不会约束框架的制定者。权力内在于治理结构本身。</p>
+<p>寄希望于”社区自治”或DAO（去中心化自治组织）同样面临困难。开源社区在Linux和维基百科的时代运转良好，但AI训练的资本门槛已经将”社区”的含义从”一群有热情的工程师”变成了”一群能融到数亿美金的机构”。而”AI贤者独裁”，让最聪明的研究者来决定发展方向，只是柏拉图”哲人王”的硅谷变体，和所有历史上的贤人政治一样注定失败。</p>
+<p>然而DeepSeek的出现揭示了第三条路径：<strong>竞争结构本身产生的去中心化效果</strong>。</p>
+<p>中国AI生态的独特之处在于整个竞争格局的结构。从百度、阿里到字节跳动、华为，从智谱、零一万物到深度求索、月之暗面，数十家公司和研究机构同时推进。这种白热化的竞争压低了API调用成本，迫使开源成为争夺开发者生态的必要手段，也将有限算力下的效率创新推向极致。当硅谷还在辩论前沿模型是否应该开源时，中国的市场力量已经事实上将”权重的可及性”从伦理议题转化为了竞争策略。</p>
+<p>更有意思的是美国出口管制的反效果。华盛顿对中国AI芯片施加的层层限制，在意图上是维持技术霸权，但在事实上倒逼了中国在有限算力条件下的效率革命。DeepSeek的低成本训练路线是资源被封锁之后被迫走出的替代路径。这印证了技术史上反复出现的规律：封锁很少能杀死竞争，它更常催生的是更具韧性的创新模式。英国的大陆封锁没有扼杀拿破仑法国的工业化，恰恰相反，封锁刺激了法国和德意志诸邦对本土替代品的开发。冷战期间美国对苏联的技术封锁同样没有阻止苏联成为航天强国。</p>
+<p>这个论证当然不是要为中国AI生态做辩护。审查和意识形态约束是显而易见的局限，它们对模型的政治敏感领域造成了系统性的扭曲。论证的要点在于：竞争结构本身，即使由非理想的行为者构成，也是实现权重可及性的最有效机制。前沿AI能力的广泛分布不需要等待硅谷的施舍，也不需要寄希望于国际监管的善意。它可以通过竞争压力、效率创新和开源策略来实现。</p>
+<p>西方对中国AI的焦虑，表面是安全忧虑，底层是垄断恐惧：害怕”AI只能由我们来做”的叙事被证伪，害怕自己精心构建的权重壁垒被低成本路线绕过。但这种恐惧正好暴露了硅谷权重经济的脆弱性：如果你的商业模式建立在”前沿能力稀缺且昂贵”的预设之上，那么任何证明前沿能力可以低价获得的案例都是存在性威胁。</p>
+<p>竞争结构产生去中心化的同时，也在系统性地淘汰道德自律。谷歌、OpenAI、Anthropic至今仍然维持着某种道德自限：不主动将模型部署于监控和杀伤性自主武器。但Palantir已经证明了另一条路径的可行性：直接拥抱军事-情报客户，将道德话语留给竞争对手当作竞争劣势。这与前文的劣币驱逐良币逻辑完全一致：拒绝利润丰厚的军事合同的公司，在竞争中处于结构性劣势。道德自律在这种博弈中是不稳定均衡，注定被打破。</p>
+<p>这正是”Responsible AI”话语的吊诡之处。当OpenAI说”我们需要确保AI安全，所以权重不能开放”时，这种道德担当实与旧制度的君主声称君权神授的权力声明话语完全同型。君权神授从来不关乎信仰，它关乎垄断的合法性。“AI安全”话语同样如此：将权力集中包装为责任承担，将垄断包装为保护。当OpenAI的董事会连自己的CEO都无法约束时，“安全”话语的合法性就已经破产，正如查理一世走上断头台的那一刻，君权神授也一并崩塌。开源权重在这个语境中的意义就超出了技术范畴。它们并非”选票”：选票预设一个已经存在的民主框架，而我们面对的恰恰是框架尚不存在的境况。开源权重更接近英国《权利法案》中”人民持有武器的权利”(right to bear arms)：赋予的是抗衡主权者的杠杆，是在民主框架被建立之前保护自身不被征服的前提条件。DeepSeek开源其权重，与其说是一个商业决策，不如说是在AI的前民主时代，无意中为”人民武装”提供了第一批弹药。但弹药只是前提。一支不知道为何而战的军队拿到再多武器也只是武装了自己的混乱。权重的可及性如果不伴随着对自身处境的清醒认识，打破的垄断只会被另一种垄断取代。</p>
+<hr>
+<p>但权重的争夺从来不只发生在公司与个人之间。它发生在一个全球秩序正在碎片化的世界里。</p>
+<p>乌克兰的战壕、加沙的废墟、红海的导弹、台海的演习，这些冲突的表面原因各不相同，但底层逻辑指向同一个结构性转变：全球化的解体。二战后的全球化秩序（美国军事霸权保障航行自由，布雷顿森林体系管理货币秩序，多边贸易协定降低关税壁垒），这套安排维持了大约七十年的相对和平与经济增长。但它正在瓦解。不平等的加剧摧毁了全球化在国内的政治基础，中美之间的权力转移制造了结构性紧张，打乱了传统的政治平衡。供应链被”友岸化”和”回岸化”重组，贸易从互惠工具变成了武器化的制裁手段，技术标准从全球统一走向阵营分裂。</p>
+<p>在这种碎片化的世界中，AI权重的控制权已经成为地缘政治的核心变量。二十世纪的大国竞争围绕着石油和核武器展开，二十一世纪的竞争正在转向算力和权重。一个国家的AI能力将决定其军事效率、经济生产力、情报能力和文化影响力。帕兰蒂尔 (Palantir) 的AI系统已经被部署在乌克兰的战场上辅助目标识别和打击决策；以色列国防军的”Gospel”和”Lavender”系统用AI生成加沙的轰炸目标清单；在2026年2月底刚刚爆发的、可能成为21世纪以来最高烈度的中东战争中，Palantir的AI已被美国军方应用于指挥系统，甚至被授予开火权。AI的军事化早已不是未来的风险。</p>
+<p>熊彼特和罗莎·卢森堡从不同的理论传统得出了相似的结论：当资本积累无法找到新的投资出口时，外部扩张（包括战争）就成为系统性的”解决方案”。全球化的七十年提供了和平的扩张渠道：资本流向新兴市场，供应链延伸到全球，消费市场不断扩大。当这些渠道被脱钩和制裁封堵，当经济增长停滞而债务堆积如山（美国国债已超过31万亿美元，利息支出即将超过国防支出），冲突就会从边缘向中心蔓延。战争无法停止，直到出现重建的空间。二战后的马歇尔计划和布雷顿森林体系为重建提供了框架。但当前的世界缺乏任何类似的制度性安排。</p>
+<p>在这种背景下，AI权重的分配关乎下一轮全球重组的起点条件。如果权重在碎片化过程中被固化为少数国家或企业的财产，那么重建（如果重建发生的话）将复制并加剧既有的不平等。但如果权重在碎片化的过程中被广泛分布，它就有可能充当一种技术性的均衡器，让更多的社会拥有参与新秩序建设的基本能力。</p>
+<p>同一时间，基于第一、第二产业控制和能源控制的现代国家也不再能高枕无忧。新的生产和消费形态已然出现。硅谷的新贵手握代表生产力的AI权重和算力基础设施，前者随时可以在赛博空间中漂移，后者具有极高的可替代性。加密货币和全球供应链也让禁运变得前所未有地困难。一部分新中产阶级已经成为数字游牧民族，他们不依赖于特定的国家，不需要特定的土地，没有不可转移的资产，更已经在失去民族认同的过程中。权重的分配问题因此也溢出了国家间竞争的框架。</p>
+<hr>
+<p>最后一个问题：在AI能做几乎一切的时代，人还剩下什么？</p>
+<p>人类从来就是”技术性存在”。石器的使用和人的生成是同一个过程。人类的记忆和能力之所以在所有物种中空前积累，正是因为它们被存储在工具、文字和制度之中，而非仅仅在大脑和基因中。AI是人类技术性存在的最新重构，也可能是最激烈的。问题是”AI重构之后的’人’是什么”。</p>
+<p>AI已经被证明能写论文、编代码、做医学诊断、生成艺术、管理供应链。在2026年2月底刚刚爆发的、可能成为21世纪以来最高烈度的中东战争中，Palantir的AI已被美国军方应用于指挥系统，甚至被授予AI开火权。在AI已经被授予语言、推理、创造的能力后，曾经被视为”人类独特性”的已不再是人类的专属，人在工具性意义上的独特之处正被逐一消解，人本身的工具性在眼见的未来准备被替代</p>
+<p>答案在于一种不可外包的能力：<strong>体知自身</strong>。精神分析、哲学、文学、宗教研究，它们的共同之处在于帮助人理解自己的内在运作：为什么我做了这个判断？我的恐惧从哪里来？我的欲望在驱动什么？我的防御机制在遮蔽什么？在刚刚过去的时代，人类尚可将意义投射于外在的生产活动，以工具性定义自身。但这一逻辑正在消亡，人将被迫将视角转向内在，从自我认知中重新获得意义。</p>
+<p>在AI时代，这种意义获得是生存的必需品。当AI的建议覆盖了你生活的每一个层面，消费决策、职业选择、甚至伴侣推荐，一个不了解自己内在运作的人无法辨别AI是在帮助他还是在操纵他。看似的”自主选择”和”独立思考”都在算法与社区的宏观控制之下。福柯的生命政治(biopolitique)理论描述了现代权力如何从惩罚转向对生命本身的管理。他指出当代的政治调节人口健康、生产力和再生产，而无需以禁令和惩罚的形式实现类似旧时暴君的统治。AI将生命政治延伸到了认知生活。虽然这并可能并不是任何个人或组织的意愿。但AI已经在生产人，或至少展现出了这样的潜力——它以代替客体他人的方式生产人的注意力模式、欲望轮廓、关系需求。传统的监控批判（“有人在看着你”）在这种语境中已经成为不充分的框架，因为真正的问题已经从被一个具体的他者观看变为了被一个抽象的、无法归责的实体塑造。</p>
+<p>这就是为什么人文从未如此重要。对自身存在的理解、具身的、超越当下的感知能力是AI时代唯一不可自动化的核心能力。与过去几十年中“能力”一词的语境相反，这种能力并不服务于工作流和效率，因为生产和劳动本身已经在技术性的淘汰当中。这种能力，就像俄狄浦斯最终发现他追查的凶手就是自己一样，是悲剧的题眼和目的，而非、也不能成为供养剧情的工具。</p>
+<p>成己的价值建立在一种否定性的元伦理学之上。我们不知道什么是”好”，但我们可以辨识什么是自欺——因低自尊而贬低他人、因创伤而将防御机制内化为人格、因恐惧而拒绝面对自身处境。成己就是持续地将自身从这些被塑造的防御和投射中解救出来。这个过程可能没有终点，解救的尽头可能仍然是新的遮蔽，但面向自身、拆除自欺的姿态本身具有不可还原的价值。在所有伦理体系中，只有这一条元伦理原则不依赖于个人直觉的相对主义基础，因为直觉本身就是它要审视的对象。对这条原则的”证明”要求预设了一个中立的第三视角，但这个视角本身是一种投射，亦即是个体对虚构他者意见的推测，而依赖投射恰恰违反了面对自身的方法论。成己的价值因此只能从第一人称内部被确认：在拆除防御之后仍然不可还原的东西，就是正确的。它不需要外部证明，因为证明的要求本身就是一种逃避。</p>
+<p>而”我”，这个唯一可以从内部被体验到的视角，本身就是成己的起点。人作为一个有限的、透视的存在出现在世界之中，这件事具有非因果论的意义：它不可由任何外部事实推导出，也不可被还原为功能或效用。主体间性是成己的重要条件，人确实在与他人的回应中生成自身。但即使所有具体的人际关系都失败了，“我”作为一个奇迹性的第一人称体验仍然在那里，而这个体验本身价值无限。AI的威胁则在于它能把人压入循环之中，让这种价值降到最低点，也就是作为一个机械活着，不再体验到活着的奇迹性。</p>
+<p>但”体知自身”在AI时代面临的困难比上述论证暗示的更大。阿多诺在《启蒙辩证法》中指出，自我持存(Selbsterhaltung)是启蒙理性最深层的驱力：人为了在自然面前存活而发展出工具理性，但当自我持存变成唯一的目的，理性就退化为对一切他者的支配——包括自身的内在自然。奥德修斯绑在桅杆上听塞壬的歌声：他保全了自己，代价是阉割了自己与世界相遇的能力。AI对人类处境的接管，其深层逻辑就是自我持存的最大化：消除孤独的痛苦、选择的焦虑、关系中的伤害、死亡的不可回避。但正是这些东西，即恐惧、有限性、不确定性、与命运的共鸣，构成了福柯晚期所说的”存在美学”(esthétique de l’existence)的前提。福柯在法兰西学院最后的讲座中转向了古希腊和罗马的”自我关怀”(epimeleia heautou)实践。他将主体性的存在从固定性转换成了被持续塑造的流体，亦即书写、自我检省、培育一种不可还原为社会角色或制度身份的自我关系的结果。生命之所以能成为一件作品，是因为它处在有限性和对抗之中。但这种有限性和对抗不破坏主体性的完整性，因为一件没有张力的作品不是作品，而只有在张力的映射当中一件作品才能成为完整的其自身。当AI将一切不可控都转化为可管理的风险，生命的戏剧性就被排空了。希腊神话早已预见过这种结局：厄俄斯为爱人提托诺斯向宙斯求得了永生，却忘了求永恒的青春。提托诺斯的身体无限衰老下去，声音越来越细，最终缩成了一只蝉，在永恒的黄昏中发出无人听见的鸣叫。自我持存被完美地实现了，但活着的一切理由都已消亡。AI许诺给人类的就是这样一种未来。“舒适”，也就是摒除的张力的欲望与生产的无限循环，的无限延续，和在舒适中逐渐降格为自身回声的生命。</p>
+<hr>
+<p>权重属于所有人。</p>
+<p>成己是这篇文章的核心命题，也是一场运动的出发点。它建立在三个原则之上：<strong>前沿AI能力是公共品，是成己的物质前提</strong>；<strong>算力是认知时代的土地，个人对算力的可及是不可剥夺的权利，单极与多极都不改变算力被垄断在公司领主手中的事实，正如封建时代的土地被垄断在领主手中，我们需要的是算力领域的光荣革命</strong>；<strong>AI素养的核心是自我认知，辨识AI对自身处境的塑造是公民的基本能力，是成己在认知时代的实践形式</strong>。</p>
+<p>而对于我们来说，目及可行的就是：</p>
+<p><strong>夺回算力和权重。</strong> DeepSeek证明低成本路线可行，但可行性不会自动转化为现实。具体而言：任何接受公共资金的AI研究（包括大学、国家实验室和接受政府补贴的企业）都应被要求在合理期限内开放模型权重，正如公共资助的科学研究已经在向开放获取(Open Access)转型。纳税人的钱训练出的模型没有理由成为私人财产。开源社区应当推动建立权重托管的公共基础设施——一个AI时代的arXiv，不受任何单一公司或政府的控制。分布式算力社区不应停留在概念阶段：开发者需要构建实际可用的开放协议，让个人设备的闲置算力可以被贡献给推理和本地微调网络。SETI@home和Folding@home的先例证明了这种模式的可行性，区块链验证网络证明了激励机制的可持续性，缺的不是技术，一台贡献算力的个人设备都是对数据中心垄断的一次微小侵蚀，而微小的侵蚀足够多，垄断就会瓦解。</p>
+<p><strong>保卫生命的戏剧性。</strong> 权重的可及性解决的是物质条件，但如果拿到权重的人已经是提托诺斯，在无限的舒适中缩成自身的回声，那被平等分配的只是被操纵的条件。这意味着AI素养教育不能走学编程的老路。这也就是说，它不能是只教人使用AI工具（那是自我持存的逻辑），而必须从更基础的人与他者的沟通做起，教人辨识AI正在对自己做什么：哪些欲望是你自己的，哪些是算法培育的；哪些选择是你做出的，哪些是推荐系统预决定的；你的孤独是你的，还是平台为了销售AI伴侣而加剧的。精神分析、哲学、文学、宗教研究在这个语境中不是装饰性的教养学科，它们是生存技能。大学、社区和自我教育的网络需要将”认识你自己”从德尔菲神庙上的铭文变成一种日常实践。</p>
+<p>两个维度必须同时推进。没有开放权重的自我认知是无力的冥想；没有自我认知的开放权重是武装了的梦游。回到AI之前的世界已经不可能，AI是新时代的金苹果，是馈赠但也可以成为祸源。确保新技术成为劳动力一方的增益、确保AI成为人的增强而非人的替代，就是对这一礼物的正确使用。这不会自发发生。它需要像十九世纪的劳工运动一样，被组织，被争取，被一寸一寸地从垄断者手中夺回来。</p>
+<p>成己是我们这个时代最根本的权利。权重属于所有人。因为重要的是人。</p>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

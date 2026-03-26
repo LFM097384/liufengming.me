@@ -1,11 +1,12 @@
 [
   {
-    "slug": "the-weights-belong-to-everyone",
-    "title": "The Weights Belong to Everyone",
+    "slug": "being-human-in-the-age-of-ai",
+    "title": "Being Human in the Age of AI",
     "title_zh": "AI时代的人之为人",
     "date": "2026-03-07",
     "description": "AI weights as the embodiment of collective human intelligence — why they belong to everyone.",
-    "description_zh": "AI权重作为集体人类智慧的体现——为何它们属于每个人。",
+    "description_zh": "AI权重的分配是一个存在论问题——成己与AI时代的人的条件。",
+    "folder": "AI",
     "file_en": "The_Weights_Belong_to_Everyone.html",
     "file_zh": "AI时代的人之为人.html",
     "tags": ["AI", "philosophy", "open source"]

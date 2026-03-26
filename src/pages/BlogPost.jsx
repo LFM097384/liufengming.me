@@ -74,13 +74,14 @@ const BlogPost = () => {
     )
   }
 
-  // Resolve file path: use file_en/file_zh if specified, otherwise {slug}/en.html
+  // Resolve file path: folder/file_xx if specified, otherwise slug/xx.html
+  const base = post.folder || post.slug
   const primaryFile = isZh
-    ? (post.file_zh || `${post.slug}/zh.html`)
-    : (post.file_en || `${post.slug}/en.html`)
+    ? (post.file_zh ? `${base}/${post.file_zh}` : `${base}/zh.html`)
+    : (post.file_en ? `${base}/${post.file_en}` : `${base}/en.html`)
   const fallbackFile = isZh
-    ? (post.file_en || `${post.slug}/en.html`)
-    : (post.file_zh || `${post.slug}/zh.html`)
+    ? (post.file_en ? `${base}/${post.file_en}` : `${base}/en.html`)
+    : (post.file_zh ? `${base}/${post.file_zh}` : `${base}/zh.html`)
   const postUrl = getStaticPath(`blog/${primaryFile}`)
   const fallbackUrl = getStaticPath(`blog/${fallbackFile}`)
   const title = isZh ? (post.title_zh || post.title) : post.title
