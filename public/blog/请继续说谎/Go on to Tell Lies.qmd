@@ -1,0 +1,77 @@
+---
+title: "Go on to Tell Lies"
+subtitle: "The Escapist Lies of Ideology"
+author: "Fengming Liu"
+date: 2026-03-07
+lang: en
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    theme: cosmo
+    fontsize: 1.1em
+    linestretch: 1.8
+  pdf:
+    documentclass: article
+    papersize: a4
+    pdf-engine: lualatex
+    latex-tinytex: false
+    fontsize: 11pt
+    geometry:
+      - top=2.5cm
+      - bottom=2.5cm
+      - left=2.5cm
+      - right=2.5cm
+    include-in-header:
+      text: |
+        \usepackage{setspace}
+        \onehalfspacing
+  docx: default
+---
+
+## The Temptation and Escape of Eternal Lies
+
+> Because people always hope to hear the answers they want to hear,
+> And cannot rest until they get the answers they seek in their hearts
+> You, I want you to tell me eternal, unbreakable lies
+> Never revealing the truth behind them no matter when
+>
+> 人はみな望む答だけを聞けるまで尋ね続けてしまうものだから
+> 君よ永遠の嘘をついてくれ　いつまでもたねあかしをしないでくれ
+>
+> — Miyuki Nakajima, "Tell Me Eternal Lies"
+
+Miyuki Nakajima's "Tell Me Eternal Lies" was written in the early 1990s, as the Japanese left-wing movement was declining. The Soviet Union had dissolved, Eastern Europe had convulsed, and the left-wing utopian ideals that had sustained the spiritual world of countless idealists collapsed overnight. The "eternal lies" of the song can be heard as the sweet deceptions of love, but they also speak to the comforting narratives of ideology. Looking back at the turbulent history of twentieth-century left-wing movements, we cannot avoid the question: did those revolutionary ideals that once drove so many to risk their lives also contain a kind of "eternal lie"?
+
+From the perspective of Freud's defense mechanisms, ideology functions as a collective process of "rationalization" and "projection," providing a narrative framework that explains the sources of suffering and offers hope in the face of complex and cruel social realities. Marx's claim that "religion is the opium of the people" extends naturally: all ideologies serve, to some degree, as society's "spiritual painkillers." The analogy is profound, but Marx's critique of religion missed a crucial point. Narcotics may sever a person from reality, but for a patient in severe pain, narcotics are also necessary. Ideology's "anesthetic" function hinders clear perception of reality, yet it also shields human beings from the existential anxiety of confronting emptiness and absurdity head-on. The "hope of changing the world" that left-wing thought offers is itself a path of escape from reality.
+
+This anesthetic effect is especially visible in contemporary American political polarization. In the 2024 election cycle, both the MAGA movement under Trump and the growing progressive forces within the Democratic Party offered their own forms of "eternal lies." Right-wing nationalists believe in an American past wrapped in the myth of "greatness," a pure, homogeneous, prosperous golden age that never actually existed, using the slogan "Make America Great Again" to flee the irreversible social transformations wrought by globalization, automation, and demographic change. This nostalgic nationalism is a simplified escape from complex reality, an anxious reaction to changes beyond anyone's control. Trump's persistent claims about a "stolen election," though lacking substantial evidence, provided his supporters with a psychological framework for rationalizing political defeat, a collective "eternal lie."
+
+At the other end, "Woke Culture," though originating in critique of social injustice, has developed its own dogmas and mechanisms of escape. In its extreme form, complex social problems are flattened into an oppressor/oppressed binary, individuals reduced to representatives of their identity categories rather than whole persons of complex character and circumstance. On American campuses, protests surrounding the Israeli-Palestinian conflict occupy a romantic idealist position in public discourse reminiscent of the anti-war movements of the sixties, yet their practice is frequently accompanied by selective moral outrage, condemning Israeli actions while maintaining relative silence about Hamas atrocities. Ideology here filters reality, constructing cognitive frameworks that conform to preset positions. "Cancel Culture," a derivative phenomenon of woke culture, achieves control over dissent through moral condemnation and social exclusion. This modern form of "heresy tribunal" suppresses necessary social dialogue while providing participants with a feeling of moral purity and communal belonging. This ostensibly "liberating intolerance" risks leading to yet another form of thought suppression. Reinforced by social media algorithms, this ideological self-confirmation hardens into ever more impenetrable information cocoons.
+
+In the Palestinian solidarity marches erupting across major European cities, left-wing groups tend to reduce the conflict to a binary of "oppressors and oppressed," intentionally or not ignoring the Middle East's tangled historical and religious contradictions. This simplification is both a cognitive escape from complex reality and a reinforcement of one's own moral superiority. Right-wing ideology performs the same operation from the other side, framing the conflict as "civilization versus barbarism" or "democracy versus terrorism" to avoid the complexities of colonial history and geopolitical reality. Both sides selectively consume information within their ideological frameworks, reinforcing preset positions. Participants in these movements often gain a sense of "moral purity" and belonging through ritualized collective protest, which reveals the dual function of ideology as psychological defense mechanism: providing emotional catharsis in the face of uncontrollable global tragedy while escaping, through simplified narratives, the cognitive discomfort that complex realities impose.
+
+Debates over abortion rights, gun control, and gender identity have long transcended rational analysis to become markers of collective identity. Media platforms like Fox News and MSNBC function not as information transmitters but as amplifiers of specific ideological discourse, consolidating their respective camps' worldviews through selective reporting and emotionalized narrative. Social media algorithms further intensify this polarization by prioritizing content that triggers strong emotional responses. The divergent interpretations of the January 6, 2021 Capitol event, from "patriotic uprising" to "attack on democracy," demonstrate how a single event is absorbed into radically different ideological narratives, becoming evidence for each side's "eternal lies."
+
+For many left-wing activists, the revolutionary identity becomes a special Jungian persona. By performatively perfecting this mask, they escape the pain of confronting the true self beneath it. Jung's concept lets us see that many radical leftists' passionate commitment to ideology may be, at its core, a performance and confirmation of self-identity. The defining feature of this performance is that the performer does not acknowledge it as performance but treats it as ultimate reality. This explains why "heresy trials" within left-wing movements tend to be harsher than in conservative camps: questioning the performance directly threatens the performer's entire self-identification system. Stalin's Great Purge (1936–1938), conducted under the banner of "eliminating enemies of the people" and "defending revolutionary achievements," in practice eliminated nearly all the old Bolshevik elites of Lenin's era. The accused were forced to confess to being "Trotskyists" or "imperialist spies," and many went to their executions still shouting loyalty to the Party and Stalin. These dramatic scenes reveal how profoundly ideology can reshape individual cognition, making people prefer to believe "the Party cannot be wrong" rather than confront painful truth. The Yan'an Rectification Movement (1942–1945), ostensibly correcting "non-proletarian thoughts" within the Party, created a distinctive "theatrical effect" through its mechanisms of thought reform and self-criticism: participants were simultaneously actors and audience, required in collective ritualized sessions of criticism and self-criticism to continuously "transform" themselves, performing the image of a "new person" conforming to ideological requirements. During the "Rescue Campaign," many intellectuals were suspected of being spies and forced to produce reams of insincere "confession materials." During the Cultural Revolution, many reformed intellectuals eventually came to genuinely believe the implanted narratives and deeply repented. This mechanism of "self-censorship" amounts to a forcible reconstruction of individual self-cognition, a negation of the true self and of every other persona, and a surrender to ideology's "eternal lie."
+
+## The Essential Critique and Reflection on Ideology
+
+The setbacks of left-wing movements across history are not merely failures of method. The deeper problem is that some left-wing ideals themselves run against the basic operating principles of human society. The communist ideal of "from each according to his ability, to each according to his needs" ignores the fundamental contradiction between the limitlessness of human desire and the finitude of resources. Marx's critique of capitalism is penetrating in its exposure of internal contradictions and alienation effects, yet his vision of communist society sidesteps the complexity of human nature itself. Given the known human tendency to seek "more," a purely egalitarian distribution system is, at bottom, a denial of the basic laws governing economic life. The most fatal blind spot in left-wing economic thought is its treatment of human self-interest as a product of capitalism rather than a constant of human nature, and thus its erroneous assumption that this motive can be eliminated through institutional reform.
+
+Historical experience shows that faith in planned economies is essentially a conflict between economies that respect market laws and those that attempt to override them. Market laws, as spontaneous order, operate with an objectivity akin to natural laws. Administrative power and revolutionary enthusiasm can neither light fire on ice nor transmute stones into gold, nor can they conjure from thin air a society that is simultaneously abundant and equal. Hayek's warning in *The Road to Serfdom* has been vindicated by history: attempts to plan the economy in full inevitably lead to inefficiency and the concentration of power. The Soviet Union's seventy-year experiment with planned economy and China's policy shift from the Great Leap Forward to Reform and Opening Up both demonstrate that attempts to replace market self-regulation with will and planning ultimately cannot be sustained. The denial of this reality is a textbook case of ideology as escape mechanism, avoiding the pain of accepting the irreconcilable contradiction between ideal and reality by denying the objective existence of economic laws.
+
+Yet blind worship of the market constitutes its own ideological escape. The American right's near-religious faith in the "free market" ignores market failures, monopoly formation, and externalities, reducing complex economic phenomena to a binary of "government intervention vs. market freedom." After the 2008 financial crisis, despite the near-collapse of the laissez-faire financial system, right-wing discourse on Wall Street continued to blame "over-regulation" rather than systemic risk. This faith in the market's self-regulatory capacity is a simplified narrative that evades complex reality, another form of "eternal lie."
+
+The contradictions of contemporary American right-wing nationalism on economic questions are even more striking. Raising the banner of free markets with one hand while advocating trade protectionism and economic nationalism with the other, this is not even a logically consistent theoretical system. It is an emotional reaction to specific anxieties. The MAGA movement's economic nationalist appeal, "bring jobs back to America," ignores the irreversibility of globalization and technological change, a selective denial of economic reality. This unrealistic promise works precisely because, as an "eternal lie," it satisfies the psychological need for certainty and security among its audience.
+
+As we have all witnessed, algorithmic recommendations, social media sorting, and online communities make it ever easier to immerse oneself in information cocoons of the like-minded. Left and right alike tend to consume information conforming to their preset positions, dismissing opposing voices as products of "hostile forces" or "false consciousness." In the new media environment, ideological discourse reduces public dialogue to a binary of friend and enemy, and debate is replaced by emotional resonance and moral superiority. Public discourse becomes a battlefield between competing "eternal lies," exhausted by the endless disputes of mutually self-deceiving systems. The deeper paradox is that the tellers of lies never believe they are lying, and their listeners never believe they are deceived. This circular logic means that ideological opposition is no longer a dialectic of true and false, right and wrong, but an interminable cycle of self-confirmation and exclusion of the other. Even from a moral standpoint, both producers and consumers of lies accept them in an almost compulsory posture, because the lies sustain their self-identity and social belonging. Shattering the lie is a devastating blow to the persona on which they depend for survival. People who denigrate others often harbor narcissistic tendencies, and narcissists rely on narcissism to compensate for their inferiority, the principle is the same. The tragedy of left-wing thought is that its vision of liberation may lead directly to new fetters: its construction of a "realm of necessity" merges with its descriptive theory of reality and its lofty moral destination, and once reality fails to match this merger, self-deceptive lies become an inevitable result. How to face ideology's own dimension as "eternal lie" has become the urgent question.
+
+## Between Lies and Truth
+
+We desire truth while fearing that truth will destroy the meaning system on which our survival depends. On this foundation, every ideology inevitably manufactures new lies. The Marxist tradition exposes the structural contradictions between capital and labor; right-wing nationalism captures globalization's erosion of local identity; woke culture acutely identifies the persistence of institutional injustice. Yet each current is trapped, in an almost involuntary posture, within its own system of meaning.
+
+To move beyond the current polarization of American politics may require a shared examination of all "eternal lies," the nostalgic phantasm of right-wing nationalism, the idealism of left-wing utopias, the moral purism of woke politics alike. True courage lies not in clinging to one's own "eternal lies" but in daring to examine them, acknowledging their limits and their delusions. What we need is not more "eternal lies" but more courage to face the truth. As Freud put it, "Only by confronting pain can we achieve genuine freedom." The gravest social problem we face, and the warning already sounded, is precisely that line:
+
+"Never revealing the truth behind them no matter when"

@@ -10,5 +10,17 @@
     "file_en": "The_Weights_Belong_to_Everyone.html",
     "file_zh": "AI时代的人之为人.html",
     "tags": ["AI", "philosophy", "open source"]
+  },
+  {
+    "slug": "go-on-to-tell-lies",
+    "title": "Go on to Tell Lies",
+    "title_zh": "请继续说谎",
+    "date": "2026-03-07",
+    "description": "The escapist lies of ideology.",
+    "description_zh": "意识形态的逃避谎言。",
+    "folder": "请继续说谎",
+    "file_en": "Go on to Tell Lies.html",
+    "file_zh": "请继续说谎.html",
+    "tags": ["philosophy", "ideology"]
   }
 ]
