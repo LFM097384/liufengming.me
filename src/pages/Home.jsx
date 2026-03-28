@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Typography, Box, Chip, Link, Divider } from '@mui/material'
 import { Link as RouterLink } from 'react-router-dom'
 import SEO from '../components/SEO'
@@ -8,7 +8,19 @@ import { getStaticPath } from '../utils/paths'
 import LazyImage from '../components/LazyImage'
 
 const Home = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isZh = i18n.language === 'zh'
+  const [blogPosts, setBlogPosts] = useState([])
+
+  useEffect(() => {
+    fetch(getStaticPath('blog/posts.json'))
+      .then(res => res.json())
+      .then(data => {
+        const sorted = data.sort((a, b) => new Date(b.date) - new Date(a.date))
+        setBlogPosts(sorted.slice(0, 3))
+      })
+      .catch(() => {})
+  }, [])
 
   const recentPubs = [
     {
@@ -142,6 +154,17 @@ const Home = () => {
         <Divider sx={{ borderColor: '#2c2c2c', borderWidth: 1.5 }} />
       </Box>
 
+      {/* ── TWO-COLUMN LAYOUT ── */}
+      <Box
+        sx={{
+          display: 'flex',
+          gap: { xs: 0, md: 5 },
+          flexDirection: { xs: 'column', md: 'row' },
+        }}
+      >
+        {/* LEFT: main content */}
+        <Box sx={{ flex: 1, minWidth: 0 }}>
+
       {/* ── ABOUT ── */}
       <Box sx={{ mb: 6 }}>
         <Typography variant="body1" sx={{ lineHeight: 1.85, mb: 2 }}>
@@ -231,6 +254,76 @@ const Home = () => {
         >
           All publications & conferences →
         </Link>
+      </Box>
+
+        </Box>
+
+        {/* RIGHT: blog sidebar */}
+        <Box
+          sx={{
+            width: { xs: '100%', md: 260 },
+            flexShrink: 0,
+            mt: { xs: 5, md: 0 },
+            position: { md: 'sticky' },
+            top: { md: 100 },
+            alignSelf: { md: 'flex-start' },
+          }}
+        >
+          {blogPosts.length > 0 && (
+            <Box
+              sx={{
+                pl: { md: 3 },
+                borderLeft: { md: '1px solid #e0dcd6' },
+              }}
+            >
+              <Typography
+                variant="overline"
+                sx={{
+                  color: '#b0413e',
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.12em',
+                  display: 'block',
+                  mb: 2,
+                }}
+              >
+                {isZh ? '最新博客' : 'RECENT WRITING'}
+              </Typography>
+
+              {blogPosts.map((post) => (
+                <Box key={post.slug} sx={{ mb: 2.5 }}>
+                  <Link
+                    component={RouterLink}
+                    to={`/blog/${post.slug}`}
+                    sx={{
+                      fontFamily: '"EB Garamond", serif',
+                      fontSize: '0.95rem',
+                      fontWeight: 600,
+                      color: '#2c2c2c',
+                      textDecoration: 'none',
+                      lineHeight: 1.35,
+                      display: 'block',
+                      '&:hover': { color: '#b0413e' },
+                    }}
+                  >
+                    {isZh ? (post.title_zh || post.title) : post.title}
+                  </Link>
+                  <Typography variant="body2" sx={{ color: '#aaa', fontSize: '0.72rem', mt: 0.3 }}>
+                    {post.date}
+                  </Typography>
+                </Box>
+              ))}
+
+              <Link
+                component={RouterLink}
+                to="/blog"
+                sx={{ fontSize: '0.82rem', fontWeight: 500, display: 'inline-block', mt: 0.5 }}
+              >
+                {isZh ? '所有文章 →' : 'All posts →'}
+              </Link>
+            </Box>
+          )}
+        </Box>
       </Box>
     </>
   )

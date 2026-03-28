@@ -22,5 +22,17 @@
     "file_en": "Go on to Tell Lies.html",
     "file_zh": "请继续说谎.html",
     "tags": ["philosophy", "ideology"]
+  },
+  {
+    "slug": "the-tyranny-of-tolerance",
+    "title": "The Tyranny of Tolerance",
+    "title_zh": "宽容的暴政",
+    "date": "2026-03-28",
+    "description": "Beyond liberal ethics.",
+    "description_zh": "超越自由主义的伦理。",
+    "folder": "宽容的暴政",
+    "file_en": "The Tyranny of Tolerance.html",
+    "file_zh": "宽容的暴政.html",
+    "tags": ["philosophy", "ethics"]
   }
 ]
