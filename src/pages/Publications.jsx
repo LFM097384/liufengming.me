@@ -160,19 +160,10 @@ const Publications = () => {
       {
         authors: 'Lin, Z., & Liu, F.',
         title:
-          'Quantifying Linguistic Injustice in Multilingual Foundation Model Evaluation: The Translation Tax',
-        journal: 'IPLJ 2026 (Oral Presentation)',
-        year: '2026',
-        correspondingAuthor: 'Ziqi Lin',
-        status: 'Published',
-      },
-      {
-        authors: 'Liu, F., & Lin, Z.',
-        title:
           'Position: LLM Social-Simulation Agents in the Wild Cannot Serve as Social Scientific Evidence Without an Identification Strategy',
         journal: 'ICML 2026 Workshop on AIWILD',
         year: '2026',
-        correspondingAuthor: 'Fengming Liu',
+        correspondingAuthor: 'Zezheng Lin',
         status: 'Published',
       },
     ],
@@ -188,12 +179,21 @@ const Publications = () => {
         status: 'Preprint',
       },
       {
+        authors: 'Lin, Z., Liu, F., & Li, H.',
+        title:
+          'The Translation Tax Is Not a Scalar: A Counterfactual Audit of English-Source Cue Inheritance in Chinese Multilingual Benchmarks',
+        year: '2026',
+        doi: '10.48550/arXiv.2605.07093',
+        correspondingAuthor: 'Zezheng Lin',
+        status: 'Preprint',
+      },
+      {
         authors: 'Lin, Z., & Liu, F.',
         title:
-          'Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims',
+          'Position: Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims',
         year: '2026',
         doi: '10.48550/arXiv.2605.08012',
-        correspondingAuthor: 'Ziqi Lin',
+        correspondingAuthor: 'Zezheng Lin',
         status: 'Preprint',
       },
       {
@@ -329,6 +329,12 @@ const Publications = () => {
       <Box sx={{ mb: 4 }}>
         <SectionTitle number="04" title="Conference Presentations" />
         {[
+          {
+            year: '2026',
+            title: 'Quantifying Linguistic Injustice in Multilingual Foundation Model Evaluation: The Translation Tax',
+            venue: '6th European Experimental Philosophy Conference',
+            type: 'Presentation (presented by Z. Lin)',
+          },
           {
             year: '2026',
             title: 'MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI',
