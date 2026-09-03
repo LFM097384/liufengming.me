@@ -157,15 +157,52 @@ const Publications = () => {
         correspondingAuthor: 'Fengming Liu',
         status: 'Published',
       },
+      {
+        authors: 'Lin, Z., & Liu, F.',
+        title:
+          'Quantifying Linguistic Injustice in Multilingual Foundation Model Evaluation: The Translation Tax',
+        journal: 'IPLJ 2026 (Oral Presentation)',
+        year: '2026',
+        correspondingAuthor: 'Ziqi Lin',
+        status: 'Published',
+      },
+      {
+        authors: 'Liu, F., & Lin, Z.',
+        title:
+          'Position: LLM Social-Simulation Agents in the Wild Cannot Serve as Social Scientific Evidence Without an Identification Strategy',
+        journal: 'ICML 2026 Workshop on AIWILD',
+        year: '2026',
+        correspondingAuthor: 'Fengming Liu',
+        status: 'Published',
+      },
     ],
     preprint: [
+      {
+        authors: 'Liu, F.',
+        title:
+          'Asymmetric Discourse Homogenization and Shared Language Technology: Evidence from Reddit',
+        year: '2026',
+        doi: '10.48550/arXiv.2608.13674',
+        note: 'Under review at ICWSM 2026.',
+        correspondingAuthor: 'Fengming Liu',
+        status: 'Preprint',
+      },
+      {
+        authors: 'Lin, Z., & Liu, F.',
+        title:
+          'Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims',
+        year: '2026',
+        doi: '10.48550/arXiv.2605.08012',
+        correspondingAuthor: 'Ziqi Lin',
+        status: 'Preprint',
+      },
       {
         authors: 'Liu, F., & Yu, S.',
         title: 'MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI',
         year: '2025',
         doi: '10.48550/arXiv.2511.03731',
         ssrn: 'https://dx.doi.org/10.2139/ssrn.5120349',
-        note: 'Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025.',
+        note: 'Under review at CHI 2026. Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025.',
         correspondingAuthor: 'Shubin Yu',
         status: 'Preprint',
       },

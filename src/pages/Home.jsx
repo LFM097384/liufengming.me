@@ -24,9 +24,16 @@ const Home = () => {
 
   const recentPubs = [
     {
+      authors: 'Liu, F.',
+      title: 'Asymmetric Discourse Homogenization and Shared Language Technology: Evidence from Reddit',
+      venue: 'arXiv (2026) · Under review at ICWSM 2026',
+      doi: 'https://arxiv.org/abs/2608.13674',
+      note: 'First-authored',
+    },
+    {
       authors: 'Liu, F., & Yu, S.',
       title: 'MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI',
-      venue: 'arXiv (2025)',
+      venue: 'arXiv (2025) · Under review at CHI 2026',
       doi: 'https://doi.org/10.48550/arXiv.2511.03731',
       note: 'SSRN Recent Top Paper',
     },
@@ -35,12 +42,6 @@ const Home = () => {
       title: 'Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets',
       venue: 'Energy (2025)',
       doi: 'https://doi.org/10.1016/j.energy.2025.137475',
-    },
-    {
-      authors: 'Shu, M., Wang, C., Liu, F., et al.',
-      title: 'The Risk Transmission Mechanism of Global Stock Markets from the Perspective of Entropy-Riemann Geometry',
-      venue: 'Computational Economics (2025)',
-      doi: 'https://doi.org/10.1007/s10614-025-10913-4',
     },
   ]
 
@@ -191,7 +192,7 @@ const Home = () => {
       {/* ── FEATURED PROJECT ── */}
       <Box
         component="a"
-        href="https://mimitalk.app"
+        href="https://qualitati.com"
         target="_blank"
         rel="noopener noreferrer"
         sx={{
@@ -213,7 +214,7 @@ const Home = () => {
           variant="h5"
           sx={{ fontFamily: '"EB Garamond", serif', color: '#1a1a1a', mb: 0.8 }}
         >
-          MimiTalk — AI-Powered Interview Platform
+          Qualitati — AI-Powered Qualitative Research at Scale
         </Typography>
         <Typography variant="body2" sx={{ color: '#666' }}>
           {t('hero.mimitalk_desc')}

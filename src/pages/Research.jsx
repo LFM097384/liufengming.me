@@ -42,11 +42,18 @@ const Research = () => {
 
   const currentProjects = [
     {
-      title: 'MimiTalk: Dual-Agent AI Interview Platform',
-      role: 'Co-developer & Lead Author',
-      supervisor: 'Dr. Shubin Yu (BI Norwegian Business School & HEC Paris)',
+      title: 'Asymmetric Discourse Homogenization and Shared Language Technology',
+      role: 'Solo Author',
+      supervisor: 'Under review at ICWSM 2026 · arXiv:2608.13674',
       description:
-        'Developing an AI-powered platform for conducting qualitative research interviews using a dual-agent architecture.',
+        'Analyzing 6 million Reddit comments (2019–2025) with transformer embeddings and quasi-experimental designs to document how shared language technology reshapes political discourse unevenly across ideological communities.',
+    },
+    {
+      title: 'Qualitati — AI-Powered Qualitative Research Platform',
+      role: 'Co-founder & Lead Developer',
+      supervisor: 'Generative AI for Research Initiative (with Dr. Shubin Yu, HEC Paris)',
+      description:
+        'AI-moderated interviews, focus groups, and conversational surveys at scale, with an automated thematic-analysis pipeline. Research paper (MimiTalk) under review at CHI 2026; SSRN Recent Top Paper.',
     },
     {
       title: 'Political Discourse on Social Media',

@@ -1,10 +1,10 @@
 {
   "hero": {
     "title": "Fengming Liu",
-    "subtitle": "BSc Philosophy, Politics and Economics",
-    "institution": "University College London · Department of Political Science",
-    "bio": "I am a final-year PPE student at University College London. My research focuses on AI-augmented qualitative research methods, computational text analysis, political economy of technology, and consumer behavior in digitally mediated markets. I currently work as a research assistant at UCL, BI Norwegian Business School & HEC Paris, and Anhui University.",
-    "mimitalk_desc": "An innovative dual-agent AI platform for conducting qualitative research interviews. Co-developed as part of the Generative AI for Research Initiative.",
+    "subtitle": "MA Public Policy (Certificate in Research Methods)",
+    "institution": "University of Chicago · Harris School of Public Policy",
+    "bio": "I am a MACRM student at the Harris School of Public Policy, University of Chicago (Harris Merit Scholarship), and previously studied Philosophy, Politics and Economics at University College London. My research focuses on AI-augmented qualitative research methods, computational text analysis, political economy of technology, and consumer behavior in digitally mediated markets. I work as a research assistant with HEC Paris, University College London, and Anhui University.",
+    "mimitalk_desc": "An AI-powered platform for qualitative research at scale: AI-moderated interviews, focus groups, and conversational surveys, with an automated thematic-analysis pipeline. Co-founded as part of the Generative AI for Research Initiative.",
     "selected_pubs": "Selected Publications"
   }
 }
