@@ -53,7 +53,7 @@ const Research = () => {
       role: 'Co-founder & Lead Developer',
       supervisor: 'Generative AI for Research Initiative (with Dr. Shubin Yu, HEC Paris)',
       description:
-        'AI-moderated interviews, focus groups, and conversational surveys at scale, with an automated thematic-analysis pipeline. Research paper (MimiTalk) under review at CHI 2026; SSRN Recent Top Paper.',
+        'AI-moderated interviews, focus groups, and conversational surveys at scale, with an automated thematic-analysis pipeline. Research paper (MimiTalk) presented at COMPTEXT 2026 and the Wharton Business and Gen AI conference; SSRN Recent Top Paper.',
     },
     {
       title: 'Political Discourse on Social Media',

@@ -33,7 +33,7 @@ const Home = () => {
     {
       authors: 'Liu, F., & Yu, S.',
       title: 'MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI',
-      venue: 'arXiv (2025) · Under review at CHI 2026',
+      venue: 'arXiv (2025) · Presented at COMPTEXT 2026 (oral)',
       doi: 'https://doi.org/10.48550/arXiv.2511.03731',
       note: 'SSRN Recent Top Paper',
     },

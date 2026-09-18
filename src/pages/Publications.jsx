@@ -202,7 +202,7 @@ const Publications = () => {
         year: '2025',
         doi: '10.48550/arXiv.2511.03731',
         ssrn: 'https://dx.doi.org/10.2139/ssrn.5120349',
-        note: 'Under review at CHI 2026. Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025.',
+        note: 'Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025.',
         correspondingAuthor: 'Shubin Yu',
         status: 'Preprint',
       },
