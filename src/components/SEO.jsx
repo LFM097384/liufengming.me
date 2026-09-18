@@ -14,8 +14,8 @@ const SEO = ({
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
   const defaultDescription = 'Academic researcher specializing in AI applications in business and social science. Research interests include AI transparency, consumer decision-making, and automated social science research.'
   const defaultKeywords = 'Fengming Liu, AI Research, Consumer Decision-Making, AI Transparency, Social Science Research, Philosophy Politics Economics, PPE, UCL, Academic Research'
-  const defaultImage = 'https://liufengming.me/Images/b71f54d23e1517e62a9235a7760e265.jpg'
-  const siteUrl = 'https://liufengming.me'
+  const defaultImage = 'https://fengmingliu.com/Images/b71f54d23e1517e62a9235a7760e265.jpg'
+  const siteUrl = 'https://fengmingliu.com'
 
   return (
     <Helmet>

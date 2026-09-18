@@ -9,7 +9,7 @@ import './i18n' // 导入i18n配置
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/liufengming.me'}>
+    <BrowserRouter basename="/">
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <App />

@@ -2,22 +2,16 @@
 
 /**
  * Get the correct path for static files
- * In development: /filename
- * In production (GitHub Pages): /liufengming.me/filename
+ * The site is served from the domain root (fengmingliu.com), so no base path is needed.
  */
 export const getStaticPath = (filename) => {
-  const isDev = import.meta.env.DEV
-  const basePath = isDev ? '' : '/liufengming.me'
-  return `${basePath}/${filename}`
+  return `/${filename}`
 }
 
 /**
  * Get optimized image path with WebP fallback
  */
 export const getOptimizedImagePath = (filename) => {
-  const isDev = import.meta.env.DEV
-  const basePath = isDev ? '' : '/liufengming.me'
-  
   // Check if browser supports WebP
   const supportsWebP = () => {
     const canvas = document.createElement('canvas')
@@ -25,22 +19,21 @@ export const getOptimizedImagePath = (filename) => {
     canvas.height = 1
     return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0
   }
-  
+
   // Return WebP version if supported, otherwise original
   const ext = filename.split('.').pop()
   const nameWithoutExt = filename.replace(`.${ext}`, '')
-  
+
   if (supportsWebP() && ext !== 'webp') {
-    return `${basePath}/${nameWithoutExt}.webp`
+    return `/${nameWithoutExt}.webp`
   }
-  
-  return `${basePath}/${filename}`
+
+  return `/${filename}`
 }
 
 /**
  * Get the base URL for the application
  */
 export const getBaseUrl = () => {
-  const isDev = import.meta.env.DEV
-  return isDev ? '' : '/liufengming.me'
+  return ''
 }
