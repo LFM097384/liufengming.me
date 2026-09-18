@@ -34,10 +34,10 @@ const Footer = () => {
               Fengming Liu
             </Typography>
             <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem' }}>
-              Department of Political Science
+              Harris School of Public Policy
             </Typography>
             <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem' }}>
-              University College London
+              University of Chicago
             </Typography>
           </Box>
           <Box sx={{ textAlign: { xs: 'left', sm: 'right' } }}>

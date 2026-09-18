@@ -7,13 +7,13 @@
   "document": {
     "title": "CV Document",
     "description": "Download or preview my complete academic CV.",
-    "last_updated": "Last updated: March 2026"
+    "last_updated": "Last updated: September 2026"
   },
   "highlights": {
     "title": "CV Highlights",
     "education": {
       "title": "Education",
-      "content": "BSc Philosophy, Politics and Economics at UCL (2023–2026 expected)"
+      "content": "MA Public Policy with Certificate in Research Methods (MACRM), University of Chicago Harris School (2026–2028 expected); BSc Philosophy, Politics and Economics, UCL (2023–2026)"
     },
     "experience": {
       "title": "Research Experience",
@@ -21,7 +21,7 @@
     },
     "publications": {
       "title": "Publications & Research",
-      "content": "2 published papers (Energy, Computational Economics), 1 preprint on MimiTalk (arXiv/SSRN), 1 working paper (R&R at Cliometrica). 6 conference presentations including COMPTEXT 2026, HumanTech Summit 2025, Wharton Business & Gen AI, AMA Summer Academic Conference."
+      "content": "Peer-reviewed work in Energy and at the ICML 2026 AIWILD workshop; a single-authored Reddit discourse study under review at ICWSM 2026 (arXiv, public replication package); MimiTalk methods preprint (arXiv/SSRN, SSRN Recent Top Paper); a working paper under R&R at Cliometrica. Conference presentations include COMPTEXT 2026, HumanTech Summit 2025, Wharton Business & Gen AI, and the AMA Summer Academic Conference."
     }
   },
   "preview": {

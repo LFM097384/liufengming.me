@@ -7,13 +7,13 @@
   "document": {
     "title": "简历文档",
     "description": "下载或预览我的完整学术简历。",
-    "last_updated": "最后更新：2026年3月"
+    "last_updated": "最后更新：2026年9月"
   },
   "highlights": {
     "title": "简历要点",
     "education": {
       "title": "教育背景",
-      "content": "伦敦大学学院 哲学、政治学与经济学学士（2023–2026，预期）"
+      "content": "芝加哥大学哈里斯公共政策学院 公共政策硕士（研究方法证书方向，MACRM，2026–2028 预期）；伦敦大学学院 哲学、政治学与经济学学士（2023–2026）"
     },
     "experience": {
       "title": "研究经历",
@@ -21,7 +21,7 @@
     },
     "publications": {
       "title": "论文与研究",
-      "content": "2篇已发表论文（Energy、Computational Economics），1篇预印本MimiTalk（arXiv/SSRN），1篇工作论文（Cliometrica R&R）。6次学术会议报告，包括COMPTEXT 2026、HumanTech Summit 2025、Wharton商学院GenAI会议、AMA夏季学术会议。"
+      "content": "同行评审成果见 Energy 与 ICML 2026 AIWILD workshop；独著 Reddit 话语研究投稿 ICWSM 2026（arXiv，复现包公开）；MimiTalk 方法论预印本（arXiv/SSRN，入选 SSRN Recent Top Paper）；一篇工作论文在 Cliometrica 修回中。会议报告包括 COMPTEXT 2026、HumanTech Summit 2025、Wharton 商学院 GenAI 会议、AMA 夏季学术会议。"
     }
   },
   "preview": {

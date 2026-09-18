@@ -12,8 +12,8 @@ const Contact = () => {
     <>
       <SEO
         title="Contact"
-        description="Contact information for Fengming Liu – researcher at University College London."
-        keywords="Fengming Liu contact, UCL, research collaboration"
+        description="Contact information for Fengming Liu – researcher at the Harris School of Public Policy, University of Chicago."
+        keywords="Fengming Liu contact, University of Chicago, Harris School, research collaboration"
       />
 
       <Box sx={{ mb: 5 }}>
@@ -42,7 +42,7 @@ const Contact = () => {
             <Typography variant="overline" sx={{ color: '#888', display: 'block', mb: 0.3 }}>
               Phone
             </Typography>
-            <Typography variant="body2">+44 7436 241983</Typography>
+            <Typography variant="body2">+1 773 241 4359</Typography>
           </Box>
 
           <Box sx={{ mb: 3 }}>
@@ -50,9 +50,9 @@ const Contact = () => {
               Address
             </Typography>
             <Typography variant="body2" sx={{ lineHeight: 1.7 }}>
-              Department of Political Science<br />
-              University College London<br />
-              Gower Street, London WC1E 6BT, United Kingdom
+              Harris School of Public Policy<br />
+              University of Chicago<br />
+              1307 E 60th St, Chicago, IL 60637, United States
             </Typography>
           </Box>
 

@@ -12,8 +12,8 @@ const SEO = ({
 }) => {
   const siteTitle = 'Fengming Liu - Academic Researcher'
   const fullTitle = title ? `${title} | ${siteTitle}` : siteTitle
-  const defaultDescription = 'Academic researcher specializing in AI applications in business and social science. Research interests include AI transparency, consumer decision-making, and automated social science research.'
-  const defaultKeywords = 'Fengming Liu, AI Research, Consumer Decision-Making, AI Transparency, Social Science Research, Philosophy Politics Economics, PPE, UCL, Academic Research'
+  const defaultDescription = 'Researcher in the computational social science of AI-mediated political discourse, LLM evaluation, and AI-augmented qualitative methods. MACRM student at the Harris School of Public Policy, University of Chicago.'
+  const defaultKeywords = 'Fengming Liu, computational social science, AI and political discourse, LLM evaluation, AI-augmented qualitative research, University of Chicago, Harris School, UCL PPE'
   const defaultImage = 'https://fengmingliu.com/Images/b71f54d23e1517e62a9235a7760e265.jpg'
   const siteUrl = 'https://fengmingliu.com'
 

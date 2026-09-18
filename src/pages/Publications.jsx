@@ -148,16 +148,6 @@ const Publications = () => {
         status: 'Published',
       },
       {
-        authors: 'Shu, M., Wang, C., Liu, F. et al.',
-        title:
-          'The Risk Transmission Mechanism of Global Stock Markets from the Perspective of Entropy-Riemann Geometry: Theoretical Construction and Empirical Analysis',
-        journal: 'Computational Economics',
-        year: '2025',
-        doi: '10.1007/s10614-025-10913-4',
-        correspondingAuthor: 'Fengming Liu',
-        status: 'Published',
-      },
-      {
         authors: 'Lin, Z., & Liu, F.',
         title:
           'Position: LLM Social-Simulation Agents in the Wild Cannot Serve as Social Scientific Evidence Without an Identification Strategy',
