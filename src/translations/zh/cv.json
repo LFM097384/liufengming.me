@@ -7,7 +7,7 @@
   "document": {
     "title": "简历文档",
     "description": "下载或预览我的完整学术简历。",
-    "last_updated": "最后更新：2026年9月"
+    "last_updated": "最后更新：2026年11月"
   },
   "highlights": {
     "title": "简历要点",
@@ -17,11 +17,11 @@
     },
     "experience": {
       "title": "研究经历",
-      "content": "分别在伦敦大学学院、BI挪威商学院与HEC巴黎高等商学院、安徽大学担任研究助理"
+      "content": "芝加哥大学 Knowledge Lab 与伦敦大学学院研究助理；BI挪威商学院与HEC巴黎高等商学院研究助理、Qualitati 联合创始人；曾任安徽大学研究助理"
     },
     "publications": {
       "title": "论文与研究",
-      "content": "同行评审成果见 Energy 与 ICML 2026 AIWILD workshop；独著 Reddit 话语研究投稿 ICWSM 2026（arXiv，复现包公开）；MimiTalk 方法论预印本（arXiv/SSRN，入选 SSRN Recent Top Paper）；一篇工作论文在 Cliometrica 修回中。会议报告包括 COMPTEXT 2026、HumanTech Summit 2025、Wharton 商学院 GenAI 会议、AMA 夏季学术会议。"
+      "content": "Cliometrica 论文已接收待刊，Energy 已发表；ICML 2026 AIWILD workshop 论文（非存档）；两篇关于语言模型与网络话语的独著预印本（Stack Exchange；Reddit 重新分析）及一篇嵌入相似度测量的方法论文；MimiTalk 方法论预印本。会议报告包括 COMPTEXT 2026、HumanTech Summit 2025、Wharton 商学院 GenAI 会议、AMA 夏季学术会议。"
     }
   },
   "preview": {

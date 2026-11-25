@@ -115,7 +115,7 @@ const PubEntry = ({ pub }) => (
         rel="noopener noreferrer"
         sx={{ fontSize: '0.82rem', display: 'inline-block', mt: 0.5 }}
       >
-        DOI →
+        {pub.doi.includes('arxiv') ? 'arXiv →' : 'DOI →'}
       </Link>
     )}
     {pub.ssrn && (
@@ -138,6 +138,14 @@ const Publications = () => {
   const publications = {
     published: [
       {
+        authors: 'Shu, M., Liu, F., & Wang, S.',
+        title: "How to Achieve Technological Leapfrogging: Evidence from China's Self-Strengthening Movement",
+        journal: 'Cliometrica, forthcoming (accepted November 2026)',
+        year: '2026',
+        correspondingAuthor: 'Mingyu Shu',
+        status: 'Forthcoming',
+      },
+      {
         authors: 'Huang, Y., Shu, M., Liu, F., Liu, B., Huang, C., & Wang, S.',
         title:
           'Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets: A Global Perspective Analysis',
@@ -151,7 +159,7 @@ const Publications = () => {
         authors: 'Lin, Z., & Liu, F.',
         title:
           'Position: LLM Social-Simulation Agents in the Wild Cannot Serve as Social Scientific Evidence Without an Identification Strategy',
-        journal: 'ICML 2026 Workshop on AIWILD',
+        journal: 'ICML 2026 Workshop on Agents in the Wild (AIWILD), non-archival',
         year: '2026',
         correspondingAuthor: 'Zezheng Lin',
         status: 'Published',
@@ -160,11 +168,25 @@ const Publications = () => {
     preprint: [
       {
         authors: 'Liu, F.',
-        title:
-          'Asymmetric Discourse Homogenization and Shared Language Technology: Evidence from Reddit',
+        title: 'Where Language-Model Vocabulary Rose on Stack Exchange',
         year: '2026',
-        doi: '10.48550/arXiv.2608.13674',
-        note: 'Under review at ICWSM 2026.',
+        doi: 'https://arxiv.org/abs/2611.15172',
+        correspondingAuthor: 'Fengming Liu',
+        status: 'Preprint',
+      },
+      {
+        authors: 'Liu, F., & Shu, M.',
+        title: 'Embedding Cosine Measures Text Length Before It Measures Homogenization',
+        year: '2026',
+        doi: 'https://arxiv.org/abs/2611.21519',
+        correspondingAuthor: 'Fengming Liu',
+        status: 'Preprint',
+      },
+      {
+        authors: 'Liu, F.',
+        title: 'Asymmetric Discourse Homogenization on Reddit Was a Text-Length Artifact: A Reanalysis',
+        year: '2026',
+        doi: 'https://arxiv.org/abs/2608.13674',
         correspondingAuthor: 'Fengming Liu',
         status: 'Preprint',
       },
@@ -173,7 +195,7 @@ const Publications = () => {
         title:
           'The Translation Tax Is Not a Scalar: A Counterfactual Audit of English-Source Cue Inheritance in Chinese Multilingual Benchmarks',
         year: '2026',
-        doi: '10.48550/arXiv.2605.07093',
+        doi: 'https://arxiv.org/abs/2605.07093',
         correspondingAuthor: 'Zezheng Lin',
         status: 'Preprint',
       },
@@ -182,7 +204,7 @@ const Publications = () => {
         title:
           'Position: Mechanistic Interpretability Must Disclose Identification Assumptions for Causal Claims',
         year: '2026',
-        doi: '10.48550/arXiv.2605.08012',
+        doi: 'https://arxiv.org/abs/2605.08012',
         correspondingAuthor: 'Zezheng Lin',
         status: 'Preprint',
       },
@@ -190,25 +212,15 @@ const Publications = () => {
         authors: 'Liu, F., & Yu, S.',
         title: 'MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI',
         year: '2025',
-        doi: '10.48550/arXiv.2511.03731',
+        doi: 'https://arxiv.org/abs/2511.03731',
         ssrn: 'https://dx.doi.org/10.2139/ssrn.5120349',
-        note: 'Designated as a Recent Top Paper by SSRN (Frontiers in Information Systems Research & Applications eJournal), April 2025.',
+        note: 'Presented by S. Yu at COMPTEXT 2026 (oral) and the Wharton Business and Gen AI Conference (2025).',
         correspondingAuthor: 'Shubin Yu',
         status: 'Preprint',
       },
     ],
-    workingPapers: [
-      {
-        authors: 'Shu, M., Liu, F., & Wang, S.',
-        title:
-          "Cannon to Kilowatts: The Enduring Legacy of the Self-Strengthening Movement on China's Electrification",
-        targetJournal: 'R&R at Cliometrica',
-        correspondingAuthor: 'Mingyu Shu',
-        status: 'Working Paper',
-      },
-    ],
+    workingPapers: [],
   }
-
   const allPubs = [
     ...publications.published,
     ...publications.preprint,
@@ -233,7 +245,7 @@ const Publications = () => {
     <>
       <SEO
         title="Publications"
-        description="Academic publications by Fengming Liu including research on energy markets, financial risk transmission, and AI-powered qualitative research."
+        description="Academic publications by Fengming Liu on language models and public expression, measurement validity for text-as-data, AI-assisted qualitative research, and quantitative history."
         keywords="Fengming Liu publications, AI research papers, energy markets, MimiTalk, academic papers"
       />
 

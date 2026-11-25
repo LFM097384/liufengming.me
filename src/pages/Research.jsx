@@ -9,73 +9,68 @@ const Research = () => {
 
   const areas = [
     {
-      area: 'AI-Augmented Qualitative Research',
+      area: 'Language Models and Public Expression',
       description:
-        'Developing AI tools that enhance qualitative data collection and analysis, including dual-agent interview systems and automated coding frameworks.',
+        'Measuring how language models change the diversity of public and political expression, from individual drafting to whole communities.',
     },
     {
-      area: 'Computational Text Analysis',
+      area: 'Measurement Validity and Identification',
       description:
-        'Applying NLP and computational methods to analyze political discourse, media narratives, and large-scale text corpora in social science contexts.',
+        'When text-as-data measures and AI-based evidence can be trusted, from length artifacts in embedding similarity to identification strategies for LLM simulations and interpretability claims.',
     },
     {
-      area: 'Political Economy of Technology',
+      area: 'AI-Assisted Qualitative Methods',
       description:
-        'Examining how technological change shapes political institutions, economic structures, and power relations in contemporary societies.',
+        'Building and studying AI interviewers, and what changes in what people say when they know a machine is listening.',
     },
     {
-      area: 'Consumer Behavior in Digital Markets',
+      area: 'Technology, Discourse and Value',
       description:
-        'Investigating how digital platforms and AI mediation influence consumer decision-making processes and market dynamics.',
-    },
-    {
-      area: 'Quantitative History',
-      description:
-        'Applying quantitative methods to historical research, particularly in understanding long-term economic and social transformations.',
-    },
-    {
-      area: 'Financial Markets & Risk Analysis',
-      description:
-        'Analyzing economic systems and financial market dynamics using advanced mathematical and statistical frameworks.',
+        'How the systems that carry public discourse shape what people value, read through intellectual history, critical theory and psychoanalysis.',
     },
   ]
 
   const currentProjects = [
     {
-      title: 'Asymmetric Discourse Homogenization and Shared Language Technology',
+      title: 'Where Language-Model Vocabulary Rose on Stack Exchange',
       role: 'Solo Author',
-      supervisor: 'Under review at ICWSM 2026 · arXiv:2608.13674',
+      supervisor: 'arXiv:2611.15172',
       description:
-        'Analyzing 6 million Reddit comments (2019–2025) with transformer embeddings and quasi-experimental designs to document how shared language technology reshapes political discourse unevenly across ideological communities.',
+        'Across 3.8 million answers on 170 Stack Exchange sites, words typical of language models rose most where authors seldom revised their own answers and hardly at all where self-revision was routine.',
     },
     {
-      title: 'Qualitati — AI-Powered Qualitative Research Platform',
+      title: 'Embedding Cosine Measures Text Length Before It Measures Homogenization',
+      role: 'With Mingyu Shu',
+      supervisor: 'arXiv:2611.21519',
+      description:
+        'Documents how far the length dependence of average pairwise cosine similarity reaches across embedding models, and what researchers can do about it. Builds on my reanalysis of partisan Reddit discourse (arXiv:2608.13674).',
+    },
+    {
+      title: 'Qualitati: AI-Powered Qualitative Research Platform',
       role: 'Co-founder & Lead Developer',
       supervisor: 'Generative AI for Research Initiative (with Dr. Shubin Yu, HEC Paris)',
       description:
-        'AI-moderated interviews, focus groups, and conversational surveys at scale, with an automated thematic-analysis pipeline. Research paper (MimiTalk) presented at COMPTEXT 2026 and the Wharton Business and Gen AI conference; SSRN Recent Top Paper.',
+        'AI-moderated interviews, focus groups, and conversational surveys at scale, with an automated thematic-analysis pipeline. Research paper (MimiTalk) presented at COMPTEXT 2026 and the Wharton Business and Gen AI conference.',
     },
     {
-      title: 'Political Discourse on Social Media',
+      title: 'Political Discourse on Weibo',
       role: 'Research Assistant',
       supervisor: 'Dr. Handi Li (University College London)',
       description:
-        'Quantitative analysis of political discourse patterns on social media platforms.',
+        'Quantitative analysis of political discourse on Weibo and auditing of Chinese-language LLM benchmarks.',
     },
     {
-      title: "Self-Strengthening Movement & China's Electrification",
+      title: 'Language-Model Agents for the Study of Science',
       role: 'Research Assistant',
-      supervisor: 'Dr. Shun Wang (Anhui University)',
-      description:
-        'Investigating the long-term legacy of 19th-century industrialization on modern infrastructure development.',
+      supervisor: 'Dr. Robert Ward (Knowledge Lab, University of Chicago)',
+      description: 'Early-stage work at the Knowledge Lab.',
     },
   ]
-
   return (
     <>
       <SEO
         title="Research"
-        description="Research interests of Fengming Liu: AI-augmented qualitative methods, computational text analysis, political economy of technology."
+        description="Research interests of Fengming Liu: how language models change the diversity of public and political expression, measurement validity for text-as-data, and AI-assisted qualitative methods."
         keywords="Fengming Liu research, AI qualitative methods, computational text analysis, political economy"
       />
 

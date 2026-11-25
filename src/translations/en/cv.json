@@ -7,7 +7,7 @@
   "document": {
     "title": "CV Document",
     "description": "Download or preview my complete academic CV.",
-    "last_updated": "Last updated: September 2026"
+    "last_updated": "Last updated: November 2026"
   },
   "highlights": {
     "title": "CV Highlights",
@@ -17,11 +17,11 @@
     },
     "experience": {
       "title": "Research Experience",
-      "content": "Research Assistant positions at UCL, BI Norwegian Business School & HEC Paris, and Anhui University"
+      "content": "Research Assistant at the Knowledge Lab (University of Chicago) and UCL; Research Assistant and Qualitati co-founder with BI Norwegian Business School & HEC Paris; earlier at Anhui University"
     },
     "publications": {
       "title": "Publications & Research",
-      "content": "Peer-reviewed work in Energy and at the ICML 2026 AIWILD workshop; a single-authored Reddit discourse study under review at ICWSM 2026 (arXiv, public replication package); MimiTalk methods preprint (arXiv/SSRN, SSRN Recent Top Paper); a working paper under R&R at Cliometrica. Conference presentations include COMPTEXT 2026, HumanTech Summit 2025, Wharton Business & Gen AI, and the AMA Summer Academic Conference."
+      "content": "Forthcoming in Cliometrica and published in Energy; ICML 2026 AIWILD workshop paper (non-archival); two single-authored preprints on language models and online discourse (Stack Exchange; Reddit reanalysis) and a methods paper on embedding-similarity measures; MimiTalk methods preprint. Conference presentations include COMPTEXT 2026, HumanTech Summit 2025, Wharton Business & Gen AI, and the AMA Summer Academic Conference."
     }
   },
   "preview": {

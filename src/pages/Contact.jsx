@@ -33,8 +33,8 @@ const Contact = () => {
             <Typography variant="overline" sx={{ color: '#888', display: 'block', mb: 0.3 }}>
               Email
             </Typography>
-            <Link href="mailto:liu_fengming@outlook.com" sx={{ fontSize: '0.95rem' }}>
-              liu_fengming@outlook.com
+            <Link href="mailto:fengmingliu@uchicago.edu" sx={{ fontSize: '0.95rem' }}>
+              fengmingliu@uchicago.edu
             </Link>
           </Box>
 
@@ -56,7 +56,7 @@ const Contact = () => {
             </Typography>
           </Box>
 
-          <Button variant="contained" startIcon={<Email />} href="mailto:liu_fengming@outlook.com" sx={{ px: 3 }}>
+          <Button variant="contained" startIcon={<Email />} href="mailto:fengmingliu@uchicago.edu" sx={{ px: 3 }}>
             {t('contact.send_email')}
           </Button>
         </Grid>

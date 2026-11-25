@@ -42,8 +42,8 @@ const Footer = () => {
           </Box>
           <Box sx={{ textAlign: { xs: 'left', sm: 'right' } }}>
             <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem' }}>
-              <Link href="mailto:liu_fengming@outlook.com" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
-                liu_fengming@outlook.com
+              <Link href="mailto:fengmingliu@uchicago.edu" sx={{ color: '#888', '&:hover': { color: '#b0413e' } }}>
+                fengmingliu@uchicago.edu
               </Link>
             </Typography>
             <Typography variant="body2" sx={{ color: '#888', fontSize: '0.82rem', mt: 0.5 }}>

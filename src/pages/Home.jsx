@@ -25,32 +25,29 @@ const Home = () => {
   const recentPubs = [
     {
       authors: 'Liu, F.',
-      title: 'Asymmetric Discourse Homogenization and Shared Language Technology: Evidence from Reddit',
-      venue: 'arXiv (2026) · Under review at ICWSM 2026',
-      doi: 'https://arxiv.org/abs/2608.13674',
-      note: 'First-authored',
+      title: 'Where Language-Model Vocabulary Rose on Stack Exchange',
+      venue: 'arXiv (2026)',
+      doi: 'https://arxiv.org/abs/2611.15172',
+      note: 'Single-authored',
     },
     {
-      authors: 'Liu, F., & Yu, S.',
-      title: 'MimiTalk: Revolutionizing Qualitative Research with Dual-Agent AI',
-      venue: 'arXiv (2025) · Presented at COMPTEXT 2026 (oral)',
-      doi: 'https://doi.org/10.48550/arXiv.2511.03731',
-      note: 'SSRN Recent Top Paper',
+      authors: 'Shu, M., Liu, F., & Wang, S.',
+      title: "How to Achieve Technological Leapfrogging: Evidence from China's Self-Strengthening Movement",
+      venue: 'Cliometrica (forthcoming)',
     },
     {
-      authors: 'Huang, Y., Shu, M., Liu, F., et al.',
-      title: 'Nonlinear Heterogeneity Impact of El Niño-Southern Oscillation on Energy Markets',
-      venue: 'Energy (2025)',
-      doi: 'https://doi.org/10.1016/j.energy.2025.137475',
+      authors: 'Liu, F., & Shu, M.',
+      title: 'Embedding Cosine Measures Text Length Before It Measures Homogenization',
+      venue: 'arXiv (2026)',
+      doi: 'https://arxiv.org/abs/2611.21519',
     },
   ]
-
   return (
     <>
       <SEO
         title="Home"
-        description="Fengming Liu – researcher in AI-augmented qualitative methods, computational text analysis, and political economy of technology. BSc PPE, University College London."
-        keywords="Fengming Liu, AI Research, Computational Text Analysis, Political Economy, UCL"
+        description="Fengming Liu – researcher measuring how language models change the diversity of public and political expression. MA student, Harris School of Public Policy, University of Chicago."
+        keywords="Fengming Liu, language models, public expression, computational social science, text-as-data, University of Chicago"
       />
 
       {/* ── HERO ── */}
@@ -108,7 +105,7 @@ const Home = () => {
               }}
             >
               <Link
-                href="mailto:liu_fengming@outlook.com"
+                href="mailto:fengmingliu@uchicago.edu"
                 sx={{ fontSize: '0.85rem', color: '#888', '&:hover': { color: '#b0413e' } }}
               >
                 liu_fengming@outlook.com
